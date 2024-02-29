@@ -1,6 +1,5 @@
 import 'package:cmt/routing/routes.dart';
 import 'package:expandable_page_view/expandable_page_view.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
@@ -34,7 +33,12 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(key: _scaffoldKey, appBar: _buildAppBar(context), body: _buildBody(context, _scaffoldKey));
+    return Scaffold(
+      key: _scaffoldKey,
+      appBar: _buildAppBar(context),
+      body: _buildBody(context, _scaffoldKey),
+      bottomNavigationBar: _buildControllerArrows(context),
+    );
   }
 
   PreferredSizeWidget _buildAppBar(BuildContext context) => AppBar(title: const Text('CMT Widgets'));
@@ -47,9 +51,11 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ExpandablePageView(
+              controller: widgetStore.pageController,
               animateFirstPage: true,
               padEnds: true,
               onPageChanged: (int pageNum) {
+                widgetStore.setPageNum(pageNum);
                 widgetStore.setWidgetKey(listOfWidgets(context, scaffoldKey)[pageNum].key.toString());
                 widgetStore.setCorrectDescription();
                 widgetStore.setSingleWidget(widgetStore.widgetModelList[pageNum]);
@@ -57,22 +63,26 @@ class _HomePageState extends State<HomePage> {
               children: listOfWidgets(context, scaffoldKey).toList(),
             ),
             const SizedBox(height: 30),
-            Observer(
-              builder: (BuildContext context) {
-                return Text(
-                  widgetStore.description.isNotEmpty
-                      ? widgetStore.description
-                      : widgetStore.widgetModelList.isNotEmpty
-                          ? widgetStore.widgetModelList.first.description
-                          : '',
-                );
-              },
-            ),
+            _buildDescription(context),
             const SizedBox(height: 30),
             _buildSeeMore(context),
           ],
         ),
       ),
+    );
+  }
+
+  Widget _buildDescription(BuildContext context) {
+    return Observer(
+      builder: (BuildContext context) {
+        return Text(
+          widgetStore.description.isNotEmpty
+              ? widgetStore.description
+              : widgetStore.widgetModelList.isNotEmpty
+                  ? widgetStore.widgetModelList.first.description
+                  : '',
+        );
+      },
     );
   }
 
@@ -83,6 +93,44 @@ class _HomePageState extends State<HomePage> {
         Navigator.of(context).pushNamed(Details);
       },
       child: const Text('See more'),
+    );
+  }
+
+  Widget _buildControllerArrows(BuildContext context) {
+    return Observer(
+      builder: (BuildContext context) {
+        return Container(
+          height: 200,
+          padding: const EdgeInsets.symmetric(horizontal: 24),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              widgetStore.pageNum == 0
+                  ? const SizedBox()
+                  : ElevatedButton(
+                      onPressed: () {
+                        widgetStore.pageController.previousPage(
+                          duration: const Duration(milliseconds: 400),
+                          curve: Curves.easeInOut,
+                        );
+                      },
+                      child: Text('Previous'),
+                    ),
+              widgetStore.pageNum == widgetStore.widgetModelList.length - 1
+                  ? const SizedBox()
+                  : ElevatedButton(
+                      onPressed: () {
+                        widgetStore.pageController.nextPage(
+                          duration: const Duration(milliseconds: 400),
+                          curve: Curves.easeInOut,
+                        );
+                      },
+                      child: Text('Next'),
+                    ),
+            ],
+          ),
+        );
+      },
     );
   }
 }

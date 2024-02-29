@@ -67,7 +67,6 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
           titleColor: Colors.white,
         ),
       ),
-
       /// ALERT CARD
       Hero(
         tag: 'AW_AlertCard',

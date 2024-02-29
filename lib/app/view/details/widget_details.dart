@@ -14,11 +14,7 @@ class WidgetDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      key: _scaffoldKey,
-      appBar: _buildAppBar(context),
-      body: _buildBody(context),
-    );
+    return Scaffold(key: _scaffoldKey, appBar: _buildAppBar(context), body: _buildBody(context));
   }
 
   PreferredSizeWidget _buildAppBar(BuildContext context) => AppBar(title: Text(widgetStore.singleWidget.name));
@@ -47,9 +43,7 @@ class WidgetDetails extends StatelessWidget {
     );
   }
 
-  Widget _buildDescription(BuildContext context) {
-    return Text(widgetStore.singleWidget.description);
-  }
+  Widget _buildDescription(BuildContext context) => Text(widgetStore.singleWidget.description);
 
   Widget _buildParameterList(BuildContext context) {
     return Observer(
@@ -81,9 +75,7 @@ class WidgetDetails extends StatelessWidget {
 
   Widget _buildSeeMore(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {
-        widgetStore.toggleAllParams();
-      },
+      onPressed: () => widgetStore.toggleAllParams(),
       child: Observer(builder: (BuildContext context) {
         return Text(widgetStore.loadAllParams ? 'See less' : 'See more');
       }),

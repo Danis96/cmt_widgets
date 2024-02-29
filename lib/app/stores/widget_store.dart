@@ -1,6 +1,5 @@
 import 'dart:convert';
-
-import 'package:cmt/app/utils/helpers/list_of_widgets.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:mobx/mobx.dart';
 
@@ -12,6 +11,8 @@ class WidgetStore = WidgetBase with _$WidgetStore;
 
 abstract class WidgetBase with Store {
 
+  PageController pageController = PageController();
+
   @observable
   List<WidgetModel> widgetModelList = [];
 
@@ -20,7 +21,7 @@ abstract class WidgetBase with Store {
     String jsonFileName = 'widgets.json';
     String jsonData = await rootBundle.loadString('lib/app/utils/json/$jsonFileName');
     Map<String, dynamic> widgetInfo = jsonDecode(jsonData);
-    for(final s in widgetInfo['widgets']) {
+    for (final s in widgetInfo['widgets']) {
       widgetModelList.add(WidgetModel.fromJson(s));
     }
   }
@@ -30,9 +31,9 @@ abstract class WidgetBase with Store {
 
   @action
   void setCorrectDescription() {
-    if(widgetModelList.isNotEmpty) {
+    if (widgetModelList.isNotEmpty) {
       widgetModelList.forEach((element) {
-        if(widgetKey.contains(element.name)) {
+        if (widgetKey.contains(element.name)) {
           description = element.description;
         }
       });
@@ -40,10 +41,18 @@ abstract class WidgetBase with Store {
   }
 
   String widgetKey = '';
+
   void setWidgetKey(String x) => widgetKey = x;
 
   @observable
+  int pageNum = 0;
+
+  @action
+  void setPageNum(int x) => pageNum = x;
+
+  @observable
   WidgetModel _singleWidget = WidgetModel();
+
   @computed
   WidgetModel get singleWidget => _singleWidget;
 
@@ -54,9 +63,9 @@ abstract class WidgetBase with Store {
 
   @action
   void setSingleWidgetBasedOnName() {
-    if(widgetModelList.isNotEmpty) {
+    if (widgetModelList.isNotEmpty) {
       widgetModelList.forEach((element) {
-        if(widgetKey.contains(element.name)) {
+        if (widgetKey.contains(element.name)) {
           _singleWidget = element;
         }
       });
@@ -70,5 +79,4 @@ abstract class WidgetBase with Store {
   void toggleAllParams() {
     loadAllParams = !loadAllParams;
   }
-
 }

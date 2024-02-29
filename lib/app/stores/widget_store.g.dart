@@ -49,6 +49,21 @@ mixin _$WidgetStore on WidgetBase, Store {
     });
   }
 
+  late final _$pageNumAtom = Atom(name: 'WidgetBase.pageNum', context: context);
+
+  @override
+  int get pageNum {
+    _$pageNumAtom.reportRead();
+    return super.pageNum;
+  }
+
+  @override
+  set pageNum(int value) {
+    _$pageNumAtom.reportWrite(value, super.pageNum, () {
+      super.pageNum = value;
+    });
+  }
+
   late final _$_singleWidgetAtom =
       Atom(name: 'WidgetBase._singleWidget', context: context);
 
@@ -104,6 +119,17 @@ mixin _$WidgetStore on WidgetBase, Store {
   }
 
   @override
+  void setPageNum(int x) {
+    final _$actionInfo =
+        _$WidgetBaseActionController.startAction(name: 'WidgetBase.setPageNum');
+    try {
+      return super.setPageNum(x);
+    } finally {
+      _$WidgetBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   void setSingleWidget(WidgetModel model) {
     final _$actionInfo = _$WidgetBaseActionController.startAction(
         name: 'WidgetBase.setSingleWidget');
@@ -141,6 +167,7 @@ mixin _$WidgetStore on WidgetBase, Store {
     return '''
 widgetModelList: ${widgetModelList},
 description: ${description},
+pageNum: ${pageNum},
 loadAllParams: ${loadAllParams},
 singleWidget: ${singleWidget}
     ''';
