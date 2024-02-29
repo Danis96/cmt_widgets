@@ -107,30 +107,22 @@ class _HomePageState extends State<HomePage> {
             children: <Widget>[
               widgetStore.pageNum == 0
                   ? const SizedBox()
-                  : ElevatedButton(
-                      onPressed: () {
-                        widgetStore.pageController.previousPage(
-                          duration: const Duration(milliseconds: 400),
-                          curve: Curves.easeInOut,
-                        );
-                      },
-                      child: Text('Previous'),
-                    ),
+                  : ElevatedButton(onPressed: () => controllerAction(isNext: false), child: Text('Previous')),
               widgetStore.pageNum == widgetStore.widgetModelList.length - 1
                   ? const SizedBox()
-                  : ElevatedButton(
-                      onPressed: () {
-                        widgetStore.pageController.nextPage(
-                          duration: const Duration(milliseconds: 400),
-                          curve: Curves.easeInOut,
-                        );
-                      },
-                      child: Text('Next'),
-                    ),
+                  : ElevatedButton(onPressed: () => controllerAction(isNext: true), child: Text('Next')),
             ],
           ),
         );
       },
     );
+  }
+
+  void controllerAction({required bool isNext}) {
+    if (isNext) {
+      widgetStore.pageController.nextPage(duration: const Duration(milliseconds: 400), curve: Curves.easeInOut);
+    } else {
+      widgetStore.pageController.previousPage(duration: const Duration(milliseconds: 400), curve: Curves.easeInOut);
+    }
   }
 }
