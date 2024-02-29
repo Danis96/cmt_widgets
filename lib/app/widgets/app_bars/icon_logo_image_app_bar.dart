@@ -35,7 +35,7 @@ PreferredSizeWidget AW_AppBarIconLogoImage(
           child: Container(
             margin: const EdgeInsets.only(right: 24),
             height: 32,
-            width: 32,
+            width: 30,
             child: CircleAvatar(
               backgroundColor: Colors.white,
               child: ClipOval(
@@ -55,7 +55,7 @@ PreferredSizeWidget AW_AppBarIconLogoImage(
             children: <Widget>[
               if (actionWidget != null)
                 Container(
-                    width: Platform.isAndroid ? MediaQuery.of(context).size.width / 6.6 : 30,
+                    width: Platform.isAndroid ? MediaQuery.of(context).size.width / 5.3 : 30,
                     child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: actionWidget)),
               const SizedBox(width: 15),
               GestureDetector(

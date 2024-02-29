@@ -1,0 +1,374 @@
+{
+  "widgets": [
+    {
+      "name": "AW_AppBarIconTitleIcon",
+      "description": "The AW_AppBarIconTitleIcon is a highly customizable AppBar widget that allows for a variety of modifications including the title, leading icon, action widget, and more. It provides flexibility in design with options for centering the title, changing the background color, adding a bottom widget, and even replacing the title or leading icon with custom widgets.",
+      "parameters": [
+        {
+          "name": "title",
+          "type": "String",
+          "description": "Title text to display in the app bar."
+        },
+        {
+          "name": "implyLeading",
+          "type": "bool",
+          "description": "Whether to automatically show a leading icon (e.g., back arrow)."
+        },
+        {
+          "name": "implyAction",
+          "type": "bool",
+          "description": "Whether to automatically show an action icon (e.g., settings)."
+        },
+        {
+          "name": "centerTitle",
+          "type": "bool",
+          "description": "Whether to center the title text."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "Background color of the app bar."
+        },
+        {
+          "name": "titleColor",
+          "type": "Color",
+          "description": "Color of the title text."
+        },
+        {
+          "name": "onActionPressed",
+          "type": "Function",
+          "description": "Callback function to be executed when the action icon is pressed."
+        },
+        {
+          "name": "onLeadingPressed",
+          "type": "Function",
+          "description": "Callback function to be executed when the leading icon is pressed."
+        },
+        {
+          "name": "leadingIcon",
+          "type": "IconData",
+          "description": "Optional leading icon data (e.g., for back arrow)."
+        },
+        {
+          "name": "actionWidget",
+          "type": "Widget",
+          "description": "Optional custom widget to use as the action icon."
+        },
+        {
+          "name": "actionKey",
+          "type": "Key",
+          "description": "Optional key for the action widget."
+        },
+        {
+          "name": "leadingIconColor",
+          "type": "Color",
+          "description": "Color of the leading icon."
+        },
+        {
+          "name": "arrowLeftMargin",
+          "type": "double",
+          "description": "Left margin for the leading icon."
+        },
+        {
+          "name": "leadingWidth",
+          "type": "double",
+          "description": "Optional width of the leading icon."
+        },
+        {
+          "name": "bottomWidget",
+          "type": "PreferredSizeWidget",
+          "description": "Optional widget to display below the app bar content."
+        },
+        {
+          "name": "shape",
+          "type": "ShapeBorder",
+          "description": "Optional shape border for the app bar."
+        },
+        {
+          "name": "titleWidget",
+          "type": "Widget",
+          "description": "Optional widget to replace the title text."
+        },
+        {
+          "name": "leadingWidget",
+          "type": "Widget",
+          "description": "Optional widget to replace the leading icon."
+        },
+        {
+          "name": "useTheme",
+          "type": "bool",
+          "description": "Whether to use the current theme for styling."
+        },
+        {
+          "name": "elevation",
+          "type": "double",
+          "description": "Elevation shadow of the app bar."
+        },
+        {
+          "name": "shadowColor",
+          "type": "Color",
+          "description": "Color of the elevation shadow."
+        }
+      ]
+    },
+    {
+      "name": "AW_AppBarIconLogoImage",
+      "description": "The AW_AppBarIconLogoImage is a customizable AppBar widget that includes a leading icon, a logo, and a profile image. It provides options for user interaction through various onTap functions, and allows for a high degree of visual customization with options for background color, leading icon color, and the ability to add additional action widgets.",
+      "parameters": [
+        {
+          "name": "context",
+          "type": "BuildContext",
+          "description": "The build context."
+        },
+        {
+          "name": "logo",
+          "type": "String",
+          "description": "The logo of the app bar."
+        },
+        {
+          "name": "profileImage",
+          "type": "String",
+          "description": "The profile image to display."
+        },
+        {
+          "name": "leadingIcon",
+          "type": "IconData",
+          "description": "The icon to display on the leading."
+        },
+        {
+          "name": "onLeadingPressed",
+          "type": "Function",
+          "description": "The function to call when the leading icon is pressed."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color of the app bar."
+        },
+        {
+          "name": "leadingColor",
+          "type": "Color",
+          "description": "The color of the leading icon."
+        },
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "The widget key."
+        },
+        {
+          "name": "leadingKey",
+          "type": "Key",
+          "description": "The key for the leading icon."
+        },
+        {
+          "name": "profileImageKey",
+          "type": "Key",
+          "description": "The key for the profile image."
+        },
+        {
+          "name": "userInitials",
+          "type": "String",
+          "description": "The initials of the user."
+        },
+        {
+          "name": "onProfileImgTap",
+          "type": "Function",
+          "description": "The function to call when the profile image is tapped."
+        },
+        {
+          "name": "actionWidget",
+          "type": "List<Widget>",
+          "description": "The list of action widgets."
+        },
+        {
+          "name": "onActionTap",
+          "type": "Function",
+          "description": "The function to call when an action widget is tapped."
+        },
+        {
+          "name": "onBatteryTap",
+          "type": "Function",
+          "description": "The function to call when the battery icon is tapped."
+        },
+        {
+          "name": "isOnlyProfileImg",
+          "type": "bool",
+          "description": "Whether to only show the profile image."
+        }
+      ]
+    },
+    {
+      "name": "AW_VerticalWidgetsAppBar",
+      "description": "This is a AW_VerticalWidgetsAppBar with a vertical widgets app bar. It has several parameters that can be customized.",
+      "parameters": [
+        {
+          "name": "context",
+          "type": "BuildContext",
+          "description": "The build context."
+        },
+        {
+          "name": "key",
+          "type": "Key",
+          "description": "The widget key."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color of the app bar."
+        },
+        {
+          "name": "titleColor",
+          "type": "Color",
+          "description": "The color of the title."
+        },
+        {
+          "name": "onLeadingPressed",
+          "type": "Function",
+          "description": "The function to call when the leading icon is pressed."
+        },
+        {
+          "name": "actions",
+          "type": "List<Widget>",
+          "description": "The list of action widgets."
+        },
+        {
+          "name": "leadingIcon",
+          "type": "IconData",
+          "description": "The icon to display on the leading."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the app bar."
+        },
+        {
+          "name": "bottomWidget",
+          "type": "PreferredSizeWidget",
+          "description": "The widget to display at the bottom of the app bar."
+        },
+        {
+          "name": "centerTitle",
+          "type": "bool",
+          "description": "Whether to center the title."
+        },
+        {
+          "name": "elevation",
+          "type": "double",
+          "description": "The elevation of the app bar."
+        }
+      ]
+    },
+    {
+      "name": "AW_IconImageTextIconAlignLeftAppBar",
+      "description": "The AW_IconImageTextIconAlignLeftAppBar is a customizable AppBar widget that features a leading icon, title text, and a right icon, with an optional circular image between the leading icon and the title. It provides a high degree of customization, including control over the background color, title text style, elevation, and the ability to specify custom functions for the leading icon and right icon’s onPressed events.",
+      "parameters": [
+        {
+          "name": "context",
+          "type": "BuildContext",
+          "description": "The build context."
+        },
+        {
+          "name": "key",
+          "type": "Key",
+          "description": "The widget key."
+        },
+        {
+          "name": "onBack",
+          "type": "Function",
+          "description": "The function to call when the back button is pressed."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color of the app bar."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the app bar."
+        },
+        {
+          "name": "onDelete",
+          "type": "Function",
+          "description": "The function to call when the delete button is pressed."
+        },
+        {
+          "name": "shouldShowImage",
+          "type": "bool",
+          "description": "Whether to show the image."
+        },
+        {
+          "name": "imageUrl",
+          "type": "String",
+          "description": "The URL of the image to display."
+        },
+        {
+          "name": "titleTextStyle",
+          "type": "TextStyle",
+          "description": "The text style of the title."
+        },
+        {
+          "name": "rightIcon",
+          "type": "Icon",
+          "description": "The icon to display on the right."
+        },
+        {
+          "name": "leadingIcon",
+          "type": "Icon",
+          "description": "The icon to display on the leading."
+        },
+        {
+          "name": "elevation",
+          "type": "double",
+          "description": "The elevation of the app bar."
+        },
+        {
+          "name": "useCached",
+          "type": "bool",
+          "description": "Whether to use cached network image."
+        }
+      ]
+    },
+    {
+      "name": "AW_AlertCard",
+      "description": "A custom StatelessWidget that displays an alert card with an icon, title, and status. The card has a customizable color and can optionally display the title text.",
+      "parameters": [
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "A key that uniquely identifies this widget."
+        },
+        {
+          "name": "icon",
+          "type": "String",
+          "description": "The asset name of the icon to display."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title text to display."
+        },
+        {
+          "name": "status",
+          "type": "String",
+          "description": "The status text to display."
+        },
+        {
+          "name": "statusColor",
+          "type": "Color",
+          "description": "The color of the status text. Defaults to a shade of blue."
+        },
+        {
+          "name": "statusColorContainer",
+          "type": "Color",
+          "description": "The color of the status text container. Defaults to a lighter shade of blue."
+        },
+        {
+          "name": "shouldSHowTitleText",
+          "type": "bool",
+          "description": "A flag that determines whether the title text should be displayed. Defaults to false."
+        }
+      ]
+    }
+  ]
+}

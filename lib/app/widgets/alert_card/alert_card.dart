@@ -2,6 +2,7 @@ part of widgets;
 
 class AW_AlertCard extends StatelessWidget {
   const AW_AlertCard({
+    super.key,
     this.widgetKey,
     this.icon,
     this.title,

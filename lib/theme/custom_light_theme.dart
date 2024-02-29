@@ -35,10 +35,8 @@ class CustomTheme {
         color: ColorHelper.monochromaticGray150.color,
       ),
       cardTheme: CardTheme(
-        elevation: 32,
-        color: Colors.white,
+        elevation: 0,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-        shadowColor: const Color.fromRGBO(0, 92, 169, 0.2),
       ),
       inputDecorationTheme: InputDecorationTheme(
         labelStyle: const TextStyle(

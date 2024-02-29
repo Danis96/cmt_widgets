@@ -42,10 +42,16 @@ dependencies:
   syncfusion_flutter_gauges: ^20.1.56
   percent_indicator: ^4.0.0
   cached_network_image: ^3.2.0
-  google_maps_flutter: ^2.2.1
+  google_maps_flutter: ^2.6.0
   fl_chart: ^0.41.0
   loading_animation_widget: ^1.2.0+3
   url_launcher: ^6.1.11
+  expandable_page_view: ^1.0.17
+  mobx: ^2.3.0+1
+  flutter_mobx: ^2.2.0+2
+  mobx_codegen: ^2.6.0+1
+  json_annotation: ^4.8.1
+  get_it: ^7.6.7
 
 dependency_overrides:
   flutter_svg: ^2.0.9
@@ -60,6 +66,8 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^3.0.0
+  json_serializable: ^6.7.1
+  build_runner: ^2.4.8
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -73,9 +81,9 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+     - assets/
+     - lib/app/utils/json/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

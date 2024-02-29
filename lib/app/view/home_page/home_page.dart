@@ -1,10 +1,88 @@
+import 'package:cmt/routing/routes.dart';
+import 'package:expandable_page_view/expandable_page_view.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+import '../../locator.dart';
+import '../../stores/widget_store.dart';
+import '../../utils/helpers/list_of_widgets.dart';
+
+class HomePage extends StatefulWidget {
+  HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  final WidgetStore widgetStore = getIt<WidgetStore>();
+
+  @override
+  void initState() {
+    _initialBuild();
+    super.initState();
+  }
+
+  Future<void> _initialBuild() async {
+    await widgetStore.loadAndParseJson();
+    if (widgetStore.widgetModelList.isNotEmpty) {
+      widgetStore.setSingleWidget(widgetStore.widgetModelList.first);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(key: _scaffoldKey, appBar: _buildAppBar(context), body: _buildBody(context, _scaffoldKey));
+  }
+
+  PreferredSizeWidget _buildAppBar(BuildContext context) => AppBar(title: const Text('CMT Widgets'));
+
+  Widget _buildBody(BuildContext context, GlobalKey<ScaffoldState> scaffoldKey) {
+    return Center(
+      child: Container(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ExpandablePageView(
+              animateFirstPage: true,
+              padEnds: true,
+              onPageChanged: (int pageNum) {
+                widgetStore.setWidgetKey(listOfWidgets(context, scaffoldKey)[pageNum].key.toString());
+                widgetStore.setCorrectDescription();
+                widgetStore.setSingleWidget(widgetStore.widgetModelList[pageNum]);
+              },
+              children: listOfWidgets(context, scaffoldKey).toList(),
+            ),
+            const SizedBox(height: 30),
+            Observer(
+              builder: (BuildContext context) {
+                return Text(
+                  widgetStore.description.isNotEmpty
+                      ? widgetStore.description
+                      : widgetStore.widgetModelList.isNotEmpty
+                          ? widgetStore.widgetModelList.first.description
+                          : '',
+                );
+              },
+            ),
+            const SizedBox(height: 30),
+            _buildSeeMore(context),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildSeeMore(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        widgetStore.setSingleWidgetBasedOnName();
+        Navigator.of(context).pushNamed(Details);
+      },
+      child: const Text('See more'),
+    );
   }
 }

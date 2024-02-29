@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: CustomTheme.darkTheme,
       themeMode: currentTheme.currentTheme,
       onGenerateRoute: RouteGenerator.generateRoute,
-      home: GestureDetector(onTap: () => keyboardCloseOnTap(context), child: const HomePage()),
+      home: GestureDetector(onTap: () => keyboardCloseOnTap(context), child: HomePage()),
     );
   }
 
