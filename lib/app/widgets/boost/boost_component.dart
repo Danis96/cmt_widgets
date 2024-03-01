@@ -54,7 +54,7 @@ class AW_BoostStatus extends StatelessWidget {
                     color: isActive ? activeColor : stoppedColor,
                     borderRadius: const BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10))),
                 child: Center(
-                  child: SvgPicture.asset(icon, height: 50, color: iconColor),
+                  child: SvgPicture.asset(icon, height: 50),
                 ),
               ),
             ),

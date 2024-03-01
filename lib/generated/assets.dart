@@ -10,6 +10,13 @@ class Assets {
   static const String appLocator = 'lib/app/locator.dart';
   static const String appMyApp = 'lib/app/My_app.dart';
   static const String assetsAppBarLogo = 'assets/app_bar_logo.svg';
+  static const String assetsBatteryIcon = 'assets/battery_icon.svg';
+  static const String assetsDrivingSafety = 'assets/driving_safety.png';
+  static const String assetsFirstLoginModal = 'assets/first_login_modal.png';
+  static const String assetsIcBl = 'assets/ic_bl.svg';
+  static const String assetsIcSpeed = 'assets/ic_speed.svg';
+  static const String assetsIcSwoosh = 'assets/ic_swoosh.svg';
+  static const String assetsIcTagBluetooth = 'assets/ic_tag_bluetooth.svg';
   static const String badgeBadgeBackground = 'lib/app/widgets/badge/badge_background.dart';
   static const String badgeBadgeJapan = 'lib/app/widgets/badge/badge_japan.dart';
   static const String badgeBadgeOneJapan = 'lib/app/widgets/badge/badge_one_japan.dart';
@@ -139,6 +146,7 @@ class Assets {
   static const String tripsTripListItemJapan = 'lib/app/widgets/trips/trip_list_item_japan.dart';
   static const String tripsTripStatItem = 'lib/app/widgets/trips/trip_stat_item.dart';
   static const String tripsTripStaticImage = 'lib/app/widgets/trips/trip_static_image.dart';
+  static const String utilsNavigationAnimations = 'lib/app/utils/navigation_animations.dart';
   static const String validationsValidationMessageItem = 'lib/app/widgets/validations/validation_message_item.dart';
   static const String validationsValidationMessages = 'lib/app/widgets/validations/validation_messages.dart';
   static const String vouchersOneProductVoucherItem = 'lib/app/widgets/vouchers/one_product_voucher_item.dart';

@@ -369,6 +369,383 @@
           "description": "A flag that determines whether the title text should be displayed. Defaults to false."
         }
       ]
+    },
+    {
+      "name": "AW_CustomBadge",
+      "description": "A custom StatelessWidget that displays a badge with an image and a footer text. The badge has a customizable color, size, and appearance, and it can show an animation.",
+      "parameters": [
+        {
+          "name": "animation",
+          "type": "bool",
+          "description": "A flag that determines whether the badge should show an animation."
+        },
+        {
+          "name": "hasTitle",
+          "type": "bool",
+          "description": "A flag that determines whether the badge should display the title text."
+        },
+        {
+          "name": "isUnlocked",
+          "type": "bool",
+          "description": "A flag that determines whether the badge is unlocked."
+        },
+        {
+          "name": "backgroundWidth",
+          "type": "double",
+          "description": "The width of the badge's background."
+        },
+        {
+          "name": "lineWidth",
+          "type": "double",
+          "description": "The width of the badge's line."
+        },
+        {
+          "name": "percent",
+          "type": "double",
+          "description": "The percentage of the badge's progress."
+        },
+        {
+          "name": "radiusImage",
+          "type": "double",
+          "description": "The radius of the badge's image."
+        },
+        {
+          "name": "circularRadius",
+          "type": "double",
+          "description": "The radius of the badge's circular shape."
+        },
+        {
+          "name": "fontSize",
+          "type": "double",
+          "description": "The font size of the badge's text."
+        },
+        {
+          "name": "progressColor",
+          "type": "Color",
+          "description": "The color of the badge's progress indicator."
+        },
+        {
+          "name": "footerText",
+          "type": "String",
+          "description": "The footer text to display on the badge."
+        },
+        {
+          "name": "imageUrl",
+          "type": "String",
+          "description": "The URL of the image to display on the badge."
+        },
+        {
+          "name": "lockedImage",
+          "type": "String",
+          "description": "The URL of the image to display when the badge is locked."
+        },
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "A key that uniquely identifies this widget."
+        },
+        {
+          "name": "maxLines",
+          "type": "int",
+          "description": "The maximum number of lines for the badge's text."
+        },
+        {
+          "name": "footerStyle",
+          "type": "TextStyle",
+          "description": "The text style of the badge's footer."
+        },
+        {
+          "name": "innerPadding",
+          "type": "EdgeInsets",
+          "description": "The inner padding of the badge."
+        },
+        {
+          "name": "titleSpacing",
+          "type": "double",
+          "description": "The spacing between the title and the badge."
+        },
+        {
+          "name": "width",
+          "type": "double",
+          "description": "The width of the badge."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color of the badge."
+        },
+        {
+          "name": "sameRadiusOfImageAndProgress",
+          "type": "bool",
+          "description": "A flag that determines whether the radius of the image and the progress indicator should be the same."
+        }
+      ]
+    },
+    {
+      "name": "AW_BadgeBackground",
+      "description": "The AW_BadgeBackground is a custom StatelessWidget that displays a badge with an image and a footer text. The badge has a customizable color, size, and appearance, and it can show an animation.The badge’s appearance, including its colors, line width, and radius, are all customizable. The badge can also show an animation, which is controlled by the animation property.This widget is highly customizable and can be adapted to fit a variety of use cases.",
+      "parameters": [
+        {
+          "name": "animation",
+          "type": "bool",
+          "description": "A flag that determines whether the badge should show an animation."
+        },
+        {
+          "name": "hasTitle",
+          "type": "bool",
+          "description": "A flag that determines whether the badge should display the title text."
+        },
+        {
+          "name": "isUnlocked",
+          "type": "bool",
+          "description": "A flag that determines whether the badge is unlocked."
+        },
+        {
+          "name": "lineWidth",
+          "type": "double",
+          "description": "The width of the badge's line."
+        },
+        {
+          "name": "percent",
+          "type": "double",
+          "description": "The percentage of the badge's progress."
+        },
+        {
+          "name": "radiusImage",
+          "type": "double",
+          "description": "The radius of the badge's image."
+        },
+        {
+          "name": "fontSize",
+          "type": "double",
+          "description": "The font size of the badge's text."
+        },
+        {
+          "name": "progressColor",
+          "type": "Color",
+          "description": "The color of the badge's progress indicator."
+        },
+        {
+          "name": "footerText",
+          "type": "String",
+          "description": "The footer text to display on the badge."
+        },
+        {
+          "name": "imageUrl",
+          "type": "String",
+          "description": "The URL of the image to display on the badge."
+        },
+        {
+          "name": "lockedImage",
+          "type": "String",
+          "description": "The URL of the image to display when the badge is locked."
+        },
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "A key that uniquely identifies this widget."
+        },
+        {
+          "name": "maxLines",
+          "type": "int",
+          "description": "The maximum number of lines for the badge's text."
+        },
+        {
+          "name": "footerStyle",
+          "type": "TextStyle",
+          "description": "The text style of the badge's footer."
+        },
+        {
+          "name": "innerPadding",
+          "type": "EdgeInsets",
+          "description": "The inner padding of the badge."
+        },
+        {
+          "name": "titleSpacing",
+          "type": "double",
+          "description": "The spacing between the title and the badge."
+        },
+        {
+          "name": "width",
+          "type": "double",
+          "description": "The width of the badge."
+        },
+        {
+          "name": "lockedBackgroundColor",
+          "type": "Color",
+          "description": "The background color of the badge when it is locked."
+        },
+        {
+          "name": "unlockedBackgroundColor",
+          "type": "Color",
+          "description": "The background color of the badge when it is unlocked."
+        },
+        {
+          "name": "spaceAround",
+          "type": "bool",
+          "description": "A flag that determines whether the badge should have space around it."
+        },
+        {
+          "name": "badgeOnly",
+          "type": "bool",
+          "description": "A flag that determines whether only the badge should be displayed."
+        }
+      ]
+    },
+    {
+      "name": "AW_IconTextBanner",
+      "description": "A custom StatelessWidget that displays a banner with an icon and a title. The banner has a customizable color, text style, and appearance. It can also handle tap events.",
+      "parameters": [
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title text to display on the banner."
+        },
+        {
+          "name": "icon",
+          "type": "IconData",
+          "description": "The icon to display on the banner."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color of the banner."
+        },
+        {
+          "name": "textColor",
+          "type": "Color",
+          "description": "The color of the banner's text."
+        },
+        {
+          "name": "iconColor",
+          "type": "Color",
+          "description": "The color of the banner's icon."
+        },
+        {
+          "name": "textStyle",
+          "type": "TextStyle",
+          "description": "The text style of the banner's text."
+        },
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "A key that uniquely identifies this widget."
+        },
+        {
+          "name": "onTap",
+          "type": "VoidCallback",
+          "description": "A callback that is called when the banner is tapped."
+        }
+      ]
+    },
+    {
+      "name": "AW_BluetoothState",
+      "description": "A stateless widget that displays the Bluetooth state. It shows an image and a colored dot based on the Bluetooth state. The widget is clickable and can trigger a function on tap.",
+      "parameters": [
+        {
+          "name": "widgetKey",
+          "type": "Key?",
+          "description": "A key that uniquely identifies this widget."
+        },
+        {
+          "name": "bluetoothImage",
+          "type": "String?",
+          "description": "The path to the Bluetooth image asset."
+        },
+        {
+          "name": "bluetoothState",
+          "type": "BluetoothState",
+          "description": "The current state of the Bluetooth connection. It can be one of the following: notPaired, pairedAndInRange, pairedAndNotInRange, bluetoothDisabled."
+        },
+        {
+          "name": "onTap",
+          "type": "Function?",
+          "description": "A function that is triggered when the widget is tapped."
+        }
+      ]
+    },
+    {
+      "name": "AW_BoostWidget",
+      "description": "A stateless widget that displays a boost status and details. It shows a title, description, icon, and more icon. The widget is clickable and can trigger a function on tap. It also has styles and colors that can be customized.",
+      "parameters": [
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the boost."
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "description": "The description of the boost."
+        },
+        {
+          "name": "icon",
+          "type": "String",
+          "description": "The icon of the boost."
+        },
+        {
+          "name": "moreIcon",
+          "type": "IconData",
+          "description": "The more icon of the boost."
+        },
+        {
+          "name": "isActive",
+          "type": "bool",
+          "description": "The active status of the boost."
+        },
+        {
+          "name": "label",
+          "type": "String",
+          "description": "The label of the boost."
+        },
+        {
+          "name": "dayLabel",
+          "type": "String",
+          "description": "The day label of the boost."
+        },
+        {
+          "name": "detailsIcon",
+          "type": "String",
+          "description": "The details icon of the boost."
+        },
+        {
+          "name": "onTap",
+          "type": "VoidCallback",
+          "description": "The function to be called when the boost is tapped."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color of the boost."
+        },
+        {
+          "name": "activeColor",
+          "type": "Color",
+          "description": "The active color of the boost."
+        },
+        {
+          "name": "stoppedColor",
+          "type": "Color",
+          "description": "The stopped color of the boost."
+        },
+        {
+          "name": "titleStyle",
+          "type": "TextStyle",
+          "description": "The style of the title text."
+        },
+        {
+          "name": "descriptionStyle",
+          "type": "TextStyle",
+          "description": "The style of the description text."
+        },
+        {
+          "name": "labelStyle",
+          "type": "TextStyle",
+          "description": "The style of the label text."
+        }
+      ]
     }
+
+
   ]
 }

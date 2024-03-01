@@ -56,6 +56,7 @@ class _HomePageState extends State<HomePage> {
               padEnds: true,
               onPageChanged: (int pageNum) {
                 widgetStore.setPageNum(pageNum);
+                widgetStore.loadAllParams = false;
                 widgetStore.setWidgetKey(listOfWidgets(context, scaffoldKey)[pageNum].key.toString());
                 widgetStore.setCorrectDescription();
                 widgetStore.setSingleWidget(widgetStore.widgetModelList[pageNum]);
@@ -90,6 +91,7 @@ class _HomePageState extends State<HomePage> {
     return ElevatedButton(
       onPressed: () {
         widgetStore.setSingleWidgetBasedOnName();
+        widgetStore.loadAllParams = false;
         Navigator.of(context).pushNamed(Details);
       },
       child: const Text('See more'),
@@ -107,10 +109,10 @@ class _HomePageState extends State<HomePage> {
             children: <Widget>[
               widgetStore.pageNum == 0
                   ? const SizedBox()
-                  : ElevatedButton(onPressed: () => controllerAction(isNext: false), child: Text('Previous')),
+                  : ElevatedButton(onPressed: () => controllerAction(isNext: false), child: const Text('Previous')),
               widgetStore.pageNum == widgetStore.widgetModelList.length - 1
                   ? const SizedBox()
-                  : ElevatedButton(onPressed: () => controllerAction(isNext: true), child: Text('Next')),
+                  : ElevatedButton(onPressed: () => controllerAction(isNext: true), child: const Text('Next')),
             ],
           ),
         );

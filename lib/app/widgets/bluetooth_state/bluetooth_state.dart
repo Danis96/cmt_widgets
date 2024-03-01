@@ -8,7 +8,11 @@ enum BluetoothState {
 }
 
 class AW_BluetoothState extends StatelessWidget {
-  const AW_BluetoothState({@required this.widgetKey, @required this.bluetoothImage, @required this.bluetoothState = BluetoothState.notPaired, this.onTap});
+  const AW_BluetoothState(
+      {@required this.widgetKey,
+      @required this.bluetoothImage,
+      @required this.bluetoothState = BluetoothState.notPaired,
+      this.onTap});
 
   final Key? widgetKey;
   final String? bluetoothImage;
@@ -23,18 +27,24 @@ class AW_BluetoothState extends StatelessWidget {
       onTap: () => onTap!(),
       child: Container(
         alignment: Alignment.topRight,
-        height: 50,
-        width: 50,
+        height: 80,
+        width: 80,
         key: widgetKey!,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            if (_isImageEmpty()) const SizedBox() else Container(child: SvgPicture.asset(bluetoothImage!)),
+            if (_isImageEmpty())
+              const SizedBox()
+            else
+              Container(
+                child: SvgPicture.asset(bluetoothImage!, width: 70, height: 70),
+              ),
             const SizedBox(width: 2),
             Container(
-              height: 6,
-              width: 6,
-              decoration: BoxDecoration(color: _getDotColor(bluetoothState), borderRadius: const BorderRadius.all(Radius.circular(20))),
+              height: 16,
+              width: 16,
+              decoration: BoxDecoration(
+                  color: _getDotColor(bluetoothState), borderRadius: const BorderRadius.all(Radius.circular(20))),
             ),
             // if (bluetoothState == BluetoothState.notPaired)
             //   const SizedBox()
