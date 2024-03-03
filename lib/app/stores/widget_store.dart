@@ -18,6 +18,7 @@ abstract class WidgetBase with Store {
 
   @action
   Future<void> loadAndParseJson() async {
+    // todo refactor [move next 2 lines]
     String jsonFileName = 'widgets.json';
     String jsonData = await rootBundle.loadString('lib/app/utils/json/$jsonFileName');
     Map<String, dynamic> widgetInfo = jsonDecode(jsonData);
@@ -35,6 +36,20 @@ abstract class WidgetBase with Store {
       widgetModelList.forEach((element) {
         if (widgetKey.contains(element.name)) {
           description = element.description;
+        }
+      });
+    }
+  }
+
+  @observable
+  String widgetName = '';
+
+  @action
+  void setCorrectWidgetName() {
+    if (widgetModelList.isNotEmpty) {
+      widgetModelList.forEach((element) {
+        if (widgetKey.contains(element.name)) {
+          widgetName = element.name;
         }
       });
     }

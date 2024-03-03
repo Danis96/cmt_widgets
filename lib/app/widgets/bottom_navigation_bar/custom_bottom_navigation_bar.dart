@@ -144,7 +144,8 @@ class _AW_BottomNavigationPageState extends State<AW_BottomNavigationPage> {
               ? widget.items![i].unreadMessagesCount > 0
                   ? Stack(
                       children: <Widget>[
-                        SvgPicture.asset(widget.items![i].icon!, color: _selectedIndex != i ? widget.unSelectedItemColor : widget.selectedItemColor),
+                        SvgPicture.asset(widget.items![i].icon!,
+                            color: _selectedIndex != i ? widget.unSelectedItemColor : widget.selectedItemColor),
                         unreadMessageCount(widget.items![i].unreadMessagesCount)
                       ],
                     )
@@ -167,7 +168,8 @@ class _AW_BottomNavigationPageState extends State<AW_BottomNavigationPage> {
               ? widget.items![i].unreadMessagesCount > 0
                   ? Stack(
                       children: <Widget>[
-                        SvgPicture.asset(widget.items![i].icon!, color: _selectedIndex != i ? widget.unSelectedItemColor : widget.selectedItemColor),
+                        SvgPicture.asset(widget.items![i].icon!,
+                            color: _selectedIndex != i ? widget.unSelectedItemColor : widget.selectedItemColor),
                         unreadMessageCount(widget.items![i].unreadMessagesCount)
                       ],
                     )
@@ -181,14 +183,17 @@ class _AW_BottomNavigationPageState extends State<AW_BottomNavigationPage> {
                       width: MediaQuery.of(context).size.width / 3.5,
                       padding: const EdgeInsets.all(5),
                       child: Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
-                        SvgPicture.asset(widget.items![i].icon!, color: _selectedIndex != i ? widget.unSelectedItemColor : widget.selectedItemColor),
+                        SvgPicture.asset(widget.items![i].icon!,
+                            color: _selectedIndex != i ? widget.unSelectedItemColor : widget.selectedItemColor),
                         if (_selectedIndex != i)
                           const SizedBox()
                         else
                           Container(
                             margin: const EdgeInsets.only(left: 10),
                             child: Text(widget.items![i].title!,
-                                style: TextStyle(color: _selectedIndex != i ? widget.unSelectedItemColor : widget.selectedItemColor)),
+                                style: TextStyle(
+                                    color:
+                                        _selectedIndex != i ? widget.unSelectedItemColor : widget.selectedItemColor)),
                           ),
                       ]))
               : const SizedBox());
@@ -218,34 +223,37 @@ class _AW_BottomNavigationPageState extends State<AW_BottomNavigationPage> {
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () async {
-        if (widget.onPop != null) {
-          return widget.onPop!();
-        }
-        return Future<bool>.value(false);
-      },
-      child: Scaffold(
-          body: widget.items![_selectedIndex].page,
-          bottomNavigationBar: Container(
-            color: widget.backgroundColor,
-            child: Container(
-              margin: EdgeInsets.symmetric(horizontal: widget.innerPadding),
-              child: widget.barVisible
-                  ? BottomNavigationBar(
-                      backgroundColor: widget.backgroundColor,
-                      key: widget.widgetKey!,
-                      items: widget.showTitleFromSide ? _getBottomNavigationBarItemsRow()! : _getBottomNavigationBarItems()!,
-                      currentIndex: _selectedIndex,
-                      showUnselectedLabels: widget.showUnselectedLabel,
-                      elevation: widget.elevation,
-                      type: widget.bottomNavigationBarType,
-                      selectedItemColor: widget.selectedItemColor,
-                      unselectedItemColor: widget.unSelectedItemColor,
-                      onTap: _onItemTapped,
-                    )
-                  : const SizedBox(),
-            ),
+    return
+        // WillPopScope(
+        // onWillPop: () async {
+        //   if (widget.onPop != null) {
+        //     return widget.onPop!();
+        //   }
+        //   return Future<bool>.value(false);
+        // },
+        // child:
+        Scaffold(
+      body: widget.items![_selectedIndex].page,
+      bottomNavigationBar: Container(
+          color: widget.backgroundColor,
+          child: Container(
+            margin: EdgeInsets.symmetric(horizontal: widget.innerPadding),
+            child: widget.barVisible
+                ? BottomNavigationBar(
+                    backgroundColor: widget.backgroundColor,
+                    key: widget.widgetKey!,
+                    items:
+                        widget.showTitleFromSide ? _getBottomNavigationBarItemsRow()! : _getBottomNavigationBarItems()!,
+                    currentIndex: _selectedIndex,
+                    showUnselectedLabels: widget.showUnselectedLabel,
+                    elevation: widget.elevation,
+                    type: widget.bottomNavigationBarType,
+                    selectedItemColor: widget.selectedItemColor,
+                    unselectedItemColor: widget.unSelectedItemColor,
+                    onTap: _onItemTapped,
+                  )
+                : const SizedBox(),
+            // ),
           )),
     );
   }

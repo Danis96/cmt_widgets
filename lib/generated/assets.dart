@@ -12,11 +12,18 @@ class Assets {
   static const String assetsAppBarLogo = 'assets/app_bar_logo.svg';
   static const String assetsBatteryIcon = 'assets/battery_icon.svg';
   static const String assetsDrivingSafety = 'assets/driving_safety.png';
+  static const String assetsEnabledOutlinedButton32756 = 'assets/enabled_outlined_button_327_56.svg';
   static const String assetsFirstLoginModal = 'assets/first_login_modal.png';
+  static const String assetsGray = 'assets/gray.png';
+  static const String assetsIcAccount = 'assets/ic_account.svg';
   static const String assetsIcBl = 'assets/ic_bl.svg';
   static const String assetsIcSpeed = 'assets/ic_speed.svg';
   static const String assetsIcSwoosh = 'assets/ic_swoosh.svg';
   static const String assetsIcTagBluetooth = 'assets/ic_tag_bluetooth.svg';
+  static const String assetsIcTeam = 'assets/ic_team.svg';
+  static const String assetsIcTimeIcon = 'assets/ic_time_icon.svg';
+  static const String assetsIcTrips = 'assets/ic_trips.svg';
+  static const String assetsPrizesPlaceholder = 'assets/prizes_placeholder.png';
   static const String badgeBadgeBackground = 'lib/app/widgets/badge/badge_background.dart';
   static const String badgeBadgeJapan = 'lib/app/widgets/badge/badge_japan.dart';
   static const String badgeBadgeOneJapan = 'lib/app/widgets/badge/badge_one_japan.dart';
@@ -60,6 +67,7 @@ class Assets {
   static const String generatedAssets = 'lib/generated/assets.dart';
   static const String geofenceGeofenceListItem = 'lib/app/widgets/geofence/geofence_list_item.dart';
   static const String geofenceTappableGooglePlace = 'lib/app/widgets/geofence/tappable_google_place.dart';
+  static const String helpersBottomNavigationList = 'lib/app/utils/helpers/bottom_navigation_list.dart';
   static const String helpersListOfWidgets = 'lib/app/utils/helpers/list_of_widgets.dart';
   static const String homePageHomePage = 'lib/app/view/home_page/home_page.dart';
   static const String inboxInboxListItem = 'lib/app/widgets/inbox/inbox_list_item.dart';

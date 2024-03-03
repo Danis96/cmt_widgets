@@ -1,5 +1,6 @@
 import 'package:cmt/routing/routes.dart';
 import 'package:expandable_page_view/expandable_page_view.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
@@ -46,26 +47,29 @@ class _HomePageState extends State<HomePage> {
   Widget _buildBody(BuildContext context, GlobalKey<ScaffoldState> scaffoldKey) {
     return Center(
       child: Container(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 2),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ExpandablePageView(
-              controller: widgetStore.pageController,
-              animateFirstPage: true,
-              padEnds: true,
-              onPageChanged: (int pageNum) {
-                widgetStore.setPageNum(pageNum);
-                widgetStore.loadAllParams = false;
-                widgetStore.setWidgetKey(listOfWidgets(context, scaffoldKey)[pageNum].key.toString());
-                widgetStore.setCorrectDescription();
-                widgetStore.setSingleWidget(widgetStore.widgetModelList[pageNum]);
-              },
-              children: listOfWidgets(context, scaffoldKey).toList(),
+            Expanded(
+              child: ExpandablePageView(
+                controller: widgetStore.pageController,
+                animateFirstPage: true,
+                padEnds: true,
+                onPageChanged: (int pageNum) {
+                  widgetStore.setPageNum(pageNum);
+                  widgetStore.loadAllParams = false;
+                  widgetStore.setWidgetKey(listOfWidgets(context, scaffoldKey)[pageNum].key.toString());
+                  widgetStore.setCorrectDescription();
+                  widgetStore.setCorrectWidgetName();
+                  widgetStore.setSingleWidget(widgetStore.widgetModelList[pageNum]);
+                },
+                children: listOfWidgets(context, scaffoldKey).toList(),
+              ),
             ),
-            const SizedBox(height: 30),
+            const SizedBox(height: 15),
             _buildDescription(context),
-            const SizedBox(height: 30),
+            const SizedBox(height: 15),
             _buildSeeMore(context),
           ],
         ),
@@ -76,12 +80,26 @@ class _HomePageState extends State<HomePage> {
   Widget _buildDescription(BuildContext context) {
     return Observer(
       builder: (BuildContext context) {
-        return Text(
-          widgetStore.description.isNotEmpty
-              ? widgetStore.description
-              : widgetStore.widgetModelList.isNotEmpty
-                  ? widgetStore.widgetModelList.first.description
-                  : '',
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              widgetStore.widgetName.isNotEmpty
+                  ? widgetStore.widgetName
+                  : widgetStore.widgetModelList.isNotEmpty
+                      ? widgetStore.widgetModelList.first.name
+                      : '',
+              style: const TextStyle(color: Colors.black, fontSize: 22),
+            ),
+            const Divider(),
+            Text(
+              widgetStore.description.isNotEmpty
+                  ? widgetStore.description
+                  : widgetStore.widgetModelList.isNotEmpty
+                      ? widgetStore.widgetModelList.first.description
+                      : '',
+            ),
+          ],
         );
       },
     );
@@ -102,7 +120,7 @@ class _HomePageState extends State<HomePage> {
     return Observer(
       builder: (BuildContext context) {
         return Container(
-          height: 200,
+          height: 100,
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

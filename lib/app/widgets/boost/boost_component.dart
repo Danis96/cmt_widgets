@@ -42,7 +42,9 @@ class AW_BoostStatus extends StatelessWidget {
         decoration: BoxDecoration(
             color: backgroundColor,
             borderRadius: BorderRadius.circular(20),
-            boxShadow: const <BoxShadow>[BoxShadow(color: Color.fromRGBO(35, 31, 32, 0.15), offset: Offset(0, 8), blurRadius: 24, spreadRadius: 0)]),
+            boxShadow: const <BoxShadow>[
+              BoxShadow(color: Color.fromRGBO(35, 31, 32, 0.15), offset: Offset(0, 8), blurRadius: 24, spreadRadius: 0)
+            ]),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -52,7 +54,8 @@ class AW_BoostStatus extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                     color: isActive ? activeColor : stoppedColor,
-                    borderRadius: const BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10))),
+                    borderRadius:
+                        const BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10))),
                 child: Center(
                   child: SvgPicture.asset(icon, height: 50),
                 ),
@@ -63,20 +66,19 @@ class AW_BoostStatus extends StatelessWidget {
               child: GestureDetector(
                 onTap: onTap,
                 child: Container(
-                  padding: const EdgeInsets.all(16),
-                  decoration: const BoxDecoration(borderRadius: BorderRadius.only(topRight: Radius.circular(10), bottomRight: Radius.circular(10))),
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.only(topRight: Radius.circular(10), bottomRight: Radius.circular(10))),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(title, style: titleStyle),
-                      const SizedBox(
-                        height: 6,
-                      ),
-                      Text(description, style: descriptionStyle),
-                      const SizedBox(
-                        height: 6,
-                      ),
-                      Align(alignment: Alignment.centerRight, child: Icon(moreIcon, color: isActive ? activeColor : stoppedColor))
+                      const SizedBox(height: 3),
+                      Text(description, style: descriptionStyle, maxLines: 4, overflow: TextOverflow.ellipsis,),
+                      const SizedBox(height: 3),
+                      Align(
+                          alignment: Alignment.centerRight,
+                          child: Icon(moreIcon, color: isActive ? activeColor : stoppedColor))
                     ],
                   ),
                 ),
@@ -125,9 +127,13 @@ class AW_BoostDetails extends StatelessWidget {
           Expanded(
             flex: 7,
             child: Container(
-              decoration: BoxDecoration(color: backgroundColor, borderRadius: BorderRadius.circular(10), boxShadow: const <BoxShadow>[
-                BoxShadow(color: Color.fromRGBO(35, 31, 32, 0.15), offset: Offset(0, 8), blurRadius: 24, spreadRadius: 0)
-              ]),
+              decoration: BoxDecoration(
+                  color: backgroundColor,
+                  borderRadius: BorderRadius.circular(10),
+                  boxShadow: const <BoxShadow>[
+                    BoxShadow(
+                        color: Color.fromRGBO(35, 31, 32, 0.15), offset: Offset(0, 8), blurRadius: 24, spreadRadius: 0)
+                  ]),
               padding: const EdgeInsets.all(16),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -150,9 +156,16 @@ class AW_BoostDetails extends StatelessWidget {
           Expanded(
             flex: 3,
             child: Container(
-                decoration: BoxDecoration(color: backgroundColor, borderRadius: BorderRadius.circular(10), boxShadow: const <BoxShadow>[
-                  BoxShadow(color: Color.fromRGBO(35, 31, 32, 0.15), offset: Offset(0, 8), blurRadius: 24, spreadRadius: 0)
-                ]),
+                decoration: BoxDecoration(
+                    color: backgroundColor,
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: const <BoxShadow>[
+                      BoxShadow(
+                          color: Color.fromRGBO(35, 31, 32, 0.15),
+                          offset: Offset(0, 8),
+                          blurRadius: 24,
+                          spreadRadius: 0)
+                    ]),
                 child: Center(
                     child: Image.asset(
                   iconAsset,

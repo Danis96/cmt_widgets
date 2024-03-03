@@ -2,6 +2,8 @@ import 'package:cmt/generated/assets.dart';
 import 'package:flutter/material.dart';
 import '../../../theme/color_helper.dart';
 import '../../widgets/widgets.dart';
+import 'bottom_navigation_list.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 void showInSnackBar(String value, GlobalKey<ScaffoldState> scaffoldKey, BuildContext context) {
   ScaffoldMessenger.of(context).clearSnackBars();
@@ -145,6 +147,7 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
             title: 'Title',
             backgroundColor: Colors.blueAccent,
             icon: Icons.access_alarm,
+            textStyle: const TextStyle(color: Colors.white),
             iconColor: Colors.white,
             textColor: Colors.white,
             widgetKey: const Key('AW_IconTextBanner'),
@@ -172,8 +175,9 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
         tag: 'AW_BoostWidget',
         key: const Key('AW_BoostWidget'),
         child: Material(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+            height: MediaQuery.of(context).size.height / 2.5,
             child: AW_BoostWidget(
               key: const Key('AW_BoostWidget'),
               title: 'Boost your discount!',
@@ -190,5 +194,185 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
             ),
           ),
         ),
-      )
+      ),
+
+      /// BOTTOM NAVIGATION BAR
+      Hero(
+        tag: 'AW_BottomNavigationPage',
+        key: const Key('AW_BottomNavigationPage'),
+        child: SizedBox(
+          width: 400,
+          height: 200,
+          child: Material(
+            child: AW_BottomNavigationPage(
+              widgetKey: const Key('AW_BottomNavigationPage'),
+              unSelectedItemColor: Colors.black,
+              selectedItemColor: Colors.white,
+              items: bottomNavigationItemsTest,
+              backgroundColor: Colors.blueAccent,
+              initialSelection: 2,
+              showTitle: true,
+            ),
+          ),
+        ),
+      ),
+
+      /// BUTTON
+      Hero(
+        tag: 'AW_Button',
+        key: const Key('AW_Button'),
+        child: AW_Button(
+          key: const Key('AW_Button'),
+          buttonTitle: 'Title',
+          disabled: false,
+          width: 200,
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all(Colors.blueAccent),
+            foregroundColor: MaterialStateProperty.all(Colors.white),
+          ),
+          onPressed: () => showInSnackBar('On press function', scaffoldKey, context),
+        ),
+      ),
+
+      /// AW_ButtonWithImageBg
+      Hero(
+        tag: 'AW_ButtonWithImageBg',
+        key: const Key('AW_ButtonWithImageBg'),
+        child: AW_ButtonWithImageBg(
+          key: const Key('AW_ButtonWithImageBg'),
+          buttonTitle: '',
+          disabled: false,
+// buttonColor: Colors.blueAccent,
+          boxDecorationImage: DecorationImage(image: AssetImage(Assets.assetsPrizesPlaceholder), fit: BoxFit.cover),
+          onPressed: () => showInSnackBar('On press function', scaffoldKey, context),
+        ),
+      ),
+
+      /// AW_CustomCardItem
+      Hero(
+        tag: 'AW_CustomCardItem',
+        key: const Key('AW_CustomCardItem'),
+        child: SizedBox(
+          height: 400,
+          child: AW_CustomCardItem(
+            widgetKey: const Key('AW_CustomCardItem'),
+            maxLines: 2,
+            width: 100,
+            imageHeight: 200,
+            bottomRadius: BorderRadius.circular(20),
+            imageBorderRadius: const BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+            title: 'Title',
+            image:
+                'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/82114837-0066-42c3-990d-755b33d0743a/dgxbv5n-f02fbdd0-1546-4b1c-b6aa-475b0f3b203a.png/v1/fill/w_1192,h_670,q_70,strp/candypunk__the_dredges_by_travis_anderson_dgxbv5n-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTAwIiwicGF0aCI6IlwvZlwvODIxMTQ4MzctMDA2Ni00MmMzLTk5MGQtNzU1YjMzZDA3NDNhXC9kZ3hidjVuLWYwMmZiZGQwLTE1NDYtNGIxYy1iNmFhLTQ3NWIwZjNiMjAzYS5wbmciLCJ3aWR0aCI6Ijw9MTYwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.RUqQwkrF9yuXYFSrZTQ-WQOxS74FhATE0lmbHr27z4A',
+          ),
+        ),
+      ),
+
+      ///AW_ChallengeItemCardDemo
+      const Hero(
+        tag: 'AW_ChallengeItemCardDemo',
+        key: Key('AW_ChallengeItemCardDemo'),
+        child: Material(
+          child: AW_ChallengeItemCardDemo(
+            key: Key('AW_ChallengeItemCardDemo'),
+            image:
+                'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/82114837-0066-42c3-990d-755b33d0743a/dgw053q-46b09f3e-36a2-4975-a767-df22c40451ca.jpg/v1/fill/w_1192,h_670,q_70,strp/swamp_dragon_by_travis_anderson_dgw053q-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTAwIiwicGF0aCI6IlwvZlwvODIxMTQ4MzctMDA2Ni00MmMzLTk5MGQtNzU1YjMzZDA3NDNhXC9kZ3cwNTNxLTQ2YjA5ZjNlLTM2YTItNDk3NS1hNzY3LWRmMjJjNDA0NTFjYS5qcGciLCJ3aWR0aCI6Ijw9MTYwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19._SNnsEcUHyx863Ph0fXfTXB5CO_SjLlLcwM3nZbPak8',
+            challengeTitle: '',
+            isJoinable: true,
+            joinChallengeText: 'You can join',
+            newChallengeText: 'Some text',
+            isExpired: false,
+            withoutTeamBannerText: '',
+            hasTeam: true,
+            team: 'name',
+            challengeExpired: 'challenge expired',
+            teamNames: ['Team 1', 'Team 2'],
+            teamValues: [0, 1],
+            assetPath: Assets.assetsBatteryIcon,
+            teamLabel: 'Team',
+            isNewChallenge: true,
+          ),
+        ),
+      ),
+
+      /// TeamsParticipantsDays
+      const Hero(
+        tag: 'TeamsParticipantsDays',
+        key: Key('TeamsParticipantsDays'),
+        child: Material(
+          child: TeamsParticipantsDays(
+            key: Key('TeamsParticipantsDays'),
+            title1: 'Teams',
+            subtitle1: '2',
+            title2: 'Participants',
+            subtitle2: '20',
+            title3: 'Days left',
+            subtitle3: 'Expired',
+            image1: Assets.assetsIcTeam,
+            image2: Assets.assetsIcAccount,
+            image3: Assets.assetsIcTimeIcon,
+            color1: Colors.blueAccent,
+            color2: Colors.blueAccent,
+            color3: Colors.blueAccent,
+          ),
+        ),
+      ),
+
+      /// AW_CustomProgressIndicator
+      Hero(
+        tag: 'AW_CustomProgressIndicator',
+        key: const Key('AW_CustomProgressIndicator'),
+        child: Material(
+          child: AW_CustomProgressIndicator(
+            widgetKey: const Key('AW_CustomProgressIndicator'),
+            value: 80,
+            startAngle: 165,
+            endAngle: 15,
+            minValue: 0,
+            maxValue: 100,
+            lineWidth: 0.1,
+            contentPadding: 50,
+            content: Text('10%'),
+            lineColor: Colors.blueAccent,
+            bgColor: Colors.grey.withOpacity(0.5),
+            height: 200,
+          ),
+        ),
+      ),
+
+      ///AW_CustomIntervalProgressIndicator
+      Hero(
+        tag: 'AW_CustomIntervalProgressIndicator',
+        key: const Key('AW_CustomIntervalProgressIndicator'),
+        child: Material(
+          child: AW_CustomIntervalProgressIndicator(
+            widgetKey: const Key('AW_CustomIntervalProgressIndicator'),
+            majorThickness: 2,
+            bgColor: Colors.blueAccent,
+            betweenColor: Colors.white,
+            lineColor: Colors.white.withOpacity(0.5),
+            separationLines: true,
+            isInversed: true,
+            value: 2,
+            content: const Text('Some data'),
+          ),
+        ),
+      ),
+
+      /// AW_ConsentsListItem
+      Hero(
+        tag: 'AW_ConsentsListItem',
+        key: const Key('AW_ConsentsListItem'),
+        child: Material(
+          child: AW_ConsentsListItem(
+            (int? index) {},
+            onTitleTap: () {},
+            consentTitle: 'Title',
+            declinedBgColor: Colors.blueAccent,
+            activeBgColor: Colors.blueAccent,
+            isToggleSwitched: false,
+            widgetKey: const Key('test_consents_list_item_key'),
+          ),
+        ),
+      ),
     ];
