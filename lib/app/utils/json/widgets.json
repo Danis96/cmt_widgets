@@ -1378,8 +1378,347 @@
           "description": "Whether to change the state of the toggle switch when the consent title is tapped. Defaults to true."
         }
       ]
+    },
+    {
+      "name": "AW_DiscountSquareWidget",
+      "description": "A custom widget that displays a title and three square widgets with different discounts. The discounts can be either percentages or fixed amounts. The widget can be customized with various colors, keys, and styles. The widget can also have an empty state if the discounts are zero.",
+      "parameters": [
+        {
+          "name": "title",
+          "type": "String?",
+          "description": "The text to display as the title of the widget. If null, no title is displayed."
+        },
+        {
+          "name": "topLeftNumber",
+          "type": "int?",
+          "description": "The discount to display in the top left square widget. If null or zero, the square widget is empty."
+        },
+        {
+          "name": "topRightNumber",
+          "type": "int?",
+          "description": "The discount to display in the top right square widget. If null or zero, the square widget is empty."
+        },
+        {
+          "name": "widgetKey",
+          "type": "Key?",
+          "description": "The key to assign to the widget. If null, no key is assigned."
+        },
+        {
+          "name": "price",
+          "type": "String",
+          "description": "The price to display in the bottom square widget. If empty, '...' is displayed. Defaults to '...'."
+        },
+        {
+          "name": "activeBgColor",
+          "type": "Color",
+          "description": "The background color of the square widgets when they are active (have a non-zero discount). Defaults to Color.fromRGBO(6, 62, 89, 1)."
+        },
+        {
+          "name": "declinedBgColor",
+          "type": "Color",
+          "description": "The background color of the square widgets when they are declined (have a zero discount). Defaults to Color.fromRGBO(127, 144, 159, 1)."
+        },
+        {
+          "name": "style",
+          "type": "TextStyle",
+          "description": "The text style to apply to the title of the widget. Defaults to TextStyle(decoration: TextDecoration.underline)."
+        }
+      ]
+    },
+    {
+      "name": "AW_DotContainerWithStates",
+      "description": "A widget that displays a container with a dot. The dot can have different states, represented by the `DotType` enum. The dot can be a full dot, an empty dot, or a dot with a ring. The color of the dot and whether it is active or not can also be specified.",
+      "parameters": [
+        {
+          "name": "type",
+          "type": "DotType",
+          "description": "The type of the dot. It can be `fullDot`, `emptyDot`, or `dotWithRing`."
+        },
+        {
+          "name": "widgetKey",
+          "type": "Key?",
+          "description": "The key for the widget. It can be used to control or determine some aspect of the widget's behavior."
+        },
+        {
+          "name": "dotColor",
+          "type": "Color",
+          "description": "The color of the dot. The default color is black."
+        },
+        {
+          "name": "isNotActiveAncCurrent",
+          "type": "bool",
+          "description": "A flag indicating whether the dot is not active and current. The default value is `false`."
+        }
+      ]
+    },
+    {
+      "name": "AW_ChallengeCardJapan",
+      "description": "A widget that displays a challenge card with various properties. It can show an info icon, display text, show a button on the right corner, and more. It also has properties for action, center, and leading icons and titles, as well as values. The card can be tapped, and it can display a widget at the bottom left.",
+      "parameters": [
+        {
+          "name": "infoIconColor",
+          "type": "Color",
+          "description": "The color of the info icon. The default color is a shade of blue."
+        },
+        {
+          "name": "infoTextStyle",
+          "type": "TextStyle",
+          "description": "The style of the info text. The default style has a font size of 12."
+        },
+        {
+          "name": "showRightCornerBtn",
+          "type": "bool",
+          "description": "Whether to show a button on the right corner. The default value is true."
+        },
+        {
+          "name": "rightCornerBtnStyle",
+          "type": "TextStyle?",
+          "description": "The style of the right corner button."
+        },
+        {
+          "name": "btnDisabled",
+          "type": "bool",
+          "description": "Whether the button is disabled. The default value is false."
+        },
+        {
+          "name": "isParticipating",
+          "type": "bool",
+          "description": "Whether the user is participating. The default value is false."
+        },
+        {
+          "name": "rightCornerBtnFunction",
+          "type": "Function?",
+          "description": "The function to be called when the right corner button is pressed."
+        },
+        {
+          "name": "rightCornerBtnText",
+          "type": "String",
+          "description": "The text of the right corner button. The default text is 'Join'."
+        },
+        {
+          "name": "infoText",
+          "type": "String",
+          "description": "The info text. The default text is 'Sample text'."
+        },
+        {
+          "name": "leftBottomWidget",
+          "type": "Widget?",
+          "description": "The widget to be displayed at the bottom left."
+        },
+        {
+          "name": "cardTap",
+          "type": "Function?",
+          "description": "The function to be called when the card is tapped."
+        },
+        {
+          "name": "actionIcon",
+          "type": "String",
+          "description": "The icon for the action. The default icon is an empty string."
+        },
+        {
+          "name": "actionTitle",
+          "type": "String",
+          "description": "The title for the action. The default title is 'title'."
+        },
+        {
+          "name": "actionValue",
+          "type": "int",
+          "description": "The value for the action. The default value is 0."
+        },
+        {
+          "name": "centerIcon",
+          "type": "String",
+          "description": "The icon for the center. The default icon is an empty string."
+        },
+        {
+          "name": "centerTitle",
+          "type": "String",
+          "description": "The title for the center. The default title is 'title'."
+        },
+        {
+          "name": "centerValue",
+          "type": "int",
+          "description": "The value for the center. The default value is 0."
+        },
+        {
+          "name": "leadingIcon",
+          "type": "String",
+          "description": "The icon for the leading. The default icon is an empty string."
+        },
+        {
+          "name": "leadingTitle",
+          "type": "String",
+          "description": "The title for the leading. The default title is 'title'."
+        },
+        {
+          "name": "leadingValue",
+          "type": "int",
+          "description": "The value for the leading. The default value is 0."
+        },
+        {
+          "name": "titleStyle",
+          "type": "TextStyle",
+          "description": "The style of the title. The default style has a font size of 16, a weight of 700, and a color of blue."
+        },
+        {
+          "name": "titleBottomStyle",
+          "type": "TextStyle",
+          "description": "The style of the bottom title. The default style has a font size of 13, a weight of 400, and a color of black."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title. The default title is 'Sample title'."
+        },
+        {
+          "name": "iconColor",
+          "type": "Color",
+          "description": "The color of the icon. The default color is a shade of blue."
+        },
+        {
+          "name": "bottomRightTitle",
+          "type": "String",
+          "description": "The title at the bottom right. The default title is 'Sample title'."
+        },
+        {
+          "name": "bottomRightTitleStyle",
+          "type": "TextStyle",
+          "description": "The style of the title at the bottom right. The default style has a font size of 11."
+        },
+        {
+          "name": "bottomRightValue",
+          "type": "int",
+          "description": "The value at the bottom right. The default value is 0."
+        },
+        {
+          "name": "userTeamName",
+          "type": "String",
+          "description": "The name of the user's team. The default name is an empty string."
+        },
+        {
+          "name": "challengeTeamNumber",
+          "type": "int",
+          "description": "The number of the challenge team. The default number is 1."
+        },
+        {
+          "name": "downLeftWidget",
+          "type": "Widget",
+          "description": "The widget to be displayed at the bottom left. This parameter is required."
+        },
+        {
+          "name": "isJapan",
+          "type": "bool",
+          "description": "Whether the card is for Japan. The default value is false."
+        }
+      ]
+    },
+    {
+      "name": "AW_ChallengeItemImage",
+      "description": "A widget that displays an image for a challenge item. It includes a title, subtitle, and a join button. The image, title, subtitle, and button title can be customized. The button can also be hidden.",
+      "parameters": [
+        {
+          "name": "widgetKey",
+          "type": "Key?",
+          "description": "The key for the widget. It can be used to control or determine some aspect of the widget's behavior."
+        },
+        {
+          "name": "image",
+          "type": "String",
+          "description": "The URL of the image to display. The default is an empty string."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title to display. The default is an empty string."
+        },
+        {
+          "name": "subtitle",
+          "type": "String",
+          "description": "The subtitle to display. The default is an empty string."
+        },
+        {
+          "name": "showJoinButton",
+          "type": "bool",
+          "description": "Whether to show the join button. The default is true."
+        },
+        {
+          "name": "buttonTitle",
+          "type": "String",
+          "description": "The title of the join button. The default is an empty string."
+        },
+        {
+          "name": "onButtonPressed",
+          "type": "Function?",
+          "description": "The function to be called when the join button is pressed."
+        }
+      ]
+    },
+    {
+      "name": "AW_CheckboxText",
+      "description": "A stateful widget that displays a checkbox with text. The checkbox can be active or inactive, and its color can be customized. The text can be plain or rich text. The widget also has an onChange function that is called when the checkbox is toggled.",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "Key?",
+          "description": "The key for the widget. It can be used to control or determine some aspect of the widget's behavior."
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "description": "The text to display next to the checkbox. This parameter is required."
+        },
+        {
+          "name": "disabled",
+          "type": "bool",
+          "description": "Whether the checkbox is disabled. This parameter is required."
+        },
+        {
+          "name": "newValue",
+          "type": "bool",
+          "description": "The new value of the checkbox. This parameter is required."
+        },
+        {
+          "name": "onChange",
+          "type": "Function",
+          "description": "The function to be called when the checkbox is toggled. This parameter is required."
+        },
+        {
+          "name": "checkBoxIconColor",
+          "type": "Color",
+          "description": "The color of the checkbox icon. The default color is blue."
+        },
+        {
+          "name": "inActiveCheckBoxBgColor",
+          "type": "Color",
+          "description": "The background color of the checkbox when it is inactive. The default color is white."
+        },
+        {
+          "name": "activeCheckBoxBgColor",
+          "type": "Color?",
+          "description": "The background color of the checkbox when it is active."
+        },
+        {
+          "name": "textColor",
+          "type": "Color",
+          "description": "The color of the text. The default color is black."
+        },
+        {
+          "name": "shouldUseRichTest",
+          "type": "bool",
+          "description": "Whether to use rich text. The default value is false."
+        },
+        {
+          "name": "otherText",
+          "type": "String",
+          "description": "Other text to display. The default text is an empty string."
+        },
+        {
+          "name": "richText",
+          "type": "String",
+          "description": "The rich text to display. The default text is an empty string."
+        }
+      ]
     }
-
 
   ]
 }

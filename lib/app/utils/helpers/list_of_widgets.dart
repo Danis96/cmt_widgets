@@ -242,8 +242,8 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
           key: const Key('AW_ButtonWithImageBg'),
           buttonTitle: '',
           disabled: false,
-// buttonColor: Colors.blueAccent,
-          boxDecorationImage: DecorationImage(image: AssetImage(Assets.assetsPrizesPlaceholder), fit: BoxFit.cover),
+          boxDecorationImage:
+              const DecorationImage(image: AssetImage(Assets.assetsPrizesPlaceholder), fit: BoxFit.cover),
           onPressed: () => showInSnackBar('On press function', scaffoldKey, context),
         ),
       ),
@@ -332,7 +332,7 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
             maxValue: 100,
             lineWidth: 0.1,
             contentPadding: 50,
-            content: Text('10%'),
+            content: const Text('10%'),
             lineColor: Colors.blueAccent,
             bgColor: Colors.grey.withOpacity(0.5),
             height: 200,
@@ -373,6 +373,84 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
             isToggleSwitched: false,
             widgetKey: const Key('test_consents_list_item_key'),
           ),
+        ),
+      ),
+
+      ///AW_DiscountSquareWidget
+      const Hero(
+        tag: 'AW_DiscountSquareWidget',
+        key: Key('AW_DiscountSquareWidget'),
+        child: Material(
+          child: AW_DiscountSquareWidget(
+            title: 'Title',
+            topLeftNumber: 40,
+            topRightNumber: 56,
+            widgetKey: Key('AW_DiscountSquareWidget'),
+          ),
+        ),
+      ),
+
+      /// AW_DotContainerWithStates
+      const Hero(
+          tag: 'AW_DotContainerWithStates',
+          key: Key('AW_DotContainerWithStates'),
+          child: AW_DotContainerWithStates(widgetKey: Key('dot_test_key'), type: DotType.dotWithRing)),
+
+      /// AW_ChallengeCardJapan
+      Hero(
+        tag: 'AW_ChallengeCardJapan',
+        key: const Key('AW_ChallengeCardJapan'),
+        child: Material(
+          child: AW_ChallengeCardJapan(
+            title: 'Title',
+            userTeamName: 'User team name',
+            downLeftWidget: const SizedBox(),
+            cardTap: () => showInSnackBar('On press function', scaffoldKey, context),
+            actionValue: 14,
+            actionTitle: 'Team 2',
+            leadingTitle: 'Team 1',
+            centerTitle: 'Team 1',
+            leadingValue: 0,
+            centerValue: 34,
+            infoText: 'Info text',
+            isJapan: true,
+            btnDisabled: false,
+          ),
+        ),
+      ),
+
+      /// AW_ChallengeItemImage
+      Hero(
+        tag: 'AW_ChallengeItemImage',
+        key: const Key('AW_ChallengeItemImage'),
+        child: Material(
+          child: AW_ChallengeItemImage(
+            title: 'Title',
+            widgetKey: const Key('AW_ChallengeItemImage'),
+            subtitle: 'Subtitle',
+            buttonTitle: 'X',
+            showJoinButton: true,
+            onButtonPressed: () => showInSnackBar('On press function', scaffoldKey, context),
+            image:
+                'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b9b4a63a-77eb-41cd-96c7-e7a7e1e3de5d/dgwlw8y-75840cf6-fbcf-4a85-bd05-f3b7113cce6a.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2I5YjRhNjNhLTc3ZWItNDFjZC05NmM3LWU3YTdlMWUzZGU1ZFwvZGd3bHc4eS03NTg0MGNmNi1mYmNmLTRhODUtYmQwNS1mM2I3MTEzY2NlNmEuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Yifzls5KbYNoqbeZQXJuvpxMz4RZxinLlpLqSVMul6U',
+          ),
+        ),
+      ),
+
+      /// AW_ChallengeItemImage
+      Hero(
+        tag: 'AW_CheckboxText',
+        key: const Key('AW_CheckboxText'),
+        child: AW_CheckboxText(
+          text: 'Text',
+          disabled: false,
+          otherText: 'Check text',
+          shouldUseRichTest: true,
+          richText: '1: ',
+          checkBoxIconColor: Colors.blueAccent,
+          key: const Key('AW_CheckboxText'),
+          newValue: true,
+          onChange: (bool v) => showInSnackBar('On press function', scaffoldKey, context),
         ),
       ),
     ];
