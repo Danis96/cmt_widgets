@@ -716,4 +716,106 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
           ),
         ),
       ),
+
+      /// AW_InboxReplyItem
+      const Hero(
+        tag: 'AW_InboxReplyItem',
+        key: Key('AW_InboxReplyItem'),
+        child: Material(
+          child: AW_InboxReplyItem(
+            key: Key('AW_InboxReplyItem'),
+            dateTime: '06.03.',
+            textContent: 'Text content content content content content content',
+            imageUrl:
+                'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/82114837-0066-42c3-990d-755b33d0743a/dgw053q-46b09f3e-36a2-4975-a767-df22c40451ca.jpg/v1/fill/w_1192,h_670,q_70,strp/swamp_dragon_by_travis_anderson_dgw053q-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTAwIiwicGF0aCI6IlwvZlwvODIxMTQ4MzctMDA2Ni00MmMzLTk5MGQtNzU1YjMzZDA3NDNhXC9kZ3cwNTNxLTQ2YjA5ZjNlLTM2YTItNDk3NS1hNzY3LWRmMjJjNDA0NTFjYS5qcGciLCJ3aWR0aCI6Ijw9MTYwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19._SNnsEcUHyx863Ph0fXfTXB5CO_SjLlLcwM3nZbPak8',
+          ),
+        ),
+      ),
+
+      /// AW_InboxReplyItemNew
+      const Hero(
+        tag: 'AW_InboxReplyItemNew',
+        key: Key('AW_InboxReplyItemNew'),
+        child: Material(
+          child: AW_InboxReplyItemNew(
+            key: Key('AW_InboxReplyItemNew'),
+            dateTime: '06.03.',
+            actionButtonLabel: 'Action',
+            textContent: 'Text content content content content content content',
+          ),
+        ),
+      ),
+
+      /// AW_ProgressBarWithPoints
+      const Hero(
+        tag: 'AW_ProgressBarWithPoints',
+        key: Key('AW_ProgressBarWithPoints'),
+        child: Material(
+          child: AW_ProgressBarWithPoints(
+            widgetKey: Key('AW_ProgressBarWithPoints'),
+            progress: 0.6,
+            backgroundStrokeCap: StrokeCap.round,
+            progressStrokeWidth: 6,
+            points: <double>[0.5, 0.75],
+            pointColor: Colors.white,
+            progressColor: Colors.red,
+            backgroundColor: Colors.grey,
+            backgroundStrokeWidth: 6,
+            progressStrokeCap: StrokeCap.round,
+          ),
+        ),
+      ),
+
+      /// AW_LinearPercentageWithLabelsAndImage
+      const Hero(
+        tag: 'AW_LinearPercentageWithLabelsAndImage',
+        key: Key('AW_LinearPercentageWithLabelsAndImage'),
+        child: Material(
+            child: AW_LinearPercentageWithLabelsAndImage(
+          widgetKey: Key('driving_score_discount_progress_test_key'),
+          title: 'Driving score: ',
+          points: <double>[0.5, 0.75],
+          progressColor: Colors.red,
+          discountCondition: '82',
+          progress: 82,
+          progressStrokeCap: StrokeCap.round,
+        )),
+      ),
+
+      /// AW_DemoNewsItem
+      Hero(
+        tag: 'AW_DemoNewsItem',
+        key: const Key('AW_DemoNewsItem'),
+        child: Material(
+            child: AW_DemoNewsItem(
+          key: const Key('AW_DemoNewsItem'),
+          date: 'Sep 28, 2022',
+          title: 'Title',
+          imageFit: BoxFit.fill,
+          description:
+              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+          icon: Icons.add,
+          image:
+              'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b07363b1-b254-4d60-8ff1-8db38b9139cf/dgvx3fy-78f7d6df-ae6f-488a-b7d0-774114432ca5.jpg/v1/fill/w_894,h_894,q_70,strp/car_orange__by_bulmiro_dgvx3fy-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcL2IwNzM2M2IxLWIyNTQtNGQ2MC04ZmYxLThkYjM4YjkxMzljZlwvZGd2eDNmeS03OGY3ZDZkZi1hZTZmLTQ4OGEtYjdkMC03NzQxMTQ0MzJjYTUuanBnIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.oH1jE2OgiQK-6Z1deMiFebry7LynaKD7YAddmmd-lXM',
+          onTap: () => showInSnackBar('On press function', scaffoldKey, context),
+        )),
+      ),
+
+      /// AW_NewsVerticalListItem
+      Hero(
+        tag: 'AW_NewsVerticalListItem',
+        key: const Key('AW_NewsVerticalListItem'),
+        child: Material(
+            child: AW_NewsVerticalListItem(
+          onTap: () => showInSnackBar('On press function', scaffoldKey, context),
+          title: 'Title',
+          leadText: 'Lead text',
+          readMoreText: 'Read more',
+          imageUrl:
+              'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/15601231-7c5b-425c-a12a-fc48868e6c49/dcs4s8c-f685f348-42ec-4e65-8fad-148541d62e62.jpg/v1/fill/w_893,h_895,q_70,strp/cube_secret_by_djape028_dcs4s8c-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNiIsInBhdGgiOiJcL2ZcLzE1NjAxMjMxLTdjNWItNDI1Yy1hMTJhLWZjNDg4NjhlNmM0OVwvZGNzNHM4Yy1mNjg1ZjM0OC00MmVjLTRlNjUtOGZhZC0xNDg1NDFkNjJlNjIuanBnIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.oR3ijihHANl6F4A2p4uj4PRTuScvcJUnS8NCSNrDK2c',
+          leadTextStyle: Theme.of(context).textTheme.titleSmall!.copyWith(fontSize: 14.0),
+          readMoreTextStyle:
+              Theme.of(context).textTheme.displayMedium!.copyWith(fontSize: 14.0, color: Colors.black38),
+        )),
+      ),
     ];

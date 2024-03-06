@@ -56,7 +56,7 @@ class _HomePageState extends State<HomePage> {
   Widget _buildBody(BuildContext context, GlobalKey<ScaffoldState> scaffoldKey) {
     return Center(
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 2),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

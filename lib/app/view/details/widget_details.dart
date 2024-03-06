@@ -44,7 +44,7 @@ class WidgetDetails extends StatelessWidget {
         const SizedBox(height: 50),
         listOfWidgets(context, _scaffoldKey)
             .firstWhere((element) => element.key.toString().contains(widgetStore.singleWidget.name)),
-        const SizedBox(height: 40),
+        const SizedBox(height: 10),
         _buildDescription(context),
         const SizedBox(height: 50),
         Text(

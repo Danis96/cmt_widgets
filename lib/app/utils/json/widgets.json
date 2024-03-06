@@ -2817,7 +2817,429 @@
           "description": "The color of the date/time when the inbox list item is unread."
         }
       ]
+    },
+    {
+      "name": "AW_InboxReplyItem",
+      "description": "AW_InboxReplyItem is a StatelessWidget that represents an inbox reply item. It has various properties that can be customized such as sentAt, iconUrl, imageUrl, dateTime, textContent, actionButtonLabel, actionParameter, actionType, htmlContent, htmlContentColor, linkAction, dateTimeTextStyle, tappableTextStyle, tappableLinkTextStyle, textContentTextStyle, and useCached.",
+      "parameters": [
+        {
+          "name": "sentAt",
+          "type": "double",
+          "description": "The time at which the reply was sent."
+        },
+        {
+          "name": "iconUrl",
+          "type": "String",
+          "description": "The URL of the icon to be displayed."
+        },
+        {
+          "name": "imageUrl",
+          "type": "String",
+          "description": "The URL of the image to be displayed."
+        },
+        {
+          "name": "dateTime",
+          "type": "String",
+          "description": "The date and time of the reply."
+        },
+        {
+          "name": "textContent",
+          "type": "String",
+          "description": "The content of the text in the reply."
+        },
+        {
+          "name": "actionButtonLabel",
+          "type": "String",
+          "description": "The label of the action button."
+        },
+        {
+          "name": "actionParameter",
+          "type": "String",
+          "description": "The parameter for the action."
+        },
+        {
+          "name": "actionType",
+          "type": "String",
+          "description": "The type of the action."
+        },
+        {
+          "name": "htmlContent",
+          "type": "String",
+          "description": "The HTML content of the reply."
+        },
+        {
+          "name": "htmlContentColor",
+          "type": "Color",
+          "description": "The color of the HTML content."
+        },
+        {
+          "name": "linkAction",
+          "type": "Function",
+          "description": "The action to be performed when the link is clicked."
+        },
+        {
+          "name": "dateTimeTextStyle",
+          "type": "TextStyle",
+          "description": "The style of the date and time text."
+        },
+        {
+          "name": "tappableTextStyle",
+          "type": "TextStyle",
+          "description": "The style of the tappable text."
+        },
+        {
+          "name": "tappableLinkTextStyle",
+          "type": "TextStyle",
+          "description": "The style of the tappable link text."
+        },
+        {
+          "name": "textContentTextStyle",
+          "type": "TextStyle",
+          "description": "The style of the text content."
+        },
+        {
+          "name": "useCached",
+          "type": "bool",
+          "description": "Whether to use cached data or not."
+        }
+      ]
+    },
+    {
+      "name": "AW_InboxReplyItemNew",
+      "description": "AW_InboxReplyItemNew is a StatelessWidget that represents an inbox reply item. It has various properties that can be customized such as sentAt, iconUrl, imageUrl, dateTime, textContent, actionButtonLabel, actionParameter, actionType, htmlContent, htmlContentColor, linkAction, dateTimeTextStyle, tappableTextStyle, tappableLinkTextStyle, textContentTextStyle, and padding.",
+      "parameters": [
+        {
+          "name": "sentAt",
+          "type": "double",
+          "description": "The time at which the reply was sent."
+        },
+        {
+          "name": "iconUrl",
+          "type": "String",
+          "description": "The URL of the icon to be displayed."
+        },
+        {
+          "name": "imageUrl",
+          "type": "String",
+          "description": "The URL of the image to be displayed."
+        },
+        {
+          "name": "dateTime",
+          "type": "String",
+          "description": "The date and time of the reply."
+        },
+        {
+          "name": "textContent",
+          "type": "String",
+          "description": "The content of the text in the reply."
+        },
+        {
+          "name": "actionButtonLabel",
+          "type": "String",
+          "description": "The label of the action button."
+        },
+        {
+          "name": "actionParameter",
+          "type": "String",
+          "description": "The parameter for the action."
+        },
+        {
+          "name": "actionType",
+          "type": "String",
+          "description": "The type of the action."
+        },
+        {
+          "name": "htmlContent",
+          "type": "String",
+          "description": "The HTML content of the reply."
+        },
+        {
+          "name": "htmlContentColor",
+          "type": "Color",
+          "description": "The color of the HTML content."
+        },
+        {
+          "name": "linkAction",
+          "type": "Function",
+          "description": "The action to be performed when the link is clicked."
+        },
+        {
+          "name": "dateTimeTextStyle",
+          "type": "TextStyle",
+          "description": "The style of the date and time text."
+        },
+        {
+          "name": "tappableTextStyle",
+          "type": "TextStyle",
+          "description": "The style of the tappable text."
+        },
+        {
+          "name": "tappableLinkTextStyle",
+          "type": "TextStyle",
+          "description": "The style of the tappable link text."
+        },
+        {
+          "name": "textContentTextStyle",
+          "type": "TextStyle",
+          "description": "The style of the text content."
+        },
+        {
+          "name": "padding",
+          "type": "EdgeInsets",
+          "description": "The padding around the widget."
+        }
+      ]
+    },
+    {
+      "name": "AW_ProgressBarWithPoints",
+      "description": "AW_ProgressBarWithPoints is a StatefulWidget that represents a progress bar with points. It has various properties that can be customized such as widgetKey, start, progress, progressColor, backgroundColor, progressStrokeWidth, backgroundStrokeWidth, progressStrokeCap, backgroundStrokeCap, pointColor, and points.",
+      "parameters": [
+        {
+          "name": "widgetKey",
+          "type": "Key?",
+          "description": "The key for the widget."
+        },
+        {
+          "name": "start",
+          "type": "double",
+          "description": "The start value of the progress bar."
+        },
+        {
+          "name": "progress",
+          "type": "double",
+          "description": "The progress value of the progress bar."
+        },
+        {
+          "name": "progressColor",
+          "type": "Color",
+          "description": "The color of the progress bar."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color of the progress bar."
+        },
+        {
+          "name": "progressStrokeWidth",
+          "type": "double",
+          "description": "The stroke width of the progress bar."
+        },
+        {
+          "name": "backgroundStrokeWidth",
+          "type": "double",
+          "description": "The stroke width of the background."
+        },
+        {
+          "name": "progressStrokeCap",
+          "type": "StrokeCap",
+          "description": "The stroke cap of the progress bar."
+        },
+        {
+          "name": "backgroundStrokeCap",
+          "type": "StrokeCap",
+          "description": "The stroke cap of the background."
+        },
+        {
+          "name": "pointColor",
+          "type": "Color",
+          "description": "The color of the points on the progress bar."
+        },
+        {
+          "name": "points",
+          "type": "List<double>",
+          "description": "The points on the progress bar."
+        }
+      ]
+    },
+    {
+      "name": "AW_LinearPercentageWithLabelsAndImage",
+      "description": "AW_LinearPercentageWithLabelsAndImage is a StatelessWidget that represents a linear percentage bar with labels and an image. It has various properties that can be customized such as widgetKey, discountCondition, progressColor, points, title, progress, progressStrokeCap, and checkCondition.",
+      "parameters": [
+        {
+          "name": "widgetKey",
+          "type": "Key?",
+          "description": "The key for the widget."
+        },
+        {
+          "name": "discountCondition",
+          "type": "String?",
+          "description": "The condition for the discount."
+        },
+        {
+          "name": "progress",
+          "type": "double?",
+          "description": "The progress value of the progress bar."
+        },
+        {
+          "name": "points",
+          "type": "List<double>?",
+          "description": "The points on the progress bar."
+        },
+        {
+          "name": "progressColor",
+          "type": "Color",
+          "description": "The color of the progress bar."
+        },
+        {
+          "name": "title",
+          "type": "String?",
+          "description": "The title of the widget."
+        },
+        {
+          "name": "progressStrokeCap",
+          "type": "StrokeCap",
+          "description": "The stroke cap of the progress bar."
+        },
+        {
+          "name": "checkCondition",
+          "type": "bool",
+          "description": "A flag indicating whether to check the condition or not."
+        }
+      ]
+    },
+    {
+      "name": "AW_DemoNewsItem",
+      "description": "This is a StatelessWidget that displays a news item. It has several customizable parameters for flexibility.",
+      "parameters": [
+        {
+          "name": "onTap",
+          "type": "VoidCallback",
+          "description": "The function to be executed when the widget is tapped."
+        },
+        {
+          "name": "date",
+          "type": "String",
+          "description": "The date of the news item."
+        },
+        {
+          "name": "image",
+          "type": "String",
+          "description": "The URL of the image of the news item."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the news item."
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "description": "The description of the news item."
+        },
+        {
+          "name": "icon",
+          "type": "IconData",
+          "description": "The icon of the news item."
+        },
+        {
+          "name": "titleStyle",
+          "type": "TextStyle",
+          "description": "The style of the title text."
+        },
+        {
+          "name": "descriptionStyle",
+          "type": "TextStyle",
+          "description": "The style of the description text."
+        },
+        {
+          "name": "dateStyle",
+          "type": "TextStyle",
+          "description": "The style of the date text."
+        },
+        {
+          "name": "height",
+          "type": "double",
+          "description": "The height of the widget."
+        },
+        {
+          "name": "imageHeight",
+          "type": "double",
+          "description": "The height of the image."
+        },
+        {
+          "name": "imageWidth",
+          "type": "double",
+          "description": "The width of the image."
+        },
+        {
+          "name": "imageFit",
+          "type": "BoxFit",
+          "description": "How the image should be inscribed into the box."
+        },
+        {
+          "name": "bannerColor",
+          "type": "Color",
+          "description": "The color of the banner."
+        },
+        {
+          "name": "bannerOpacity",
+          "type": "double",
+          "description": "The opacity of the banner."
+        },
+        {
+          "name": "iconRadius",
+          "type": "double",
+          "description": "The radius of the icon."
+        },
+        {
+          "name": "emptyPlaceholder",
+          "type": "Widget?",
+          "description": "The placeholder widget when the news item is empty."
+        }
+      ]
+    },
+    {
+      "name": "AW_NewsVerticalListItem",
+      "description": "This is a StatelessWidget that displays a vertical list item for news. It has several customizable parameters for flexibility.",
+      "parameters": [
+        {
+          "name": "onTap",
+          "type": "Function?",
+          "description": "The function to be executed when the widget is tapped."
+        },
+        {
+          "name": "imageUrl",
+          "type": "String?",
+          "description": "The URL of the image of the news item."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the news item."
+        },
+        {
+          "name": "leadText",
+          "type": "String",
+          "description": "The lead text of the news item."
+        },
+        {
+          "name": "readMoreText",
+          "type": "String",
+          "description": "The read more text of the news item."
+        },
+        {
+          "name": "titleTextStyle",
+          "type": "TextStyle",
+          "description": "The style of the title text."
+        },
+        {
+          "name": "leadTextStyle",
+          "type": "TextStyle",
+          "description": "The style of the lead text."
+        },
+        {
+          "name": "readMoreTextStyle",
+          "type": "TextStyle",
+          "description": "The style of the read more text."
+        },
+        {
+          "name": "dividerColor",
+          "type": "Color",
+          "description": "The color of the divider."
+        }
+      ]
     }
+
 
   ]
 }
