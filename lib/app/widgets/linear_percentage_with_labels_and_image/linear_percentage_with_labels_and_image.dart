@@ -50,7 +50,6 @@ class AW_LinearPercentageWithLabelsAndImage extends StatelessWidget {
               ),
             ),
             const SizedBox(width: 16),
-            Container(child: SvgPicture.asset(checkCondition ? 'assets/ic_discount_check.svg' : 'assets/ic_discount_x.svg')),
           ],
         ),
       ],

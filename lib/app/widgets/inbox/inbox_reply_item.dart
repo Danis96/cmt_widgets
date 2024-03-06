@@ -51,20 +51,22 @@ class AW_InboxReplyItem extends StatelessWidget {
             children: <Widget>[
               _returnIconCircle(),
               const SizedBox(width: 8.0),
-              Container(
-                constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.85 - 74),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    _returnTextContentReply(),
-                    if (htmlContent.isNotEmpty) _returnHtmlContentReply(),
-                    if ((actionParameter.isNotEmpty) || (actionButtonLabel.isNotEmpty) || (actionType.isNotEmpty)) _returnActionReply(),
-                    if (imageUrl.isNotEmpty)
-                      Padding(
-                        padding: const EdgeInsets.only(top: 30),
-                        child: _returnImageReply(),
-                      )
-                  ],
+              Expanded(
+                child: Container(
+                  constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.85 - 74),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      _returnTextContentReply(),
+                      if (htmlContent.isNotEmpty) _returnHtmlContentReply(),
+                      if ((actionParameter.isNotEmpty) || (actionButtonLabel.isNotEmpty) || (actionType.isNotEmpty)) _returnActionReply(),
+                      if (imageUrl.isNotEmpty)
+                        Padding(
+                          padding: const EdgeInsets.only(top: 20),
+                          child: _returnImageReply(),
+                        )
+                    ],
+                  ),
                 ),
               ),
             ],
