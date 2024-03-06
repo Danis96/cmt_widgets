@@ -1,0 +1,2823 @@
+{
+  "widgets": [
+    {
+      "name": "AW_AppBarIconTitleIcon",
+      "description": "The AW_AppBarIconTitleIcon is a highly customizable AppBar widget that allows for a variety of modifications including the title, leading icon, action widget, and more. It provides flexibility in design with options for centering the title, changing the background color, adding a bottom widget, and even replacing the title or leading icon with custom widgets.",
+      "parameters": [
+        {
+          "name": "title",
+          "type": "String",
+          "description": "Title text to display in the app bar."
+        },
+        {
+          "name": "implyLeading",
+          "type": "bool",
+          "description": "Whether to automatically show a leading icon (e.g., back arrow)."
+        },
+        {
+          "name": "implyAction",
+          "type": "bool",
+          "description": "Whether to automatically show an action icon (e.g., settings)."
+        },
+        {
+          "name": "centerTitle",
+          "type": "bool",
+          "description": "Whether to center the title text."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "Background color of the app bar."
+        },
+        {
+          "name": "titleColor",
+          "type": "Color",
+          "description": "Color of the title text."
+        },
+        {
+          "name": "onActionPressed",
+          "type": "Function",
+          "description": "Callback function to be executed when the action icon is pressed."
+        },
+        {
+          "name": "onLeadingPressed",
+          "type": "Function",
+          "description": "Callback function to be executed when the leading icon is pressed."
+        },
+        {
+          "name": "leadingIcon",
+          "type": "IconData",
+          "description": "Optional leading icon data (e.g., for back arrow)."
+        },
+        {
+          "name": "actionWidget",
+          "type": "Widget",
+          "description": "Optional custom widget to use as the action icon."
+        },
+        {
+          "name": "actionKey",
+          "type": "Key",
+          "description": "Optional key for the action widget."
+        },
+        {
+          "name": "leadingIconColor",
+          "type": "Color",
+          "description": "Color of the leading icon."
+        },
+        {
+          "name": "arrowLeftMargin",
+          "type": "double",
+          "description": "Left margin for the leading icon."
+        },
+        {
+          "name": "leadingWidth",
+          "type": "double",
+          "description": "Optional width of the leading icon."
+        },
+        {
+          "name": "bottomWidget",
+          "type": "PreferredSizeWidget",
+          "description": "Optional widget to display below the app bar content."
+        },
+        {
+          "name": "shape",
+          "type": "ShapeBorder",
+          "description": "Optional shape border for the app bar."
+        },
+        {
+          "name": "titleWidget",
+          "type": "Widget",
+          "description": "Optional widget to replace the title text."
+        },
+        {
+          "name": "leadingWidget",
+          "type": "Widget",
+          "description": "Optional widget to replace the leading icon."
+        },
+        {
+          "name": "useTheme",
+          "type": "bool",
+          "description": "Whether to use the current theme for styling."
+        },
+        {
+          "name": "elevation",
+          "type": "double",
+          "description": "Elevation shadow of the app bar."
+        },
+        {
+          "name": "shadowColor",
+          "type": "Color",
+          "description": "Color of the elevation shadow."
+        }
+      ]
+    },
+    {
+      "name": "AW_AppBarIconLogoImage",
+      "description": "The AW_AppBarIconLogoImage is a customizable AppBar widget that includes a leading icon, a logo, and a profile image. It provides options for user interaction through various onTap functions, and allows for a high degree of visual customization with options for background color, leading icon color, and the ability to add additional action widgets.",
+      "parameters": [
+        {
+          "name": "context",
+          "type": "BuildContext",
+          "description": "The build context."
+        },
+        {
+          "name": "logo",
+          "type": "String",
+          "description": "The logo of the app bar."
+        },
+        {
+          "name": "profileImage",
+          "type": "String",
+          "description": "The profile image to display."
+        },
+        {
+          "name": "leadingIcon",
+          "type": "IconData",
+          "description": "The icon to display on the leading."
+        },
+        {
+          "name": "onLeadingPressed",
+          "type": "Function",
+          "description": "The function to call when the leading icon is pressed."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color of the app bar."
+        },
+        {
+          "name": "leadingColor",
+          "type": "Color",
+          "description": "The color of the leading icon."
+        },
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "The widget key."
+        },
+        {
+          "name": "leadingKey",
+          "type": "Key",
+          "description": "The key for the leading icon."
+        },
+        {
+          "name": "profileImageKey",
+          "type": "Key",
+          "description": "The key for the profile image."
+        },
+        {
+          "name": "userInitials",
+          "type": "String",
+          "description": "The initials of the user."
+        },
+        {
+          "name": "onProfileImgTap",
+          "type": "Function",
+          "description": "The function to call when the profile image is tapped."
+        },
+        {
+          "name": "actionWidget",
+          "type": "List<Widget>",
+          "description": "The list of action widgets."
+        },
+        {
+          "name": "onActionTap",
+          "type": "Function",
+          "description": "The function to call when an action widget is tapped."
+        },
+        {
+          "name": "onBatteryTap",
+          "type": "Function",
+          "description": "The function to call when the battery icon is tapped."
+        },
+        {
+          "name": "isOnlyProfileImg",
+          "type": "bool",
+          "description": "Whether to only show the profile image."
+        }
+      ]
+    },
+    {
+      "name": "AW_VerticalWidgetsAppBar",
+      "description": "This is a AW_VerticalWidgetsAppBar with a vertical widgets app bar. It has several parameters that can be customized.",
+      "parameters": [
+        {
+          "name": "context",
+          "type": "BuildContext",
+          "description": "The build context."
+        },
+        {
+          "name": "key",
+          "type": "Key",
+          "description": "The widget key."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color of the app bar."
+        },
+        {
+          "name": "titleColor",
+          "type": "Color",
+          "description": "The color of the title."
+        },
+        {
+          "name": "onLeadingPressed",
+          "type": "Function",
+          "description": "The function to call when the leading icon is pressed."
+        },
+        {
+          "name": "actions",
+          "type": "List<Widget>",
+          "description": "The list of action widgets."
+        },
+        {
+          "name": "leadingIcon",
+          "type": "IconData",
+          "description": "The icon to display on the leading."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the app bar."
+        },
+        {
+          "name": "bottomWidget",
+          "type": "PreferredSizeWidget",
+          "description": "The widget to display at the bottom of the app bar."
+        },
+        {
+          "name": "centerTitle",
+          "type": "bool",
+          "description": "Whether to center the title."
+        },
+        {
+          "name": "elevation",
+          "type": "double",
+          "description": "The elevation of the app bar."
+        }
+      ]
+    },
+    {
+      "name": "AW_IconImageTextIconAlignLeftAppBar",
+      "description": "The AW_IconImageTextIconAlignLeftAppBar is a customizable AppBar widget that features a leading icon, title text, and a right icon, with an optional circular image between the leading icon and the title. It provides a high degree of customization, including control over the background color, title text style, elevation, and the ability to specify custom functions for the leading icon and right icon’s onPressed events.",
+      "parameters": [
+        {
+          "name": "context",
+          "type": "BuildContext",
+          "description": "The build context."
+        },
+        {
+          "name": "key",
+          "type": "Key",
+          "description": "The widget key."
+        },
+        {
+          "name": "onBack",
+          "type": "Function",
+          "description": "The function to call when the back button is pressed."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color of the app bar."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the app bar."
+        },
+        {
+          "name": "onDelete",
+          "type": "Function",
+          "description": "The function to call when the delete button is pressed."
+        },
+        {
+          "name": "shouldShowImage",
+          "type": "bool",
+          "description": "Whether to show the image."
+        },
+        {
+          "name": "imageUrl",
+          "type": "String",
+          "description": "The URL of the image to display."
+        },
+        {
+          "name": "titleTextStyle",
+          "type": "TextStyle",
+          "description": "The text style of the title."
+        },
+        {
+          "name": "rightIcon",
+          "type": "Icon",
+          "description": "The icon to display on the right."
+        },
+        {
+          "name": "leadingIcon",
+          "type": "Icon",
+          "description": "The icon to display on the leading."
+        },
+        {
+          "name": "elevation",
+          "type": "double",
+          "description": "The elevation of the app bar."
+        },
+        {
+          "name": "useCached",
+          "type": "bool",
+          "description": "Whether to use cached network image."
+        }
+      ]
+    },
+    {
+      "name": "AW_AlertCard",
+      "description": "A custom StatelessWidget that displays an alert card with an icon, title, and status. The card has a customizable color and can optionally display the title text.",
+      "parameters": [
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "A key that uniquely identifies this widget."
+        },
+        {
+          "name": "icon",
+          "type": "String",
+          "description": "The asset name of the icon to display."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title text to display."
+        },
+        {
+          "name": "status",
+          "type": "String",
+          "description": "The status text to display."
+        },
+        {
+          "name": "statusColor",
+          "type": "Color",
+          "description": "The color of the status text. Defaults to a shade of blue."
+        },
+        {
+          "name": "statusColorContainer",
+          "type": "Color",
+          "description": "The color of the status text container. Defaults to a lighter shade of blue."
+        },
+        {
+          "name": "shouldSHowTitleText",
+          "type": "bool",
+          "description": "A flag that determines whether the title text should be displayed. Defaults to false."
+        }
+      ]
+    },
+    {
+      "name": "AW_CustomBadge",
+      "description": "A custom StatelessWidget that displays a badge with an image and a footer text. The badge has a customizable color, size, and appearance, and it can show an animation.",
+      "parameters": [
+        {
+          "name": "animation",
+          "type": "bool",
+          "description": "A flag that determines whether the badge should show an animation."
+        },
+        {
+          "name": "hasTitle",
+          "type": "bool",
+          "description": "A flag that determines whether the badge should display the title text."
+        },
+        {
+          "name": "isUnlocked",
+          "type": "bool",
+          "description": "A flag that determines whether the badge is unlocked."
+        },
+        {
+          "name": "backgroundWidth",
+          "type": "double",
+          "description": "The width of the badge's background."
+        },
+        {
+          "name": "lineWidth",
+          "type": "double",
+          "description": "The width of the badge's line."
+        },
+        {
+          "name": "percent",
+          "type": "double",
+          "description": "The percentage of the badge's progress."
+        },
+        {
+          "name": "radiusImage",
+          "type": "double",
+          "description": "The radius of the badge's image."
+        },
+        {
+          "name": "circularRadius",
+          "type": "double",
+          "description": "The radius of the badge's circular shape."
+        },
+        {
+          "name": "fontSize",
+          "type": "double",
+          "description": "The font size of the badge's text."
+        },
+        {
+          "name": "progressColor",
+          "type": "Color",
+          "description": "The color of the badge's progress indicator."
+        },
+        {
+          "name": "footerText",
+          "type": "String",
+          "description": "The footer text to display on the badge."
+        },
+        {
+          "name": "imageUrl",
+          "type": "String",
+          "description": "The URL of the image to display on the badge."
+        },
+        {
+          "name": "lockedImage",
+          "type": "String",
+          "description": "The URL of the image to display when the badge is locked."
+        },
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "A key that uniquely identifies this widget."
+        },
+        {
+          "name": "maxLines",
+          "type": "int",
+          "description": "The maximum number of lines for the badge's text."
+        },
+        {
+          "name": "footerStyle",
+          "type": "TextStyle",
+          "description": "The text style of the badge's footer."
+        },
+        {
+          "name": "innerPadding",
+          "type": "EdgeInsets",
+          "description": "The inner padding of the badge."
+        },
+        {
+          "name": "titleSpacing",
+          "type": "double",
+          "description": "The spacing between the title and the badge."
+        },
+        {
+          "name": "width",
+          "type": "double",
+          "description": "The width of the badge."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color of the badge."
+        },
+        {
+          "name": "sameRadiusOfImageAndProgress",
+          "type": "bool",
+          "description": "A flag that determines whether the radius of the image and the progress indicator should be the same."
+        }
+      ]
+    },
+    {
+      "name": "AW_BadgeBackground",
+      "description": "The AW_BadgeBackground is a custom StatelessWidget that displays a badge with an image and a footer text. The badge has a customizable color, size, and appearance, and it can show an animation.The badge’s appearance, including its colors, line width, and radius, are all customizable. The badge can also show an animation, which is controlled by the animation property.This widget is highly customizable and can be adapted to fit a variety of use cases.",
+      "parameters": [
+        {
+          "name": "animation",
+          "type": "bool",
+          "description": "A flag that determines whether the badge should show an animation."
+        },
+        {
+          "name": "hasTitle",
+          "type": "bool",
+          "description": "A flag that determines whether the badge should display the title text."
+        },
+        {
+          "name": "isUnlocked",
+          "type": "bool",
+          "description": "A flag that determines whether the badge is unlocked."
+        },
+        {
+          "name": "lineWidth",
+          "type": "double",
+          "description": "The width of the badge's line."
+        },
+        {
+          "name": "percent",
+          "type": "double",
+          "description": "The percentage of the badge's progress."
+        },
+        {
+          "name": "radiusImage",
+          "type": "double",
+          "description": "The radius of the badge's image."
+        },
+        {
+          "name": "fontSize",
+          "type": "double",
+          "description": "The font size of the badge's text."
+        },
+        {
+          "name": "progressColor",
+          "type": "Color",
+          "description": "The color of the badge's progress indicator."
+        },
+        {
+          "name": "footerText",
+          "type": "String",
+          "description": "The footer text to display on the badge."
+        },
+        {
+          "name": "imageUrl",
+          "type": "String",
+          "description": "The URL of the image to display on the badge."
+        },
+        {
+          "name": "lockedImage",
+          "type": "String",
+          "description": "The URL of the image to display when the badge is locked."
+        },
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "A key that uniquely identifies this widget."
+        },
+        {
+          "name": "maxLines",
+          "type": "int",
+          "description": "The maximum number of lines for the badge's text."
+        },
+        {
+          "name": "footerStyle",
+          "type": "TextStyle",
+          "description": "The text style of the badge's footer."
+        },
+        {
+          "name": "innerPadding",
+          "type": "EdgeInsets",
+          "description": "The inner padding of the badge."
+        },
+        {
+          "name": "titleSpacing",
+          "type": "double",
+          "description": "The spacing between the title and the badge."
+        },
+        {
+          "name": "width",
+          "type": "double",
+          "description": "The width of the badge."
+        },
+        {
+          "name": "lockedBackgroundColor",
+          "type": "Color",
+          "description": "The background color of the badge when it is locked."
+        },
+        {
+          "name": "unlockedBackgroundColor",
+          "type": "Color",
+          "description": "The background color of the badge when it is unlocked."
+        },
+        {
+          "name": "spaceAround",
+          "type": "bool",
+          "description": "A flag that determines whether the badge should have space around it."
+        },
+        {
+          "name": "badgeOnly",
+          "type": "bool",
+          "description": "A flag that determines whether only the badge should be displayed."
+        }
+      ]
+    },
+    {
+      "name": "AW_IconTextBanner",
+      "description": "A custom StatelessWidget that displays a banner with an icon and a title. The banner has a customizable color, text style, and appearance. It can also handle tap events.",
+      "parameters": [
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title text to display on the banner."
+        },
+        {
+          "name": "icon",
+          "type": "IconData",
+          "description": "The icon to display on the banner."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color of the banner."
+        },
+        {
+          "name": "textColor",
+          "type": "Color",
+          "description": "The color of the banner's text."
+        },
+        {
+          "name": "iconColor",
+          "type": "Color",
+          "description": "The color of the banner's icon."
+        },
+        {
+          "name": "textStyle",
+          "type": "TextStyle",
+          "description": "The text style of the banner's text."
+        },
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "A key that uniquely identifies this widget."
+        },
+        {
+          "name": "onTap",
+          "type": "VoidCallback",
+          "description": "A callback that is called when the banner is tapped."
+        }
+      ]
+    },
+    {
+      "name": "AW_BluetoothState",
+      "description": "A stateless widget that displays the Bluetooth state. It shows an image and a colored dot based on the Bluetooth state. The widget is clickable and can trigger a function on tap.",
+      "parameters": [
+        {
+          "name": "widgetKey",
+          "type": "Key?",
+          "description": "A key that uniquely identifies this widget."
+        },
+        {
+          "name": "bluetoothImage",
+          "type": "String?",
+          "description": "The path to the Bluetooth image asset."
+        },
+        {
+          "name": "bluetoothState",
+          "type": "BluetoothState",
+          "description": "The current state of the Bluetooth connection. It can be one of the following: notPaired, pairedAndInRange, pairedAndNotInRange, bluetoothDisabled."
+        },
+        {
+          "name": "onTap",
+          "type": "Function?",
+          "description": "A function that is triggered when the widget is tapped."
+        }
+      ]
+    },
+    {
+      "name": "AW_BoostWidget",
+      "description": "A stateless widget that displays a boost status and details. It shows a title, description, icon, and more icon. The widget is clickable and can trigger a function on tap. It also has styles and colors that can be customized.",
+      "parameters": [
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the boost."
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "description": "The description of the boost."
+        },
+        {
+          "name": "icon",
+          "type": "String",
+          "description": "The icon of the boost."
+        },
+        {
+          "name": "moreIcon",
+          "type": "IconData",
+          "description": "The more icon of the boost."
+        },
+        {
+          "name": "isActive",
+          "type": "bool",
+          "description": "The active status of the boost."
+        },
+        {
+          "name": "label",
+          "type": "String",
+          "description": "The label of the boost."
+        },
+        {
+          "name": "dayLabel",
+          "type": "String",
+          "description": "The day label of the boost."
+        },
+        {
+          "name": "detailsIcon",
+          "type": "String",
+          "description": "The details icon of the boost."
+        },
+        {
+          "name": "onTap",
+          "type": "VoidCallback",
+          "description": "The function to be called when the boost is tapped."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color of the boost."
+        },
+        {
+          "name": "activeColor",
+          "type": "Color",
+          "description": "The active color of the boost."
+        },
+        {
+          "name": "stoppedColor",
+          "type": "Color",
+          "description": "The stopped color of the boost."
+        },
+        {
+          "name": "titleStyle",
+          "type": "TextStyle",
+          "description": "The style of the title text."
+        },
+        {
+          "name": "descriptionStyle",
+          "type": "TextStyle",
+          "description": "The style of the description text."
+        },
+        {
+          "name": "labelStyle",
+          "type": "TextStyle",
+          "description": "The style of the label text."
+        }
+      ]
+    },
+    {
+      "name": "AW_BottomNavigationPage",
+      "description": "A stateful widget that displays a bottom navigation bar. It allows customization of selected and unselected item colors, items, visibility of title, background color, type of navigation bar, initial selection, visibility of unselected label, inner padding, elevation, visibility of bar, and event trackers. It also accepts a function to handle the 'pop' event.",
+      "parameters": [
+        {
+          "name": "selectedItemColor",
+          "type": "Color?",
+          "description": "The color of the selected item in the bottom navigation bar."
+        },
+        {
+          "name": "unSelectedItemColor",
+          "type": "Color",
+          "description": "The color of the unselected item in the bottom navigation bar."
+        },
+        {
+          "name": "items",
+          "type": "List<BottomNavigationBarItem>?",
+          "description": "The items to be displayed in the bottom navigation bar."
+        },
+        {
+          "name": "widgetKey",
+          "type": "Key?",
+          "description": "A key that uniquely identifies this widget."
+        },
+        {
+          "name": "showTitle",
+          "type": "bool",
+          "description": "A flag indicating whether to show the title."
+        },
+        {
+          "name": "logEvent",
+          "type": "Function?",
+          "description": "A function to handle the log event."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color of the bottom navigation bar."
+        },
+        {
+          "name": "bottomNavigationBarType",
+          "type": "BottomNavigationBarType",
+          "description": "The type of the bottom navigation bar."
+        },
+        {
+          "name": "showTitleFromSide",
+          "type": "bool",
+          "description": "A flag indicating whether to show the title from the side."
+        },
+        {
+          "name": "initialSelection",
+          "type": "int",
+          "description": "The initial selection of the bottom navigation bar."
+        },
+        {
+          "name": "showUnselectedLabel",
+          "type": "bool",
+          "description": "A flag indicating whether to show the unselected label."
+        },
+        {
+          "name": "innerPadding",
+          "type": "double",
+          "description": "The inner padding of the bottom navigation bar."
+        },
+        {
+          "name": "elevation",
+          "type": "double",
+          "description": "The elevation of the bottom navigation bar."
+        },
+        {
+          "name": "onPop",
+          "type": "Function?",
+          "description": "A function to handle the 'pop' event."
+        },
+        {
+          "name": "barVisible",
+          "type": "bool",
+          "description": "A flag indicating whether the bar is visible."
+        },
+        {
+          "name": "eventTrackers",
+          "type": "List<EventTracker>?",
+          "description": "The event trackers of the bottom navigation bar."
+        }
+      ]
+    },
+    {
+      "name": "AW_Button",
+      "description": "A stateless widget that displays a button with customizable styles, colors, and behaviors. The button can be disabled, and its appearance can be customized using a ButtonStyle. The button also has a title, which can be styled using a TextStyle. The button can have a gradient background, which can be forced to override the default style. The button also has a width, a minimum width, and padding.",
+      "parameters": [
+        {
+          "name": "buttonTitle",
+          "type": "String",
+          "description": "The title of the button."
+        },
+        {
+          "name": "disabled",
+          "type": "bool",
+          "description": "A flag indicating whether the button is disabled."
+        },
+        {
+          "name": "onPressed",
+          "type": "Function?",
+          "description": "The function to be called when the button is pressed."
+        },
+        {
+          "name": "style",
+          "type": "ButtonStyle?",
+          "description": "The style of the button."
+        },
+        {
+          "name": "btnTitleStyle",
+          "type": "TextStyle?",
+          "description": "The style of the button's title."
+        },
+        {
+          "name": "padding",
+          "type": "double",
+          "description": "The padding of the button."
+        },
+        {
+          "name": "forceStyleOverGradient",
+          "type": "bool",
+          "description": "A flag indicating whether to force the style over the gradient."
+        },
+        {
+          "name": "width",
+          "type": "double?",
+          "description": "The width of the button."
+        },
+        {
+          "name": "minWidth",
+          "type": "double?",
+          "description": "The minimum width of the button."
+        }
+      ]
+    },
+    {
+      "name": "AW_ButtonWithImageBg",
+      "description": "A stateless widget that displays a button with an image background. The button can be disabled, and its appearance can be customized using a TextStyle and a Color. The button also has a title, which can be styled using a TextStyle. The button also has a height, a button color, and two DecorationImage parameters for the enabled and disabled states.",
+      "parameters": [
+        {
+          "name": "buttonTitle",
+          "type": "String",
+          "description": "The title of the button."
+        },
+        {
+          "name": "disabled",
+          "type": "bool",
+          "description": "A flag indicating whether the button is disabled."
+        },
+        {
+          "name": "onPressed",
+          "type": "Function?",
+          "description": "The function to be called when the button is pressed."
+        },
+        {
+          "name": "height",
+          "type": "double",
+          "description": "The height of the button."
+        },
+        {
+          "name": "buttonTextStyle",
+          "type": "TextStyle",
+          "description": "The style of the button's title."
+        },
+        {
+          "name": "buttonColor",
+          "type": "Color",
+          "description": "The color of the button."
+        },
+        {
+          "name": "boxDecorationImage",
+          "type": "DecorationImage?",
+          "description": "The decoration image that contains the SVG asset path and size for the enabled state."
+        },
+        {
+          "name": "disabledBoxDecorationImage",
+          "type": "DecorationImage?",
+          "description": "The decoration image that contains the SVG asset path and size for the disabled state."
+        }
+      ]
+    },
+    {
+      "name": "AW_CustomCardItem",
+      "description": "A stateless widget that displays a custom card item with an image and a title. The card has customizable width, image, title, maximum lines for the title, image border radius, image height, bottom radius, and box fit.",
+      "parameters": [
+        {
+          "name": "widgetKey",
+          "type": "Key?",
+          "description": "A key that uniquely identifies this widget."
+        },
+        {
+          "name": "title",
+          "type": "String?",
+          "description": "The title of the card."
+        },
+        {
+          "name": "image",
+          "type": "String?",
+          "description": "The image of the card."
+        },
+        {
+          "name": "width",
+          "type": "double",
+          "description": "The width of the card."
+        },
+        {
+          "name": "imageBorderRadius",
+          "type": "BorderRadius?",
+          "description": "The border radius of the image."
+        },
+        {
+          "name": "maxLines",
+          "type": "int",
+          "description": "The maximum number of lines for the title."
+        },
+        {
+          "name": "imageHeight",
+          "type": "double",
+          "description": "The height of the image."
+        },
+        {
+          "name": "bottomRadius",
+          "type": "BorderRadius?",
+          "description": "The bottom radius of the card."
+        },
+        {
+          "name": "boxFit",
+          "type": "BoxFit",
+          "description": "How to inscribe the image into the box."
+        }
+      ]
+    },
+    {
+      "name": "AW_ChallengeItemCardDemo",
+      "description": "A stateless widget that displays a challenge item card with an image, texts, and various flags. The card has customizable height, image radius, and several required parameters such as image, newChallengeText, challengeTitle, joinChallengeText, isJoinable, isExpired, teamNames, teamValues, hasTeam, team, withoutTeamBannerText, challengeExpired, assetPath, teamLabel, and isNewChallenge.",
+      "parameters": [
+        {
+          "name": "image",
+          "type": "String",
+          "description": "The image of the challenge item card."
+        },
+        {
+          "name": "newChallengeText",
+          "type": "String",
+          "description": "The new challenge text of the challenge item card."
+        },
+        {
+          "name": "challengeTitle",
+          "type": "String",
+          "description": "The title of the challenge."
+        },
+        {
+          "name": "joinChallengeText",
+          "type": "String",
+          "description": "The join challenge text of the challenge item card."
+        },
+        {
+          "name": "isJoinable",
+          "type": "bool",
+          "description": "A flag indicating whether the challenge is joinable."
+        },
+        {
+          "name": "isExpired",
+          "type": "bool",
+          "description": "A flag indicating whether the challenge is expired."
+        },
+        {
+          "name": "teamNames",
+          "type": "String",
+          "description": "The team names of the challenge."
+        },
+        {
+          "name": "teamValues",
+          "type": "String",
+          "description": "The team values of the challenge."
+        },
+        {
+          "name": "hasTeam",
+          "type": "bool",
+          "description": "A flag indicating whether the challenge has a team."
+        },
+        {
+          "name": "team",
+          "type": "String",
+          "description": "The team of the challenge."
+        },
+        {
+          "name": "withoutTeamBannerText",
+          "type": "String",
+          "description": "The without team banner text of the challenge item card."
+        },
+        {
+          "name": "challengeExpired",
+          "type": "String",
+          "description": "The challenge expired text of the challenge item card."
+        },
+        {
+          "name": "height",
+          "type": "double",
+          "description": "The height of the challenge item card."
+        },
+        {
+          "name": "imageRadius",
+          "type": "BorderRadius",
+          "description": "The image radius of the challenge item card."
+        },
+        {
+          "name": "assetPath",
+          "type": "String",
+          "description": "The asset path of the challenge item card."
+        },
+        {
+          "name": "teamLabel",
+          "type": "String",
+          "description": "The team label of the challenge item card."
+        },
+        {
+          "name": "isNewChallenge",
+          "type": "bool",
+          "description": "A flag indicating whether it is a new challenge."
+        }
+      ]
+    },
+    {
+      "name": "TeamsParticipantsDays",
+      "description": "A stateless widget that displays a row of items with images, titles, and subtitles. The row has customizable padding, height, alignment, colors, subtitle style, visibility flags, and main axis alignment.",
+      "parameters": [
+        {
+          "name": "subtitle1",
+          "type": "String",
+          "description": "The subtitle of the first item."
+        },
+        {
+          "name": "title1",
+          "type": "String",
+          "description": "The title of the first item."
+        },
+        {
+          "name": "image1",
+          "type": "String",
+          "description": "The image of the first item."
+        },
+        {
+          "name": "image2",
+          "type": "String",
+          "description": "The image of the second item."
+        },
+        {
+          "name": "image3",
+          "type": "String",
+          "description": "The image of the third item."
+        },
+        {
+          "name": "subtitle2",
+          "type": "String",
+          "description": "The subtitle of the second item."
+        },
+        {
+          "name": "subtitle3",
+          "type": "String",
+          "description": "The subtitle of the third item."
+        },
+        {
+          "name": "title2",
+          "type": "String",
+          "description": "The title of the second item."
+        },
+        {
+          "name": "title3",
+          "type": "String",
+          "description": "The title of the third item."
+        },
+        {
+          "name": "padding",
+          "type": "EdgeInsets",
+          "description": "The padding of the row."
+        },
+        {
+          "name": "height",
+          "type": "double",
+          "description": "The height of the row."
+        },
+        {
+          "name": "alignment",
+          "type": "CrossAxisAlignment",
+          "description": "The alignment of the row in the cross axis."
+        },
+        {
+          "name": "color1",
+          "type": "Color",
+          "description": "The color of the first item."
+        },
+        {
+          "name": "color2",
+          "type": "Color",
+          "description": "The color of the second item."
+        },
+        {
+          "name": "color3",
+          "type": "Color",
+          "description": "The color of the third item."
+        },
+        {
+          "name": "subtitleStyle",
+          "type": "TextStyle?",
+          "description": "The style of the subtitles."
+        },
+        {
+          "name": "hide1",
+          "type": "bool",
+          "description": "A flag indicating whether to hide the first item."
+        },
+        {
+          "name": "hide2",
+          "type": "bool",
+          "description": "A flag indicating whether to hide the second item."
+        },
+        {
+          "name": "hide3",
+          "type": "bool",
+          "description": "A flag indicating whether to hide the third item."
+        },
+        {
+          "name": "mainAxisAlignment",
+          "type": "MainAxisAlignment",
+          "description": "The alignment of the row in the main axis."
+        }
+      ]
+    },
+    {
+      "name": "AW_CustomProgressIndicator",
+      "description": "A custom progress indicator widget that extends StatelessWidget. It uses the SfRadialGauge widget to create a radial gauge that can be customized with various parameters.",
+      "parameters": [
+        {
+          "name": "minValue",
+          "type": "double",
+          "description": "The minimum value of the radial gauge. Default is 0."
+        },
+        {
+          "name": "maxValue",
+          "type": "double",
+          "description": "The maximum value of the radial gauge. Default is 5."
+        },
+        {
+          "name": "value",
+          "type": "double",
+          "description": "The current value of the radial gauge. Default is 1."
+        },
+        {
+          "name": "lineColor",
+          "type": "Color",
+          "description": "The color of the line in the radial gauge. Can be null."
+        },
+        {
+          "name": "lineWidth",
+          "type": "double",
+          "description": "The width of the line in the radial gauge. Default is 0.05."
+        },
+        {
+          "name": "bgColor",
+          "type": "Color",
+          "description": "The background color of the radial gauge. Can be null."
+        },
+        {
+          "name": "content",
+          "type": "Widget",
+          "description": "The content widget inside the radial gauge. Can be null."
+        },
+        {
+          "name": "contentPadding",
+          "type": "double",
+          "description": "The padding for the content widget. Default is 0."
+        },
+        {
+          "name": "startAngle",
+          "type": "double",
+          "description": "The start angle of the radial gauge. Default is 125."
+        },
+        {
+          "name": "endAngle",
+          "type": "double",
+          "description": "The end angle of the radial gauge. Default is 55."
+        },
+        {
+          "name": "height",
+          "type": "double",
+          "description": "The height of the widget. Default is 150."
+        },
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "The key for the widget. Can be null."
+        }
+      ]
+    },
+    {
+      "name": "AW_CustomIntervalProgressIndicator",
+      "description": "A custom widget that displays a radial gauge with a range pointer and a content widget in the center. The gauge can be customized with various colors, angles, thicknesses, and intervals.",
+      "parameters": [
+        {
+          "name": "minValue",
+          "type": "double",
+          "description": "The minimum value of the gauge. Defaults to 0."
+        },
+        {
+          "name": "maxValue",
+          "type": "double",
+          "description": "The maximum value of the gauge. Defaults to 5."
+        },
+        {
+          "name": "interval",
+          "type": "double",
+          "description": "The interval between the major ticks of the gauge. Defaults to 1."
+        },
+        {
+          "name": "value",
+          "type": "double",
+          "description": "The current value of the range pointer. Defaults to 1."
+        },
+        {
+          "name": "lineColor",
+          "type": "Color?",
+          "description": "The color of the range pointer. If null, defaults to Colors.blue."
+        },
+        {
+          "name": "lineWidth",
+          "type": "double",
+          "description": "The thickness of the range pointer and the axis line. Defaults to 0.05."
+        },
+        {
+          "name": "bgColor",
+          "type": "Color?",
+          "description": "The color of the axis line. If null, defaults to Colors.white."
+        },
+        {
+          "name": "betweenColor",
+          "type": "Color?",
+          "description": "The color of the segments between the major ticks. If null, defaults to Colors.white."
+        },
+        {
+          "name": "content",
+          "type": "Widget?",
+          "description": "The widget to display in the center of the gauge. If null, no widget is displayed."
+        },
+        {
+          "name": "contentPadding",
+          "type": "double",
+          "description": "The padding between the content widget and the axis line. Defaults to 0."
+        },
+        {
+          "name": "startAngle",
+          "type": "double",
+          "description": "The start angle of the gauge in degrees. Defaults to 125."
+        },
+        {
+          "name": "endAngle",
+          "type": "double",
+          "description": "The end angle of the gauge in degrees. Defaults to 55."
+        },
+        {
+          "name": "majorThickness",
+          "type": "double",
+          "description": "The thickness of the major ticks in pixels. Defaults to 6."
+        },
+        {
+          "name": "separationLines",
+          "type": "bool",
+          "description": "Whether to show the segments between the major ticks. Defaults to true."
+        },
+        {
+          "name": "widgetKey",
+          "type": "Key?",
+          "description": "The key to assign to the widget. If null, no key is assigned."
+        },
+        {
+          "name": "isInversed",
+          "type": "bool",
+          "description": "Whether to inverse the direction of the gauge. Defaults to false."
+        }
+      ]
+    },
+    {
+      "name": "AW_ConsentsListItem",
+      "description": "A custom widget that displays a consent title with a toggle switch. The toggle switch can be switched between two states: accepted or declined. The widget can be customized with various colors, styles, and functions.",
+      "parameters": [
+        {
+          "name": "onToggle",
+          "type": "Function(int)",
+          "description": "The function to execute when the toggle switch is toggled. The function takes an integer as an argument, which represents the index of the selected state (0 for declined, 1 for accepted)."
+        },
+        {
+          "name": "onTitleTap",
+          "type": "Function?",
+          "description": "The function to execute when the consent title is tapped. If null, no function is executed."
+        },
+        {
+          "name": "consentTitle",
+          "type": "String",
+          "description": "The text to display as the consent title. Defaults to an empty string."
+        },
+        {
+          "name": "isToggleSwitched",
+          "type": "bool?",
+          "description": "The initial state of the toggle switch. If null, no state is selected. If true, the accepted state is selected. If false, the declined state is selected."
+        },
+        {
+          "name": "activeBgColor",
+          "type": "Color",
+          "description": "The background color of the toggle switch when the accepted state is selected. Defaults to Color.fromRGBO(23, 72, 213, 1)."
+        },
+        {
+          "name": "declinedBgColor",
+          "type": "Color",
+          "description": "The background color of the toggle switch when the declined state is selected. Defaults to Colors.red."
+        },
+        {
+          "name": "widgetKey",
+          "type": "Key?",
+          "description": "The key to assign to the widget. If null, no key is assigned."
+        },
+        {
+          "name": "style",
+          "type": "TextStyle",
+          "description": "The text style to apply to the consent title. Defaults to TextStyle(decoration: TextDecoration.underline)."
+        },
+        {
+          "name": "changeOnTap",
+          "type": "bool",
+          "description": "Whether to change the state of the toggle switch when the consent title is tapped. Defaults to true."
+        }
+      ]
+    },
+    {
+      "name": "AW_DiscountSquareWidget",
+      "description": "A custom widget that displays a title and three square widgets with different discounts. The discounts can be either percentages or fixed amounts. The widget can be customized with various colors, keys, and styles. The widget can also have an empty state if the discounts are zero.",
+      "parameters": [
+        {
+          "name": "title",
+          "type": "String?",
+          "description": "The text to display as the title of the widget. If null, no title is displayed."
+        },
+        {
+          "name": "topLeftNumber",
+          "type": "int?",
+          "description": "The discount to display in the top left square widget. If null or zero, the square widget is empty."
+        },
+        {
+          "name": "topRightNumber",
+          "type": "int?",
+          "description": "The discount to display in the top right square widget. If null or zero, the square widget is empty."
+        },
+        {
+          "name": "widgetKey",
+          "type": "Key?",
+          "description": "The key to assign to the widget. If null, no key is assigned."
+        },
+        {
+          "name": "price",
+          "type": "String",
+          "description": "The price to display in the bottom square widget. If empty, '...' is displayed. Defaults to '...'."
+        },
+        {
+          "name": "activeBgColor",
+          "type": "Color",
+          "description": "The background color of the square widgets when they are active (have a non-zero discount). Defaults to Color.fromRGBO(6, 62, 89, 1)."
+        },
+        {
+          "name": "declinedBgColor",
+          "type": "Color",
+          "description": "The background color of the square widgets when they are declined (have a zero discount). Defaults to Color.fromRGBO(127, 144, 159, 1)."
+        },
+        {
+          "name": "style",
+          "type": "TextStyle",
+          "description": "The text style to apply to the title of the widget. Defaults to TextStyle(decoration: TextDecoration.underline)."
+        }
+      ]
+    },
+    {
+      "name": "AW_DotContainerWithStates",
+      "description": "A widget that displays a container with a dot. The dot can have different states, represented by the `DotType` enum. The dot can be a full dot, an empty dot, or a dot with a ring. The color of the dot and whether it is active or not can also be specified.",
+      "parameters": [
+        {
+          "name": "type",
+          "type": "DotType",
+          "description": "The type of the dot. It can be `fullDot`, `emptyDot`, or `dotWithRing`."
+        },
+        {
+          "name": "widgetKey",
+          "type": "Key?",
+          "description": "The key for the widget. It can be used to control or determine some aspect of the widget's behavior."
+        },
+        {
+          "name": "dotColor",
+          "type": "Color",
+          "description": "The color of the dot. The default color is black."
+        },
+        {
+          "name": "isNotActiveAncCurrent",
+          "type": "bool",
+          "description": "A flag indicating whether the dot is not active and current. The default value is `false`."
+        }
+      ]
+    },
+    {
+      "name": "AW_ChallengeCardJapan",
+      "description": "A widget that displays a challenge card with various properties. It can show an info icon, display text, show a button on the right corner, and more. It also has properties for action, center, and leading icons and titles, as well as values. The card can be tapped, and it can display a widget at the bottom left.",
+      "parameters": [
+        {
+          "name": "infoIconColor",
+          "type": "Color",
+          "description": "The color of the info icon. The default color is a shade of blue."
+        },
+        {
+          "name": "infoTextStyle",
+          "type": "TextStyle",
+          "description": "The style of the info text. The default style has a font size of 12."
+        },
+        {
+          "name": "showRightCornerBtn",
+          "type": "bool",
+          "description": "Whether to show a button on the right corner. The default value is true."
+        },
+        {
+          "name": "rightCornerBtnStyle",
+          "type": "TextStyle?",
+          "description": "The style of the right corner button."
+        },
+        {
+          "name": "btnDisabled",
+          "type": "bool",
+          "description": "Whether the button is disabled. The default value is false."
+        },
+        {
+          "name": "isParticipating",
+          "type": "bool",
+          "description": "Whether the user is participating. The default value is false."
+        },
+        {
+          "name": "rightCornerBtnFunction",
+          "type": "Function?",
+          "description": "The function to be called when the right corner button is pressed."
+        },
+        {
+          "name": "rightCornerBtnText",
+          "type": "String",
+          "description": "The text of the right corner button. The default text is 'Join'."
+        },
+        {
+          "name": "infoText",
+          "type": "String",
+          "description": "The info text. The default text is 'Sample text'."
+        },
+        {
+          "name": "leftBottomWidget",
+          "type": "Widget?",
+          "description": "The widget to be displayed at the bottom left."
+        },
+        {
+          "name": "cardTap",
+          "type": "Function?",
+          "description": "The function to be called when the card is tapped."
+        },
+        {
+          "name": "actionIcon",
+          "type": "String",
+          "description": "The icon for the action. The default icon is an empty string."
+        },
+        {
+          "name": "actionTitle",
+          "type": "String",
+          "description": "The title for the action. The default title is 'title'."
+        },
+        {
+          "name": "actionValue",
+          "type": "int",
+          "description": "The value for the action. The default value is 0."
+        },
+        {
+          "name": "centerIcon",
+          "type": "String",
+          "description": "The icon for the center. The default icon is an empty string."
+        },
+        {
+          "name": "centerTitle",
+          "type": "String",
+          "description": "The title for the center. The default title is 'title'."
+        },
+        {
+          "name": "centerValue",
+          "type": "int",
+          "description": "The value for the center. The default value is 0."
+        },
+        {
+          "name": "leadingIcon",
+          "type": "String",
+          "description": "The icon for the leading. The default icon is an empty string."
+        },
+        {
+          "name": "leadingTitle",
+          "type": "String",
+          "description": "The title for the leading. The default title is 'title'."
+        },
+        {
+          "name": "leadingValue",
+          "type": "int",
+          "description": "The value for the leading. The default value is 0."
+        },
+        {
+          "name": "titleStyle",
+          "type": "TextStyle",
+          "description": "The style of the title. The default style has a font size of 16, a weight of 700, and a color of blue."
+        },
+        {
+          "name": "titleBottomStyle",
+          "type": "TextStyle",
+          "description": "The style of the bottom title. The default style has a font size of 13, a weight of 400, and a color of black."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title. The default title is 'Sample title'."
+        },
+        {
+          "name": "iconColor",
+          "type": "Color",
+          "description": "The color of the icon. The default color is a shade of blue."
+        },
+        {
+          "name": "bottomRightTitle",
+          "type": "String",
+          "description": "The title at the bottom right. The default title is 'Sample title'."
+        },
+        {
+          "name": "bottomRightTitleStyle",
+          "type": "TextStyle",
+          "description": "The style of the title at the bottom right. The default style has a font size of 11."
+        },
+        {
+          "name": "bottomRightValue",
+          "type": "int",
+          "description": "The value at the bottom right. The default value is 0."
+        },
+        {
+          "name": "userTeamName",
+          "type": "String",
+          "description": "The name of the user's team. The default name is an empty string."
+        },
+        {
+          "name": "challengeTeamNumber",
+          "type": "int",
+          "description": "The number of the challenge team. The default number is 1."
+        },
+        {
+          "name": "downLeftWidget",
+          "type": "Widget",
+          "description": "The widget to be displayed at the bottom left. This parameter is required."
+        },
+        {
+          "name": "isJapan",
+          "type": "bool",
+          "description": "Whether the card is for Japan. The default value is false."
+        }
+      ]
+    },
+    {
+      "name": "AW_ChallengeItemImage",
+      "description": "A widget that displays an image for a challenge item. It includes a title, subtitle, and a join button. The image, title, subtitle, and button title can be customized. The button can also be hidden.",
+      "parameters": [
+        {
+          "name": "widgetKey",
+          "type": "Key?",
+          "description": "The key for the widget. It can be used to control or determine some aspect of the widget's behavior."
+        },
+        {
+          "name": "image",
+          "type": "String",
+          "description": "The URL of the image to display. The default is an empty string."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title to display. The default is an empty string."
+        },
+        {
+          "name": "subtitle",
+          "type": "String",
+          "description": "The subtitle to display. The default is an empty string."
+        },
+        {
+          "name": "showJoinButton",
+          "type": "bool",
+          "description": "Whether to show the join button. The default is true."
+        },
+        {
+          "name": "buttonTitle",
+          "type": "String",
+          "description": "The title of the join button. The default is an empty string."
+        },
+        {
+          "name": "onButtonPressed",
+          "type": "Function?",
+          "description": "The function to be called when the join button is pressed."
+        }
+      ]
+    },
+    {
+      "name": "AW_CheckboxText",
+      "description": "A stateful widget that displays a checkbox with text. The checkbox can be active or inactive, and its color can be customized. The text can be plain or rich text. The widget also has an onChange function that is called when the checkbox is toggled.",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "Key?",
+          "description": "The key for the widget. It can be used to control or determine some aspect of the widget's behavior."
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "description": "The text to display next to the checkbox. This parameter is required."
+        },
+        {
+          "name": "disabled",
+          "type": "bool",
+          "description": "Whether the checkbox is disabled. This parameter is required."
+        },
+        {
+          "name": "newValue",
+          "type": "bool",
+          "description": "The new value of the checkbox. This parameter is required."
+        },
+        {
+          "name": "onChange",
+          "type": "Function",
+          "description": "The function to be called when the checkbox is toggled. This parameter is required."
+        },
+        {
+          "name": "checkBoxIconColor",
+          "type": "Color",
+          "description": "The color of the checkbox icon. The default color is blue."
+        },
+        {
+          "name": "inActiveCheckBoxBgColor",
+          "type": "Color",
+          "description": "The background color of the checkbox when it is inactive. The default color is white."
+        },
+        {
+          "name": "activeCheckBoxBgColor",
+          "type": "Color?",
+          "description": "The background color of the checkbox when it is active."
+        },
+        {
+          "name": "textColor",
+          "type": "Color",
+          "description": "The color of the text. The default color is black."
+        },
+        {
+          "name": "shouldUseRichTest",
+          "type": "bool",
+          "description": "Whether to use rich text. The default value is false."
+        },
+        {
+          "name": "otherText",
+          "type": "String",
+          "description": "Other text to display. The default text is an empty string."
+        },
+        {
+          "name": "richText",
+          "type": "String",
+          "description": "The rich text to display. The default text is an empty string."
+        }
+      ]
+    },
+    {
+      "name": "AW_Co2RankingWidget",
+      "description": "A widget that displays a ranking based on CO2 emissions.",
+      "parameters": [
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "The key for the widget."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the widget."
+        },
+        {
+          "name": "rankTopPlace",
+          "type": "List<double>",
+          "description": "The ranking for the top place."
+        },
+        {
+          "name": "rankBottomPlace",
+          "type": "List<double>",
+          "description": "The ranking for the bottom place."
+        },
+        {
+          "name": "initialsTop",
+          "type": "List<String>",
+          "description": "The initials for the top place."
+        },
+        {
+          "name": "initialsBottom",
+          "type": "List<String>",
+          "description": "The initials for the bottom place."
+        },
+        {
+          "name": "initialsMiddle",
+          "type": "String",
+          "description": "The initials for the middle place."
+        },
+        {
+          "name": "nameMiddle",
+          "type": "String",
+          "description": "The name for the middle place."
+        },
+        {
+          "name": "rankMiddle",
+          "type": "double",
+          "description": "The ranking for the middle place."
+        },
+        {
+          "name": "namesBottom",
+          "type": "List<String>",
+          "description": "The names for the bottom place."
+        },
+        {
+          "name": "namesTop",
+          "type": "List<String>",
+          "description": "The names for the top place."
+        },
+        {
+          "name": "emissionBottom",
+          "type": "List<double>",
+          "description": "The emissions for the bottom place."
+        },
+        {
+          "name": "emissionTop",
+          "type": "List<double>",
+          "description": "The emissions for the top place."
+        },
+        {
+          "name": "emissionMiddle",
+          "type": "double",
+          "description": "The emissions for the middle place."
+        },
+        {
+          "name": "imgSeparator",
+          "type": "Image",
+          "description": "The image for the separator."
+        },
+        {
+          "name": "valueDesc",
+          "type": "String",
+          "description": "The description of the value."
+        },
+        {
+          "name": "isMe",
+          "type": "bool",
+          "description": "A flag indicating whether the widget represents the current user."
+        },
+        {
+          "name": "titleColor",
+          "type": "Color",
+          "description": "The color of the title."
+        },
+        {
+          "name": "imgSeparatorColor",
+          "type": "Color",
+          "description": "The color of the image separator."
+        },
+        {
+          "name": "separatorColor",
+          "type": "Color",
+          "description": "The color of the separator."
+        },
+        {
+          "name": "textColor",
+          "type": "Color",
+          "description": "The color of the text."
+        },
+        {
+          "name": "isMeTextColor",
+          "type": "Color",
+          "description": "The color of the text if the widget represents the current user."
+        },
+        {
+          "name": "circleColor",
+          "type": "Color",
+          "description": "The color of the circle."
+        },
+        {
+          "name": "circleIsMeColor",
+          "type": "Color",
+          "description": "The color of the circle if the widget represents the current user."
+        }
+      ]
+    },
+    {
+      "name": "AW_Stepper",
+      "description": "A widget that displays a stepper. It allows to navigate through a sequence of steps with each step requiring user's input. It includes features like scrolling physics, stepper type, current step, step tapped event, step continue event, step cancel event, controls builder, elevation, and colors for complete, active, and inactive states.",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "Key",
+          "description": "The key for the widget."
+        },
+        {
+          "name": "steps",
+          "type": "List<AW_Step>",
+          "description": "The steps of the stepper."
+        },
+        {
+          "name": "physics",
+          "type": "ScrollPhysics",
+          "description": "The scrolling physics for the stepper."
+        },
+        {
+          "name": "type",
+          "type": "AW_StepperType",
+          "description": "The type of the stepper. It can be vertical or horizontal."
+        },
+        {
+          "name": "currentStep",
+          "type": "int",
+          "description": "The current step of the stepper."
+        },
+        {
+          "name": "onStepTapped",
+          "type": "ValueChanged<int>",
+          "description": "The callback function that is called when a step is tapped."
+        },
+        {
+          "name": "onStepContinue",
+          "type": "VoidCallback",
+          "description": "The callback function that is called when the 'continue' button is pressed."
+        },
+        {
+          "name": "onStepCancel",
+          "type": "VoidCallback",
+          "description": "The callback function that is called when the 'cancel' button is pressed."
+        },
+        {
+          "name": "controlsBuilder",
+          "type": "ControlsWidgetBuilder",
+          "description": "The builder for the controls of the stepper."
+        },
+        {
+          "name": "elevation",
+          "type": "double",
+          "description": "The elevation of the stepper."
+        },
+        {
+          "name": "completeColor",
+          "type": "Color",
+          "description": "The color for the complete state of the stepper."
+        },
+        {
+          "name": "activeColor",
+          "type": "Color",
+          "description": "The color for the active state of the stepper."
+        },
+        {
+          "name": "inActiveColor",
+          "type": "Color",
+          "description": "The color for the inactive state of the stepper."
+        },
+        {
+          "name": "index",
+          "type": "int",
+          "description": "The index of the stepper."
+        }
+      ]
+    },
+    {
+      "name": "AW_FullPageDialog",
+      "description": "A full page dialog widget. It displays a dialog with a title, content, and a button. The content can be a string or a widget. The dialog can be customized with various colors, padding, and a button style.",
+      "parameters": [
+        {
+          "name": "context",
+          "type": "BuildContext",
+          "description": "The build context for the widget."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the dialog."
+        },
+        {
+          "name": "content",
+          "type": "String",
+          "description": "The content of the dialog."
+        },
+        {
+          "name": "buttonText",
+          "type": "String",
+          "description": "The text of the button in the dialog."
+        },
+        {
+          "name": "titleColor",
+          "type": "Color",
+          "description": "The color of the title."
+        },
+        {
+          "name": "contentColor",
+          "type": "Color",
+          "description": "The color of the content."
+        },
+        {
+          "name": "buttonColor",
+          "type": "Color",
+          "description": "The color of the button."
+        },
+        {
+          "name": "key",
+          "type": "String",
+          "description": "The key for the widget."
+        },
+        {
+          "name": "contentWidget",
+          "type": "Widget",
+          "description": "The widget to be used as the content of the dialog."
+        },
+        {
+          "name": "noButton",
+          "type": "bool",
+          "description": "A flag indicating whether the dialog should have a button."
+        },
+        {
+          "name": "contentPadding",
+          "type": "EdgeInsetsGeometry",
+          "description": "The padding for the content of the dialog."
+        },
+        {
+          "name": "titlePadding",
+          "type": "EdgeInsetsGeometry",
+          "description": "The padding for the title of the dialog."
+        },
+        {
+          "name": "insetPadding",
+          "type": "EdgeInsets",
+          "description": "The inset padding for the dialog."
+        },
+        {
+          "name": "buttonStyle",
+          "type": "ButtonStyle",
+          "description": "The style for the button in the dialog."
+        },
+        {
+          "name": "shape",
+          "type": "ShapeBorder",
+          "description": "The shape of the dialog."
+        },
+        {
+          "name": "height",
+          "type": "double",
+          "description": "The height of the dialog."
+        },
+        {
+          "name": "onButtonPressed",
+          "type": "VoidCallback",
+          "description": "The callback function that is called when the button is pressed."
+        }
+      ]
+    },
+    {
+      "name": "AW_InfoPopup",
+      "description": "A function that displays an information popup. It includes a title, content, and one or two buttons. The title and content can be strings or widgets. The popup can be dismissed and its dismissal behavior can be customized. It also includes various colors for title, content, button, and button text. It also includes a key for the widget, and optional widgets for content and title. It also includes an optional icon for the title with its color. It also includes optional functions that are called when the buttons are pressed. It also includes flags for dismissal, two buttons, and can pop.",
+      "parameters": [
+        {
+          "name": "context",
+          "type": "BuildContext",
+          "description": "The build context for the widget."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the popup."
+        },
+        {
+          "name": "content",
+          "type": "String",
+          "description": "The content of the popup."
+        },
+        {
+          "name": "buttonText",
+          "type": "String",
+          "description": "The text of the first button in the popup."
+        },
+        {
+          "name": "buttonTwoText",
+          "type": "String",
+          "description": "The text of the second button in the popup."
+        },
+        {
+          "name": "titleColor",
+          "type": "Color",
+          "description": "The color of the title."
+        },
+        {
+          "name": "contentColor",
+          "type": "Color",
+          "description": "The color of the content."
+        },
+        {
+          "name": "buttonColor",
+          "type": "Color",
+          "description": "The color of the button."
+        },
+        {
+          "name": "buttonTextColor",
+          "type": "Color",
+          "description": "The color of the button text."
+        },
+        {
+          "name": "key",
+          "type": "String",
+          "description": "The key for the widget."
+        },
+        {
+          "name": "contentWidget",
+          "type": "Widget",
+          "description": "The widget to be used as the content of the popup."
+        },
+        {
+          "name": "titleWidget",
+          "type": "Widget",
+          "description": "The widget to be used as the title of the popup."
+        },
+        {
+          "name": "iconForTitle",
+          "type": "IconData",
+          "description": "The icon for the title."
+        },
+        {
+          "name": "iconColor",
+          "type": "Color",
+          "description": "The color of the icon."
+        },
+        {
+          "name": "onButtonPressed",
+          "type": "Function",
+          "description": "The callback function that is called when the first button is pressed."
+        },
+        {
+          "name": "onButtonTwoPressed",
+          "type": "Function",
+          "description": "The callback function that is called when the second button is pressed."
+        },
+        {
+          "name": "dismiss",
+          "type": "bool",
+          "description": "A flag indicating whether the popup should be dismissible."
+        },
+        {
+          "name": "twoButtons",
+          "type": "bool",
+          "description": "A flag indicating whether the popup should have two buttons."
+        },
+        {
+          "name": "canPop",
+          "type": "bool",
+          "description": "A flag indicating whether the popup can be popped."
+        }
+      ]
+    },
+    {
+      "name": "AW_SimpleDialog",
+      "description": "A simple dialog widget. It displays a dialog with a title, content, and one or two buttons. The title and content can be strings or widgets. The dialog can be dismissed and its dismissal behavior can be customized. It also includes various colors for title, content, and button. It also includes a key for the widget, and optional widgets for content and title. It also includes optional functions that are called when the buttons are pressed. It also includes flags for dismissal, two buttons, and can pop.",
+      "parameters": [
+        {
+          "name": "context",
+          "type": "BuildContext",
+          "description": "The build context for the widget."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the dialog."
+        },
+        {
+          "name": "content",
+          "type": "String",
+          "description": "The content of the dialog."
+        },
+        {
+          "name": "buttonText",
+          "type": "String",
+          "description": "The text of the first button in the dialog."
+        },
+        {
+          "name": "buttonTwoText",
+          "type": "String",
+          "description": "The text of the second button in the dialog."
+        },
+        {
+          "name": "titleColor",
+          "type": "Color",
+          "description": "The color of the title."
+        },
+        {
+          "name": "contentColor",
+          "type": "Color",
+          "description": "The color of the content."
+        },
+        {
+          "name": "buttonColor",
+          "type": "Color",
+          "description": "The color of the button."
+        },
+        {
+          "name": "key",
+          "type": "String",
+          "description": "The key for the widget."
+        },
+        {
+          "name": "contentWidget",
+          "type": "Widget",
+          "description": "The widget to be used as the content of the dialog."
+        },
+        {
+          "name": "titleWidget",
+          "type": "Widget",
+          "description": "The widget to be used as the title of the dialog."
+        },
+        {
+          "name": "onButtonPressed",
+          "type": "Function",
+          "description": "The callback function that is called when the first button is pressed."
+        },
+        {
+          "name": "onButtonTwoPressed",
+          "type": "Function",
+          "description": "The callback function that is called when the second button is pressed."
+        },
+        {
+          "name": "dismiss",
+          "type": "bool",
+          "description": "A flag indicating whether the dialog should be dismissible."
+        },
+        {
+          "name": "twoButtons",
+          "type": "bool",
+          "description": "A flag indicating whether the dialog should have two buttons."
+        },
+        {
+          "name": "canPop",
+          "type": "bool",
+          "description": "A flag indicating whether the dialog can be popped."
+        }
+      ]
+    },
+    {
+      "name": "AW_TwoButtonDialog",
+      "description": "A two-button dialog widget. It displays a dialog with a title, content, and two buttons. The title and content are strings. The dialog can be dismissed and its dismissal behavior can be customized. It also includes various colors for title, content, and button. It also includes a key for the widget, and a function that is called when the right button is pressed.",
+      "parameters": [
+        {
+          "name": "context",
+          "type": "BuildContext",
+          "description": "The build context for the widget."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the dialog."
+        },
+        {
+          "name": "content",
+          "type": "String",
+          "description": "The content of the dialog."
+        },
+        {
+          "name": "leftButtonText",
+          "type": "String",
+          "description": "The text of the left button in the dialog."
+        },
+        {
+          "name": "rightButtonText",
+          "type": "String",
+          "description": "The text of the right button in the dialog."
+        },
+        {
+          "name": "titleColor",
+          "type": "Color",
+          "description": "The color of the title."
+        },
+        {
+          "name": "contentColor",
+          "type": "Color",
+          "description": "The color of the content."
+        },
+        {
+          "name": "buttonColor",
+          "type": "Color",
+          "description": "The color of the button."
+        },
+        {
+          "name": "key",
+          "type": "String",
+          "description": "The key for the widget."
+        },
+        {
+          "name": "onRightButtonPressed",
+          "type": "Function",
+          "description": "The callback function that is called when the right button is pressed."
+        }
+      ]
+    },
+    {
+      "name": "AW_TypedDialog",
+      "description": "A typed dialog widget. It displays a dialog with a title, content, and a button. The title and content can be strings or widgets. The dialog can be dismissed and its dismissal behavior can be customized. It also includes a key for the widget, an image for a specific profile, a button title, flags for barrier dismissible, can pop, and specific user profile dialog info. It also includes optional widgets for title, content, and bottom. It also includes an optional color for content, and a function that is called when the dialog is tapped. The type of the dialog determines the values used from the singleton instance TypedDialogConfig.",
+      "parameters": [
+        {
+          "name": "context",
+          "type": "BuildContext",
+          "description": "The build context for the widget."
+        },
+        {
+          "name": "type",
+          "type": "DialogType",
+          "description": "The type of the dialog. It determines the values used from the singleton instance TypedDialogConfig."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the dialog."
+        },
+        {
+          "name": "content",
+          "type": "String",
+          "description": "The content of the dialog."
+        },
+        {
+          "name": "key",
+          "type": "String",
+          "description": "The key for the widget."
+        },
+        {
+          "name": "imgForSpecificProfile",
+          "type": "String",
+          "description": "The image for a specific profile."
+        },
+        {
+          "name": "buttonTitle",
+          "type": "String",
+          "description": "The title of the button in the dialog."
+        },
+        {
+          "name": "barrierDismissible",
+          "type": "bool",
+          "description": "A flag indicating whether the dialog should be barrier dismissible."
+        },
+        {
+          "name": "canPop",
+          "type": "bool",
+          "description": "A flag indicating whether the dialog can be popped."
+        },
+        {
+          "name": "specificUserProfileDialogInfo",
+          "type": "bool",
+          "description": "A flag indicating whether the dialog is for a specific user profile dialog info."
+        },
+        {
+          "name": "titleWidget",
+          "type": "Widget",
+          "description": "The widget to be used as the title of the dialog."
+        },
+        {
+          "name": "contentWidget",
+          "type": "Widget",
+          "description": "The widget to be used as the content of the dialog."
+        },
+        {
+          "name": "bottomWidget",
+          "type": "Widget",
+          "description": "The widget to be used at the bottom of the dialog."
+        },
+        {
+          "name": "contentColor",
+          "type": "Color",
+          "description": "The color of the content."
+        },
+        {
+          "name": "onTap",
+          "type": "Function",
+          "description": "The callback function that is called when the dialog is tapped."
+        }
+      ]
+    },
+    {
+      "name": "AW_CustomDrawer",
+      "description": "A custom drawer widget in Flutter. It provides a highly customizable drawer interface with various properties to modify its appearance and behavior.",
+      "parameters": [
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color of the drawer."
+        },
+        {
+          "name": "headerHeight",
+          "type": "double",
+          "description": "The height of the drawer's header."
+        },
+        {
+          "name": "headerCenterWidget",
+          "type": "Widget",
+          "description": "The widget to display in the center of the drawer's header."
+        },
+        {
+          "name": "actionIcon",
+          "type": "IconData",
+          "description": "The icon for the action button in the drawer."
+        },
+        {
+          "name": "actionIconColor",
+          "type": "Color",
+          "description": "The color of the action icon."
+        },
+        {
+          "name": "onActionIconPress",
+          "type": "Function",
+          "description": "The callback function that is called when the action icon is pressed."
+        },
+        {
+          "name": "actionLinkClicked",
+          "type": "Function",
+          "description": "The callback function that is called when the action link is clicked."
+        },
+        {
+          "name": "listItems",
+          "type": "List<AW_DrawerListItem>",
+          "description": "The list of items to display in the drawer."
+        },
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "The key to associate with this widget."
+        },
+        {
+          "name": "actionKey",
+          "type": "Key",
+          "description": "The key to associate with the action icon."
+        },
+        {
+          "name": "logoutTitle",
+          "type": "String",
+          "description": "The title for the logout option. If this is null, the logout option will not be shown."
+        },
+        {
+          "name": "onLogoutPress",
+          "type": "Function",
+          "description": "The callback function that is called when the logout option is pressed."
+        },
+        {
+          "name": "onDrawerOpened",
+          "type": "Function(String)",
+          "description": "The callback function that is called when the drawer is opened."
+        },
+        {
+          "name": "onDrawerItemPressed",
+          "type": "Function(String)",
+          "description": "The callback function that is called when a drawer item is pressed."
+        },
+        {
+          "name": "labelStyle",
+          "type": "TextStyle",
+          "description": "The text style for the labels in the drawer."
+        },
+        {
+          "name": "customHeader",
+          "type": "Widget",
+          "description": "A custom widget to use as the drawer's header."
+        },
+        {
+          "name": "logoutStyle",
+          "type": "TextStyle",
+          "description": "The text style for the logout option."
+        },
+        {
+          "name": "logoutTitleColor",
+          "type": "Color",
+          "description": "The color of the logout title."
+        },
+        {
+          "name": "headerCenter",
+          "type": "bool",
+          "description": "Whether to center the header content."
+        },
+        {
+          "name": "headerMainAxisAlignment",
+          "type": "MainAxisAlignment",
+          "description": "How the children should be placed along the main axis in the header."
+        },
+        {
+          "name": "wrapWithMaterial",
+          "type": "bool",
+          "description": "Whether to wrap the drawer with a Material widget."
+        },
+        {
+          "name": "appVersion",
+          "type": "String",
+          "description": "The version of the app to display in the drawer."
+        },
+        {
+          "name": "appVersionStyle",
+          "type": "TextStyle",
+          "description": "The text style for the app version."
+        },
+        {
+          "name": "listItemBottomPadding",
+          "type": "double",
+          "description": "The bottom padding for the list items in the drawer."
+        },
+        {
+          "name": "elevation",
+          "type": "double",
+          "description": "The elevation of the drawer."
+        }
+      ]
+    },
+    {
+      "name": "AW_DrawerListItem",
+      "description": "The `AW_DrawerListItem` widget is a customizable list item commonly used in navigation drawers. It displays an icon or image alongside a text title. Users can tap on the item to navigate to a specific route within the app.",
+      "parameters": [
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title text displayed for the list item."
+        },
+        {
+          "name": "image",
+          "type": "String",
+          "description": "The path to an SVG image asset representing the icon or image for the list item. If empty, no image is displayed."
+        },
+        {
+          "name": "routeName",
+          "type": "String",
+          "description": "The name of the route to navigate when the list item is tapped."
+        },
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "An optional key to uniquely identify the widget."
+        },
+        {
+          "name": "titleColor",
+          "type": "Color",
+          "description": "The color of the title text (default: white)."
+        },
+        {
+          "name": "imageColor",
+          "type": "Color",
+          "description": "The color of the image/icon (default: white)."
+        },
+        {
+          "name": "arguments",
+          "type": "dynamic",
+          "description": "Additional arguments to pass when navigating to the specified route."
+        },
+        {
+          "name": "tapKey",
+          "type": "Key",
+          "description": "An optional key for handling tap events."
+        },
+        {
+          "name": "height",
+          "type": "double",
+          "description": "The height of the image/icon (default: 20)."
+        },
+        {
+          "name": "boxFit",
+          "type": "BoxFit",
+          "description": "The fit mode for the image/icon (default: BoxFit.contain)."
+        },
+        {
+          "name": "textStyle",
+          "type": "TextStyle",
+          "description": "Custom text style for the title."
+        },
+        {
+          "name": "margin",
+          "type": "EdgeInsets",
+          "description": "The margin around the list item (default: bottom: 30, left: 15)."
+        },
+        {
+          "name": "isLink",
+          "type": "bool",
+          "description": "Whether the list item represents an external link (default: false)."
+        },
+        {
+          "name": "onTap",
+          "type": "VoidCallback",
+          "description": "A callback function triggered when the list item is tapped."
+        }
+      ]
+    },
+    {
+      "name": "AW_FAQListItem",
+      "description": "The AW_FAQListItem is a StatefulWidget that displays a list item for FAQs. It has a title and description, and can be opened or closed to show or hide the description. It also has customizable styles for the title and description, as well as customizable assets for the open and close arrows.",
+      "parameters": [
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the FAQ item."
+        },
+        {
+          "name": "titleTextStyle",
+          "type": "TextStyle",
+          "description": "The text style of the title. The default style is black, font size 16, and weight 400."
+        },
+        {
+          "name": "arrowsAssetClosed",
+          "type": "SvgPicture",
+          "description": "The asset shown when the FAQ item is closed."
+        },
+        {
+          "name": "arrowsAssetOpened",
+          "type": "SvgPicture",
+          "description": "The asset shown when the FAQ item is opened."
+        },
+        {
+          "name": "boxShadow",
+          "type": "List<BoxShadow>",
+          "description": "The box shadow of the FAQ item. The default is a box shadow with color RGB(0, 0, 0, 0.05), offset (0, 8), blur radius 16, and spread radius 0."
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "description": "The description of the FAQ item."
+        },
+        {
+          "name": "descriptionTextStyle",
+          "type": "TextStyle",
+          "description": "The text style of the description. The default style is color RGB(70, 83, 93, 1), font size 14, and weight 400."
+        },
+        {
+          "name": "padding",
+          "type": "EdgeInsets",
+          "description": "The padding of the FAQ item. The default is symmetric horizontal padding of 16."
+        }
+      ]
+    },
+    {
+      "name": "AW_FilterAigComponent",
+      "description": "The AW_FilterAigComponent is a StatelessWidget that displays a filter component. It contains a list of ShieldFilter items, and each item can be clicked to trigger an action. The selected item is highlighted with a specified color.",
+      "parameters": [
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "The key for the widget."
+        },
+        {
+          "name": "listItem",
+          "type": "List<ShieldFilter>",
+          "description": "The list of ShieldFilter items to be displayed."
+        },
+        {
+          "name": "onItemClick",
+          "type": "Function(String, int)",
+          "description": "The function to be called when an item is clicked. It takes the text and id of the ShieldFilter item as parameters."
+        },
+        {
+          "name": "selectedShieldId",
+          "type": "int",
+          "description": "The id of the currently selected ShieldFilter item."
+        },
+        {
+          "name": "selectedFilterColor",
+          "type": "Color",
+          "description": "The color to highlight the selected ShieldFilter item."
+        }
+      ]
+    },
+    {
+      "name": "AW_GeofenceItem",
+      "description": "The AW_GeofenceItem is a StatelessWidget that displays a geofence item. It has a checkbox that can be tapped to trigger an action. The checkbox, border, and text have customizable colors. An optional edit button can be added.",
+      "parameters": [
+        {
+          "name": "borderColor",
+          "type": "Color",
+          "description": "The color of the border. The default color is RGB(97, 97, 97, 1)."
+        },
+        {
+          "name": "checkBoxBackgroundColor",
+          "type": "Color",
+          "description": "The background color of the checkbox. The default color is RGB(224, 224, 224, 1)."
+        },
+        {
+          "name": "checkBoxPath",
+          "type": "String",
+          "description": "The path to the asset for the checkbox."
+        },
+        {
+          "name": "checkBoxColor",
+          "type": "Color",
+          "description": "The color of the checkbox."
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "description": "The text displayed in the geofence item."
+        },
+        {
+          "name": "editButton",
+          "type": "Widget",
+          "description": "An optional widget to be displayed as an edit button."
+        },
+        {
+          "name": "onCheckBoxTap",
+          "type": "VoidCallback",
+          "description": "The function to be called when the checkbox is tapped."
+        },
+        {
+          "name": "checkBoxTapped",
+          "type": "bool",
+          "description": "A boolean value indicating whether the checkbox is tapped."
+        }
+      ]
+    },
+    {
+      "name": "AW_TappableGooglePlace",
+      "description": "The AW_TappableGooglePlace is a StatelessWidget that displays a tappable place. It has a text field that shows the name of the place. The text field has two styles, one for when it is selected and one for when it is not. The widget also has a border with a customizable color. When the widget is tapped, it triggers a specified action.",
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String",
+          "description": "The name of the place to be displayed."
+        },
+        {
+          "name": "borderColor",
+          "type": "Color",
+          "description": "The color of the border. The default color is grey."
+        },
+        {
+          "name": "notSelectedStyle",
+          "type": "TextStyle",
+          "description": "The text style when the widget is not selected. The default style is grey color and font size 16."
+        },
+        {
+          "name": "selectedStyle",
+          "type": "TextStyle",
+          "description": "The text style when the widget is selected. The default style is blue color and font size 16."
+        },
+        {
+          "name": "isSelected",
+          "type": "bool",
+          "description": "A boolean value indicating whether the widget is selected."
+        },
+        {
+          "name": "onTap",
+          "type": "VoidCallback",
+          "description": "The function to be called when the widget is tapped."
+        }
+      ]
+    },
+    {
+      "name": "AW_InboxListItem",
+      "description": "The AW_InboxListItem is a StatelessWidget that displays an inbox list item. It has a title, image, date/time, and text content. The styles for the title, text content, and date/time can be customized. The widget also has a tap action, and different styles can be applied depending on whether the item has been read.",
+      "parameters": [
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the inbox list item."
+        },
+        {
+          "name": "imageUrl",
+          "type": "String",
+          "description": "The URL of the image to be displayed."
+        },
+        {
+          "name": "dateTime",
+          "type": "String",
+          "description": "The date and time of the inbox list item."
+        },
+        {
+          "name": "textContent",
+          "type": "String",
+          "description": "The text content of the inbox list item."
+        },
+        {
+          "name": "readAt",
+          "type": "double",
+          "description": "The timestamp when the inbox list item was read."
+        },
+        {
+          "name": "sentAt",
+          "type": "double",
+          "description": "The timestamp when the inbox list item was sent."
+        },
+        {
+          "name": "titleTextStyle",
+          "type": "TextStyle",
+          "description": "The text style of the title."
+        },
+        {
+          "name": "textContentTextStyle",
+          "type": "TextStyle",
+          "description": "The text style of the text content."
+        },
+        {
+          "name": "dateTimeTextStyle",
+          "type": "TextStyle",
+          "description": "The text style of the date/time."
+        },
+        {
+          "name": "titleUnreadFontWeight",
+          "type": "FontWeight",
+          "description": "The font weight of the title when the inbox list item is unread."
+        },
+        {
+          "name": "titleReadFontWeight",
+          "type": "FontWeight",
+          "description": "The font weight of the title when the inbox list item is read."
+        },
+        {
+          "name": "textReadFontWeight",
+          "type": "FontWeight",
+          "description": "The font weight of the text content when the inbox list item is read."
+        },
+        {
+          "name": "textUnreadFontWeight",
+          "type": "FontWeight",
+          "description": "The font weight of the text content when the inbox list item is unread."
+        },
+        {
+          "name": "onTap",
+          "type": "VoidCallback",
+          "description": "The function to be called when the inbox list item is tapped."
+        },
+        {
+          "name": "crossAxisAlignment",
+          "type": "CrossAxisAlignment",
+          "description": "The alignment of the children along the cross axis."
+        },
+        {
+          "name": "useCached",
+          "type": "bool",
+          "description": "A boolean value indicating whether to use cached images."
+        },
+        {
+          "name": "imgFit",
+          "type": "BoxFit",
+          "description": "How the image should be inscribed into the box."
+        },
+        {
+          "name": "imgNotCachedHeight",
+          "type": "int",
+          "description": "The height of the image when it is not cached."
+        },
+        {
+          "name": "titleReadColor",
+          "type": "Color",
+          "description": "The color of the title when the inbox list item is read."
+        },
+        {
+          "name": "titleUnReadColor",
+          "type": "Color",
+          "description": "The color of the title when the inbox list item is unread."
+        },
+        {
+          "name": "dateReadColor",
+          "type": "Color",
+          "description": "The color of the date/time when the inbox list item is read."
+        },
+        {
+          "name": "dateUnReadColor",
+          "type": "Color",
+          "description": "The color of the date/time when the inbox list item is unread."
+        }
+      ]
+    }
+
+  ]
+}

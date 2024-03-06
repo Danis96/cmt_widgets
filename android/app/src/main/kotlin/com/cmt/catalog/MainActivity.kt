@@ -1,4 +1,4 @@
-package com.example.cmt
+package com.cmt.catalog
 
 import io.flutter.embedding.android.FlutterActivity
 
