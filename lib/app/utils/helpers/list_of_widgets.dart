@@ -437,7 +437,7 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
         ),
       ),
 
-      /// AW_ChallengeItemImage
+      /// AW_CheckboxText
       Hero(
         tag: 'AW_CheckboxText',
         key: const Key('AW_CheckboxText'),
@@ -451,6 +451,158 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
           key: const Key('AW_CheckboxText'),
           newValue: true,
           onChange: (bool v) => showInSnackBar('On press function', scaffoldKey, context),
+        ),
+      ),
+
+      /// AW_Co2RankingWidget
+      const Hero(
+        tag: 'AW_Co2RankingWidget',
+        key: Key('AW_Co2RankingWidget'),
+        child: Material(
+          child: AW_Co2RankingWidget(
+            separatorColor: Colors.grey,
+            textColor: Colors.blueAccent,
+            title: 'Ranking',
+            valueDesc: 'g/km',
+            imgSeparator: Assets.assetsDostSeparator,
+            initialsMiddle: 'IM',
+            initialsBottom: ['IB4', 'IB5'],
+            initialsTop: ['IT1', 'IT2'],
+            nameMiddle: 'Name middle',
+            namesBottom: ['Name4', 'Name5'],
+            namesTop: ['Name1', 'Name2'],
+            rankMiddle: 17,
+            rankBottomPlace: [34, 135],
+            rankTopPlace: [1, 2],
+            emissionMiddle: 8,
+            emissionBottom: [12, 14],
+            emissionTop: [0, 0.1],
+          ),
+        ),
+      ),
+
+      ///AW_Stepper
+      Hero(
+        tag: 'AW_Stepper',
+        key: const Key('AW_Stepper'),
+        child: Material(
+          child: SizedBox(
+            height: 200,
+            width: 200,
+            child: AW_Stepper(
+              key: const Key('AW_Stepper'),
+              steps: const <AW_Step>[
+                AW_Step(content: Center(child: SizedBox(height: 200, child: Text('Step1')))),
+                AW_Step(content: Center(child: SizedBox(height: 200, child: Text('Step2')))),
+              ],
+              completeColor: Colors.greenAccent,
+              activeColor: Colors.blueAccent,
+              inActiveColor: Colors.blueAccent,
+              elevation: 2,
+              currentStep: 1,
+              index: 1,
+              type: AW_StepperType.horizontal,
+              onStepCancel: () => showInSnackBar('On press function', scaffoldKey, context),
+              onStepContinue: () => showInSnackBar('On press function', scaffoldKey, context),
+              onStepTapped: (int i) => showInSnackBar('On press function', scaffoldKey, context),
+              physics: const NeverScrollableScrollPhysics(),
+            ),
+          ),
+        ),
+      ),
+
+      /// AW_FullPageDialog
+      Hero(
+        tag: 'AW_FullPageDialog',
+        key: const Key('AW_FullPageDialog'),
+        child: ElevatedButton(
+          onPressed: () {
+            AW_FullPageDialog(context,
+                title: 'Title',
+                buttonText: 'Button',
+                buttonColor: Colors.blueAccent,
+                content:
+                    'Content text, content.Content text, content.Content text, content.Content text, content.Content text, content.Content text, content.Content text, content.Content text, content.');
+          },
+          child: const Text('Open AW_FullPageDialog'),
+        ),
+      ),
+
+      /// AW_InfoPopup
+      Hero(
+        tag: 'AW_InfoPopup',
+        key: const Key('AW_InfoPopup'),
+        child: ElevatedButton(
+          onPressed: () {
+            AW_InfoPopup(context,
+                title: 'Title',
+                buttonText: 'Button',
+                buttonColor: Colors.blueAccent,
+                content: 'Content text, content.Content text, content.Content text');
+          },
+          child: const Text('Open AW_InfoPopup'),
+        ),
+      ),
+
+      /// AW_SimpleDialog
+      Hero(
+        tag: 'AW_SimpleDialog',
+        key: const Key('AW_SimpleDialog'),
+        child: ElevatedButton(
+          onPressed: () {
+            AW_SimpleDialog(context,
+                title: 'Title',
+                buttonText: 'Button',
+                buttonColor: Colors.blueAccent,
+                content: 'Content text, content.Content text, content.Content text');
+          },
+          child: const Text('Open AW_SimpleDialog'),
+        ),
+      ),
+
+      /// AW_TwoButtonDialog
+      Hero(
+        tag: 'AW_TwoButtonDialog',
+        key: const Key('AW_TwoButtonDialog'),
+        child: ElevatedButton(
+          onPressed: () {
+            AW_TwoButtonDialog(context,
+                title: 'Title',
+                leftButtonText: 'Left button',
+                rightButtonText: 'Right button',
+                onRightButtonPressed: () => showInSnackBar('On press function', scaffoldKey, context),
+                buttonColor: Colors.blueAccent,
+                content: 'Content text, content.Content text, content.Content text');
+          },
+          child: const Text('Open AW_TwoButtonDialog'),
+        ),
+      ),
+
+      /// AW_TypedDialog
+      Hero(
+        tag: 'AW_TypedDialog',
+        key: const Key('AW_TypedDialog'),
+        child: ElevatedButton(
+          onPressed: () {
+            AW_TypedDialog(
+              context,
+              DialogType.INFO,
+              title: 'Title',
+              content: 'Content text, content.Content text, content.Content text',
+              buttonTitle: 'Button',
+              bottomWidget: const SizedBox(),
+              contentWidget: const SizedBox(),
+              titleWidget: const SizedBox(),
+              contentColor: Colors.blueAccent,
+              canPop: true,
+              key: 'AW_TypedDialog',
+              onTap: () => showInSnackBar('On press function', scaffoldKey, context),
+              barrierDismissible: true,
+              imgForSpecificProfile: Assets.assetsBatteryIcon,
+              specificUserProfileDialogInfo: false,
+            );
+          },
+          child: const Text('Open AW_TypedDialog'),
         ),
       ),
     ];

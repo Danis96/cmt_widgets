@@ -1718,7 +1718,623 @@
           "description": "The rich text to display. The default text is an empty string."
         }
       ]
+    },
+    {
+      "name": "AW_Co2RankingWidget",
+      "description": "A widget that displays a ranking based on CO2 emissions.",
+      "parameters": [
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "The key for the widget."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the widget."
+        },
+        {
+          "name": "rankTopPlace",
+          "type": "List<double>",
+          "description": "The ranking for the top place."
+        },
+        {
+          "name": "rankBottomPlace",
+          "type": "List<double>",
+          "description": "The ranking for the bottom place."
+        },
+        {
+          "name": "initialsTop",
+          "type": "List<String>",
+          "description": "The initials for the top place."
+        },
+        {
+          "name": "initialsBottom",
+          "type": "List<String>",
+          "description": "The initials for the bottom place."
+        },
+        {
+          "name": "initialsMiddle",
+          "type": "String",
+          "description": "The initials for the middle place."
+        },
+        {
+          "name": "nameMiddle",
+          "type": "String",
+          "description": "The name for the middle place."
+        },
+        {
+          "name": "rankMiddle",
+          "type": "double",
+          "description": "The ranking for the middle place."
+        },
+        {
+          "name": "namesBottom",
+          "type": "List<String>",
+          "description": "The names for the bottom place."
+        },
+        {
+          "name": "namesTop",
+          "type": "List<String>",
+          "description": "The names for the top place."
+        },
+        {
+          "name": "emissionBottom",
+          "type": "List<double>",
+          "description": "The emissions for the bottom place."
+        },
+        {
+          "name": "emissionTop",
+          "type": "List<double>",
+          "description": "The emissions for the top place."
+        },
+        {
+          "name": "emissionMiddle",
+          "type": "double",
+          "description": "The emissions for the middle place."
+        },
+        {
+          "name": "imgSeparator",
+          "type": "Image",
+          "description": "The image for the separator."
+        },
+        {
+          "name": "valueDesc",
+          "type": "String",
+          "description": "The description of the value."
+        },
+        {
+          "name": "isMe",
+          "type": "bool",
+          "description": "A flag indicating whether the widget represents the current user."
+        },
+        {
+          "name": "titleColor",
+          "type": "Color",
+          "description": "The color of the title."
+        },
+        {
+          "name": "imgSeparatorColor",
+          "type": "Color",
+          "description": "The color of the image separator."
+        },
+        {
+          "name": "separatorColor",
+          "type": "Color",
+          "description": "The color of the separator."
+        },
+        {
+          "name": "textColor",
+          "type": "Color",
+          "description": "The color of the text."
+        },
+        {
+          "name": "isMeTextColor",
+          "type": "Color",
+          "description": "The color of the text if the widget represents the current user."
+        },
+        {
+          "name": "circleColor",
+          "type": "Color",
+          "description": "The color of the circle."
+        },
+        {
+          "name": "circleIsMeColor",
+          "type": "Color",
+          "description": "The color of the circle if the widget represents the current user."
+        }
+      ]
+    },
+    {
+      "name": "AW_Stepper",
+      "description": "A widget that displays a stepper. It allows to navigate through a sequence of steps with each step requiring user's input. It includes features like scrolling physics, stepper type, current step, step tapped event, step continue event, step cancel event, controls builder, elevation, and colors for complete, active, and inactive states.",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "Key",
+          "description": "The key for the widget."
+        },
+        {
+          "name": "steps",
+          "type": "List<AW_Step>",
+          "description": "The steps of the stepper."
+        },
+        {
+          "name": "physics",
+          "type": "ScrollPhysics",
+          "description": "The scrolling physics for the stepper."
+        },
+        {
+          "name": "type",
+          "type": "AW_StepperType",
+          "description": "The type of the stepper. It can be vertical or horizontal."
+        },
+        {
+          "name": "currentStep",
+          "type": "int",
+          "description": "The current step of the stepper."
+        },
+        {
+          "name": "onStepTapped",
+          "type": "ValueChanged<int>",
+          "description": "The callback function that is called when a step is tapped."
+        },
+        {
+          "name": "onStepContinue",
+          "type": "VoidCallback",
+          "description": "The callback function that is called when the 'continue' button is pressed."
+        },
+        {
+          "name": "onStepCancel",
+          "type": "VoidCallback",
+          "description": "The callback function that is called when the 'cancel' button is pressed."
+        },
+        {
+          "name": "controlsBuilder",
+          "type": "ControlsWidgetBuilder",
+          "description": "The builder for the controls of the stepper."
+        },
+        {
+          "name": "elevation",
+          "type": "double",
+          "description": "The elevation of the stepper."
+        },
+        {
+          "name": "completeColor",
+          "type": "Color",
+          "description": "The color for the complete state of the stepper."
+        },
+        {
+          "name": "activeColor",
+          "type": "Color",
+          "description": "The color for the active state of the stepper."
+        },
+        {
+          "name": "inActiveColor",
+          "type": "Color",
+          "description": "The color for the inactive state of the stepper."
+        },
+        {
+          "name": "index",
+          "type": "int",
+          "description": "The index of the stepper."
+        }
+      ]
+    },
+    {
+      "name": "AW_FullPageDialog",
+      "description": "A full page dialog widget. It displays a dialog with a title, content, and a button. The content can be a string or a widget. The dialog can be customized with various colors, padding, and a button style.",
+      "parameters": [
+        {
+          "name": "context",
+          "type": "BuildContext",
+          "description": "The build context for the widget."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the dialog."
+        },
+        {
+          "name": "content",
+          "type": "String",
+          "description": "The content of the dialog."
+        },
+        {
+          "name": "buttonText",
+          "type": "String",
+          "description": "The text of the button in the dialog."
+        },
+        {
+          "name": "titleColor",
+          "type": "Color",
+          "description": "The color of the title."
+        },
+        {
+          "name": "contentColor",
+          "type": "Color",
+          "description": "The color of the content."
+        },
+        {
+          "name": "buttonColor",
+          "type": "Color",
+          "description": "The color of the button."
+        },
+        {
+          "name": "key",
+          "type": "String",
+          "description": "The key for the widget."
+        },
+        {
+          "name": "contentWidget",
+          "type": "Widget",
+          "description": "The widget to be used as the content of the dialog."
+        },
+        {
+          "name": "noButton",
+          "type": "bool",
+          "description": "A flag indicating whether the dialog should have a button."
+        },
+        {
+          "name": "contentPadding",
+          "type": "EdgeInsetsGeometry",
+          "description": "The padding for the content of the dialog."
+        },
+        {
+          "name": "titlePadding",
+          "type": "EdgeInsetsGeometry",
+          "description": "The padding for the title of the dialog."
+        },
+        {
+          "name": "insetPadding",
+          "type": "EdgeInsets",
+          "description": "The inset padding for the dialog."
+        },
+        {
+          "name": "buttonStyle",
+          "type": "ButtonStyle",
+          "description": "The style for the button in the dialog."
+        },
+        {
+          "name": "shape",
+          "type": "ShapeBorder",
+          "description": "The shape of the dialog."
+        },
+        {
+          "name": "height",
+          "type": "double",
+          "description": "The height of the dialog."
+        },
+        {
+          "name": "onButtonPressed",
+          "type": "VoidCallback",
+          "description": "The callback function that is called when the button is pressed."
+        }
+      ]
+    },
+    {
+      "name": "AW_InfoPopup",
+      "description": "A function that displays an information popup. It includes a title, content, and one or two buttons. The title and content can be strings or widgets. The popup can be dismissed and its dismissal behavior can be customized. It also includes various colors for title, content, button, and button text. It also includes a key for the widget, and optional widgets for content and title. It also includes an optional icon for the title with its color. It also includes optional functions that are called when the buttons are pressed. It also includes flags for dismissal, two buttons, and can pop.",
+      "parameters": [
+        {
+          "name": "context",
+          "type": "BuildContext",
+          "description": "The build context for the widget."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the popup."
+        },
+        {
+          "name": "content",
+          "type": "String",
+          "description": "The content of the popup."
+        },
+        {
+          "name": "buttonText",
+          "type": "String",
+          "description": "The text of the first button in the popup."
+        },
+        {
+          "name": "buttonTwoText",
+          "type": "String",
+          "description": "The text of the second button in the popup."
+        },
+        {
+          "name": "titleColor",
+          "type": "Color",
+          "description": "The color of the title."
+        },
+        {
+          "name": "contentColor",
+          "type": "Color",
+          "description": "The color of the content."
+        },
+        {
+          "name": "buttonColor",
+          "type": "Color",
+          "description": "The color of the button."
+        },
+        {
+          "name": "buttonTextColor",
+          "type": "Color",
+          "description": "The color of the button text."
+        },
+        {
+          "name": "key",
+          "type": "String",
+          "description": "The key for the widget."
+        },
+        {
+          "name": "contentWidget",
+          "type": "Widget",
+          "description": "The widget to be used as the content of the popup."
+        },
+        {
+          "name": "titleWidget",
+          "type": "Widget",
+          "description": "The widget to be used as the title of the popup."
+        },
+        {
+          "name": "iconForTitle",
+          "type": "IconData",
+          "description": "The icon for the title."
+        },
+        {
+          "name": "iconColor",
+          "type": "Color",
+          "description": "The color of the icon."
+        },
+        {
+          "name": "onButtonPressed",
+          "type": "Function",
+          "description": "The callback function that is called when the first button is pressed."
+        },
+        {
+          "name": "onButtonTwoPressed",
+          "type": "Function",
+          "description": "The callback function that is called when the second button is pressed."
+        },
+        {
+          "name": "dismiss",
+          "type": "bool",
+          "description": "A flag indicating whether the popup should be dismissible."
+        },
+        {
+          "name": "twoButtons",
+          "type": "bool",
+          "description": "A flag indicating whether the popup should have two buttons."
+        },
+        {
+          "name": "canPop",
+          "type": "bool",
+          "description": "A flag indicating whether the popup can be popped."
+        }
+      ]
+    },
+    {
+      "name": "AW_SimpleDialog",
+      "description": "A simple dialog widget. It displays a dialog with a title, content, and one or two buttons. The title and content can be strings or widgets. The dialog can be dismissed and its dismissal behavior can be customized. It also includes various colors for title, content, and button. It also includes a key for the widget, and optional widgets for content and title. It also includes optional functions that are called when the buttons are pressed. It also includes flags for dismissal, two buttons, and can pop.",
+      "parameters": [
+        {
+          "name": "context",
+          "type": "BuildContext",
+          "description": "The build context for the widget."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the dialog."
+        },
+        {
+          "name": "content",
+          "type": "String",
+          "description": "The content of the dialog."
+        },
+        {
+          "name": "buttonText",
+          "type": "String",
+          "description": "The text of the first button in the dialog."
+        },
+        {
+          "name": "buttonTwoText",
+          "type": "String",
+          "description": "The text of the second button in the dialog."
+        },
+        {
+          "name": "titleColor",
+          "type": "Color",
+          "description": "The color of the title."
+        },
+        {
+          "name": "contentColor",
+          "type": "Color",
+          "description": "The color of the content."
+        },
+        {
+          "name": "buttonColor",
+          "type": "Color",
+          "description": "The color of the button."
+        },
+        {
+          "name": "key",
+          "type": "String",
+          "description": "The key for the widget."
+        },
+        {
+          "name": "contentWidget",
+          "type": "Widget",
+          "description": "The widget to be used as the content of the dialog."
+        },
+        {
+          "name": "titleWidget",
+          "type": "Widget",
+          "description": "The widget to be used as the title of the dialog."
+        },
+        {
+          "name": "onButtonPressed",
+          "type": "Function",
+          "description": "The callback function that is called when the first button is pressed."
+        },
+        {
+          "name": "onButtonTwoPressed",
+          "type": "Function",
+          "description": "The callback function that is called when the second button is pressed."
+        },
+        {
+          "name": "dismiss",
+          "type": "bool",
+          "description": "A flag indicating whether the dialog should be dismissible."
+        },
+        {
+          "name": "twoButtons",
+          "type": "bool",
+          "description": "A flag indicating whether the dialog should have two buttons."
+        },
+        {
+          "name": "canPop",
+          "type": "bool",
+          "description": "A flag indicating whether the dialog can be popped."
+        }
+      ]
+    },
+    {
+      "name": "AW_TwoButtonDialog",
+      "description": "A two-button dialog widget. It displays a dialog with a title, content, and two buttons. The title and content are strings. The dialog can be dismissed and its dismissal behavior can be customized. It also includes various colors for title, content, and button. It also includes a key for the widget, and a function that is called when the right button is pressed.",
+      "parameters": [
+        {
+          "name": "context",
+          "type": "BuildContext",
+          "description": "The build context for the widget."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the dialog."
+        },
+        {
+          "name": "content",
+          "type": "String",
+          "description": "The content of the dialog."
+        },
+        {
+          "name": "leftButtonText",
+          "type": "String",
+          "description": "The text of the left button in the dialog."
+        },
+        {
+          "name": "rightButtonText",
+          "type": "String",
+          "description": "The text of the right button in the dialog."
+        },
+        {
+          "name": "titleColor",
+          "type": "Color",
+          "description": "The color of the title."
+        },
+        {
+          "name": "contentColor",
+          "type": "Color",
+          "description": "The color of the content."
+        },
+        {
+          "name": "buttonColor",
+          "type": "Color",
+          "description": "The color of the button."
+        },
+        {
+          "name": "key",
+          "type": "String",
+          "description": "The key for the widget."
+        },
+        {
+          "name": "onRightButtonPressed",
+          "type": "Function",
+          "description": "The callback function that is called when the right button is pressed."
+        }
+      ]
+    },
+    {
+      "name": "AW_TypedDialog",
+      "description": "A typed dialog widget. It displays a dialog with a title, content, and a button. The title and content can be strings or widgets. The dialog can be dismissed and its dismissal behavior can be customized. It also includes a key for the widget, an image for a specific profile, a button title, flags for barrier dismissible, can pop, and specific user profile dialog info. It also includes optional widgets for title, content, and bottom. It also includes an optional color for content, and a function that is called when the dialog is tapped. The type of the dialog determines the values used from the singleton instance TypedDialogConfig.",
+      "parameters": [
+        {
+          "name": "context",
+          "type": "BuildContext",
+          "description": "The build context for the widget."
+        },
+        {
+          "name": "type",
+          "type": "DialogType",
+          "description": "The type of the dialog. It determines the values used from the singleton instance TypedDialogConfig."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the dialog."
+        },
+        {
+          "name": "content",
+          "type": "String",
+          "description": "The content of the dialog."
+        },
+        {
+          "name": "key",
+          "type": "String",
+          "description": "The key for the widget."
+        },
+        {
+          "name": "imgForSpecificProfile",
+          "type": "String",
+          "description": "The image for a specific profile."
+        },
+        {
+          "name": "buttonTitle",
+          "type": "String",
+          "description": "The title of the button in the dialog."
+        },
+        {
+          "name": "barrierDismissible",
+          "type": "bool",
+          "description": "A flag indicating whether the dialog should be barrier dismissible."
+        },
+        {
+          "name": "canPop",
+          "type": "bool",
+          "description": "A flag indicating whether the dialog can be popped."
+        },
+        {
+          "name": "specificUserProfileDialogInfo",
+          "type": "bool",
+          "description": "A flag indicating whether the dialog is for a specific user profile dialog info."
+        },
+        {
+          "name": "titleWidget",
+          "type": "Widget",
+          "description": "The widget to be used as the title of the dialog."
+        },
+        {
+          "name": "contentWidget",
+          "type": "Widget",
+          "description": "The widget to be used as the content of the dialog."
+        },
+        {
+          "name": "bottomWidget",
+          "type": "Widget",
+          "description": "The widget to be used at the bottom of the dialog."
+        },
+        {
+          "name": "contentColor",
+          "type": "Color",
+          "description": "The color of the content."
+        },
+        {
+          "name": "onTap",
+          "type": "Function",
+          "description": "The callback function that is called when the dialog is tapped."
+        }
+      ]
     }
-
   ]
 }
