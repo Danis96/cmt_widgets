@@ -2335,6 +2335,489 @@
           "description": "The callback function that is called when the dialog is tapped."
         }
       ]
+    },
+    {
+      "name": "AW_CustomDrawer",
+      "description": "A custom drawer widget in Flutter. It provides a highly customizable drawer interface with various properties to modify its appearance and behavior.",
+      "parameters": [
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color of the drawer."
+        },
+        {
+          "name": "headerHeight",
+          "type": "double",
+          "description": "The height of the drawer's header."
+        },
+        {
+          "name": "headerCenterWidget",
+          "type": "Widget",
+          "description": "The widget to display in the center of the drawer's header."
+        },
+        {
+          "name": "actionIcon",
+          "type": "IconData",
+          "description": "The icon for the action button in the drawer."
+        },
+        {
+          "name": "actionIconColor",
+          "type": "Color",
+          "description": "The color of the action icon."
+        },
+        {
+          "name": "onActionIconPress",
+          "type": "Function",
+          "description": "The callback function that is called when the action icon is pressed."
+        },
+        {
+          "name": "actionLinkClicked",
+          "type": "Function",
+          "description": "The callback function that is called when the action link is clicked."
+        },
+        {
+          "name": "listItems",
+          "type": "List<AW_DrawerListItem>",
+          "description": "The list of items to display in the drawer."
+        },
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "The key to associate with this widget."
+        },
+        {
+          "name": "actionKey",
+          "type": "Key",
+          "description": "The key to associate with the action icon."
+        },
+        {
+          "name": "logoutTitle",
+          "type": "String",
+          "description": "The title for the logout option. If this is null, the logout option will not be shown."
+        },
+        {
+          "name": "onLogoutPress",
+          "type": "Function",
+          "description": "The callback function that is called when the logout option is pressed."
+        },
+        {
+          "name": "onDrawerOpened",
+          "type": "Function(String)",
+          "description": "The callback function that is called when the drawer is opened."
+        },
+        {
+          "name": "onDrawerItemPressed",
+          "type": "Function(String)",
+          "description": "The callback function that is called when a drawer item is pressed."
+        },
+        {
+          "name": "labelStyle",
+          "type": "TextStyle",
+          "description": "The text style for the labels in the drawer."
+        },
+        {
+          "name": "customHeader",
+          "type": "Widget",
+          "description": "A custom widget to use as the drawer's header."
+        },
+        {
+          "name": "logoutStyle",
+          "type": "TextStyle",
+          "description": "The text style for the logout option."
+        },
+        {
+          "name": "logoutTitleColor",
+          "type": "Color",
+          "description": "The color of the logout title."
+        },
+        {
+          "name": "headerCenter",
+          "type": "bool",
+          "description": "Whether to center the header content."
+        },
+        {
+          "name": "headerMainAxisAlignment",
+          "type": "MainAxisAlignment",
+          "description": "How the children should be placed along the main axis in the header."
+        },
+        {
+          "name": "wrapWithMaterial",
+          "type": "bool",
+          "description": "Whether to wrap the drawer with a Material widget."
+        },
+        {
+          "name": "appVersion",
+          "type": "String",
+          "description": "The version of the app to display in the drawer."
+        },
+        {
+          "name": "appVersionStyle",
+          "type": "TextStyle",
+          "description": "The text style for the app version."
+        },
+        {
+          "name": "listItemBottomPadding",
+          "type": "double",
+          "description": "The bottom padding for the list items in the drawer."
+        },
+        {
+          "name": "elevation",
+          "type": "double",
+          "description": "The elevation of the drawer."
+        }
+      ]
+    },
+    {
+      "name": "AW_DrawerListItem",
+      "description": "The `AW_DrawerListItem` widget is a customizable list item commonly used in navigation drawers. It displays an icon or image alongside a text title. Users can tap on the item to navigate to a specific route within the app.",
+      "parameters": [
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title text displayed for the list item."
+        },
+        {
+          "name": "image",
+          "type": "String",
+          "description": "The path to an SVG image asset representing the icon or image for the list item. If empty, no image is displayed."
+        },
+        {
+          "name": "routeName",
+          "type": "String",
+          "description": "The name of the route to navigate when the list item is tapped."
+        },
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "An optional key to uniquely identify the widget."
+        },
+        {
+          "name": "titleColor",
+          "type": "Color",
+          "description": "The color of the title text (default: white)."
+        },
+        {
+          "name": "imageColor",
+          "type": "Color",
+          "description": "The color of the image/icon (default: white)."
+        },
+        {
+          "name": "arguments",
+          "type": "dynamic",
+          "description": "Additional arguments to pass when navigating to the specified route."
+        },
+        {
+          "name": "tapKey",
+          "type": "Key",
+          "description": "An optional key for handling tap events."
+        },
+        {
+          "name": "height",
+          "type": "double",
+          "description": "The height of the image/icon (default: 20)."
+        },
+        {
+          "name": "boxFit",
+          "type": "BoxFit",
+          "description": "The fit mode for the image/icon (default: BoxFit.contain)."
+        },
+        {
+          "name": "textStyle",
+          "type": "TextStyle",
+          "description": "Custom text style for the title."
+        },
+        {
+          "name": "margin",
+          "type": "EdgeInsets",
+          "description": "The margin around the list item (default: bottom: 30, left: 15)."
+        },
+        {
+          "name": "isLink",
+          "type": "bool",
+          "description": "Whether the list item represents an external link (default: false)."
+        },
+        {
+          "name": "onTap",
+          "type": "VoidCallback",
+          "description": "A callback function triggered when the list item is tapped."
+        }
+      ]
+    },
+    {
+      "name": "AW_FAQListItem",
+      "description": "The AW_FAQListItem is a StatefulWidget that displays a list item for FAQs. It has a title and description, and can be opened or closed to show or hide the description. It also has customizable styles for the title and description, as well as customizable assets for the open and close arrows.",
+      "parameters": [
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the FAQ item."
+        },
+        {
+          "name": "titleTextStyle",
+          "type": "TextStyle",
+          "description": "The text style of the title. The default style is black, font size 16, and weight 400."
+        },
+        {
+          "name": "arrowsAssetClosed",
+          "type": "SvgPicture",
+          "description": "The asset shown when the FAQ item is closed."
+        },
+        {
+          "name": "arrowsAssetOpened",
+          "type": "SvgPicture",
+          "description": "The asset shown when the FAQ item is opened."
+        },
+        {
+          "name": "boxShadow",
+          "type": "List<BoxShadow>",
+          "description": "The box shadow of the FAQ item. The default is a box shadow with color RGB(0, 0, 0, 0.05), offset (0, 8), blur radius 16, and spread radius 0."
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "description": "The description of the FAQ item."
+        },
+        {
+          "name": "descriptionTextStyle",
+          "type": "TextStyle",
+          "description": "The text style of the description. The default style is color RGB(70, 83, 93, 1), font size 14, and weight 400."
+        },
+        {
+          "name": "padding",
+          "type": "EdgeInsets",
+          "description": "The padding of the FAQ item. The default is symmetric horizontal padding of 16."
+        }
+      ]
+    },
+    {
+      "name": "AW_FilterAigComponent",
+      "description": "The AW_FilterAigComponent is a StatelessWidget that displays a filter component. It contains a list of ShieldFilter items, and each item can be clicked to trigger an action. The selected item is highlighted with a specified color.",
+      "parameters": [
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "The key for the widget."
+        },
+        {
+          "name": "listItem",
+          "type": "List<ShieldFilter>",
+          "description": "The list of ShieldFilter items to be displayed."
+        },
+        {
+          "name": "onItemClick",
+          "type": "Function(String, int)",
+          "description": "The function to be called when an item is clicked. It takes the text and id of the ShieldFilter item as parameters."
+        },
+        {
+          "name": "selectedShieldId",
+          "type": "int",
+          "description": "The id of the currently selected ShieldFilter item."
+        },
+        {
+          "name": "selectedFilterColor",
+          "type": "Color",
+          "description": "The color to highlight the selected ShieldFilter item."
+        }
+      ]
+    },
+    {
+      "name": "AW_GeofenceItem",
+      "description": "The AW_GeofenceItem is a StatelessWidget that displays a geofence item. It has a checkbox that can be tapped to trigger an action. The checkbox, border, and text have customizable colors. An optional edit button can be added.",
+      "parameters": [
+        {
+          "name": "borderColor",
+          "type": "Color",
+          "description": "The color of the border. The default color is RGB(97, 97, 97, 1)."
+        },
+        {
+          "name": "checkBoxBackgroundColor",
+          "type": "Color",
+          "description": "The background color of the checkbox. The default color is RGB(224, 224, 224, 1)."
+        },
+        {
+          "name": "checkBoxPath",
+          "type": "String",
+          "description": "The path to the asset for the checkbox."
+        },
+        {
+          "name": "checkBoxColor",
+          "type": "Color",
+          "description": "The color of the checkbox."
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "description": "The text displayed in the geofence item."
+        },
+        {
+          "name": "editButton",
+          "type": "Widget",
+          "description": "An optional widget to be displayed as an edit button."
+        },
+        {
+          "name": "onCheckBoxTap",
+          "type": "VoidCallback",
+          "description": "The function to be called when the checkbox is tapped."
+        },
+        {
+          "name": "checkBoxTapped",
+          "type": "bool",
+          "description": "A boolean value indicating whether the checkbox is tapped."
+        }
+      ]
+    },
+    {
+      "name": "AW_TappableGooglePlace",
+      "description": "The AW_TappableGooglePlace is a StatelessWidget that displays a tappable place. It has a text field that shows the name of the place. The text field has two styles, one for when it is selected and one for when it is not. The widget also has a border with a customizable color. When the widget is tapped, it triggers a specified action.",
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String",
+          "description": "The name of the place to be displayed."
+        },
+        {
+          "name": "borderColor",
+          "type": "Color",
+          "description": "The color of the border. The default color is grey."
+        },
+        {
+          "name": "notSelectedStyle",
+          "type": "TextStyle",
+          "description": "The text style when the widget is not selected. The default style is grey color and font size 16."
+        },
+        {
+          "name": "selectedStyle",
+          "type": "TextStyle",
+          "description": "The text style when the widget is selected. The default style is blue color and font size 16."
+        },
+        {
+          "name": "isSelected",
+          "type": "bool",
+          "description": "A boolean value indicating whether the widget is selected."
+        },
+        {
+          "name": "onTap",
+          "type": "VoidCallback",
+          "description": "The function to be called when the widget is tapped."
+        }
+      ]
+    },
+    {
+      "name": "AW_InboxListItem",
+      "description": "The AW_InboxListItem is a StatelessWidget that displays an inbox list item. It has a title, image, date/time, and text content. The styles for the title, text content, and date/time can be customized. The widget also has a tap action, and different styles can be applied depending on whether the item has been read.",
+      "parameters": [
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the inbox list item."
+        },
+        {
+          "name": "imageUrl",
+          "type": "String",
+          "description": "The URL of the image to be displayed."
+        },
+        {
+          "name": "dateTime",
+          "type": "String",
+          "description": "The date and time of the inbox list item."
+        },
+        {
+          "name": "textContent",
+          "type": "String",
+          "description": "The text content of the inbox list item."
+        },
+        {
+          "name": "readAt",
+          "type": "double",
+          "description": "The timestamp when the inbox list item was read."
+        },
+        {
+          "name": "sentAt",
+          "type": "double",
+          "description": "The timestamp when the inbox list item was sent."
+        },
+        {
+          "name": "titleTextStyle",
+          "type": "TextStyle",
+          "description": "The text style of the title."
+        },
+        {
+          "name": "textContentTextStyle",
+          "type": "TextStyle",
+          "description": "The text style of the text content."
+        },
+        {
+          "name": "dateTimeTextStyle",
+          "type": "TextStyle",
+          "description": "The text style of the date/time."
+        },
+        {
+          "name": "titleUnreadFontWeight",
+          "type": "FontWeight",
+          "description": "The font weight of the title when the inbox list item is unread."
+        },
+        {
+          "name": "titleReadFontWeight",
+          "type": "FontWeight",
+          "description": "The font weight of the title when the inbox list item is read."
+        },
+        {
+          "name": "textReadFontWeight",
+          "type": "FontWeight",
+          "description": "The font weight of the text content when the inbox list item is read."
+        },
+        {
+          "name": "textUnreadFontWeight",
+          "type": "FontWeight",
+          "description": "The font weight of the text content when the inbox list item is unread."
+        },
+        {
+          "name": "onTap",
+          "type": "VoidCallback",
+          "description": "The function to be called when the inbox list item is tapped."
+        },
+        {
+          "name": "crossAxisAlignment",
+          "type": "CrossAxisAlignment",
+          "description": "The alignment of the children along the cross axis."
+        },
+        {
+          "name": "useCached",
+          "type": "bool",
+          "description": "A boolean value indicating whether to use cached images."
+        },
+        {
+          "name": "imgFit",
+          "type": "BoxFit",
+          "description": "How the image should be inscribed into the box."
+        },
+        {
+          "name": "imgNotCachedHeight",
+          "type": "int",
+          "description": "The height of the image when it is not cached."
+        },
+        {
+          "name": "titleReadColor",
+          "type": "Color",
+          "description": "The color of the title when the inbox list item is read."
+        },
+        {
+          "name": "titleUnReadColor",
+          "type": "Color",
+          "description": "The color of the title when the inbox list item is unread."
+        },
+        {
+          "name": "dateReadColor",
+          "type": "Color",
+          "description": "The color of the date/time when the inbox list item is read."
+        },
+        {
+          "name": "dateUnReadColor",
+          "type": "Color",
+          "description": "The color of the date/time when the inbox list item is unread."
+        }
+      ]
     }
+
   ]
 }

@@ -1,6 +1,9 @@
+import 'package:cmt/app/utils/helpers/drawer_list.dart';
+import 'package:cmt/app/utils/helpers/shield_lIst.dart';
 import 'package:cmt/generated/assets.dart';
 import 'package:flutter/material.dart';
 import '../../../theme/color_helper.dart';
+import '../../models/helpers/shield_model.dart';
 import '../../widgets/widgets.dart';
 import 'bottom_navigation_list.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -603,6 +606,114 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
             );
           },
           child: const Text('Open AW_TypedDialog'),
+        ),
+      ),
+
+      /// AW_CustomDrawer
+      Hero(
+        tag: 'AW_CustomDrawer',
+        key: const Key('AW_CustomDrawer'),
+        child: Material(
+          child: ElevatedButton(
+            onPressed: () {
+              scaffoldKey.currentState!.openDrawer();
+            },
+            child: const Icon(Icons.menu),
+          ),
+        ),
+      ),
+
+      /// AW_DrawerListItem
+      Hero(
+        tag: 'AW_DrawerListItem',
+        key: const Key('AW_DrawerListItem'),
+        child: Material(
+          child: AW_DrawerListItem(
+            imageColor: Colors.blueAccent,
+            titleColor: Colors.blueAccent,
+            title: 'Item 1',
+            image: Assets.assetsIcSpeed,
+            onTap: () => showInSnackBar('On press function', scaffoldKey, context),
+            routeName: '',
+            textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: Colors.redAccent),
+          ),
+        ),
+      ),
+
+      /// AW_FAQListItem
+      Hero(
+        tag: 'AW_FAQListItem',
+        key: const Key('AW_FAQListItem'),
+        child: Material(
+          child: AW_FAQListItem(
+            key: const Key('AW_FAQListItem'),
+            arrowsAssetClosed: SvgPicture.asset(Assets.assetsIcStatItemArrowsClosed),
+            arrowsAssetOpened: SvgPicture.asset(Assets.assetsIcStatItemArrowsOpened),
+            description: 'FAQ item description',
+            title: 'FAQ item title',
+          ),
+        ),
+      ),
+
+      /// AW_FilterAigComponent
+      Hero(
+        tag: 'AW_FilterAigComponent',
+        key: const Key('AW_FilterAigComponent'),
+        child: Material(
+          child: AW_FilterAigComponent(
+            widgetKey: const Key('AW_FilterAigComponent'),
+            listItem: ShieldListHelper().shields,
+            selectedShieldId: 0,
+            selectedFilterColor: Colors.blueAccent,
+            onItemClick: (String s, int i) => showInSnackBar('On press function', scaffoldKey, context),
+          ),
+        ),
+      ),
+
+      /// AW_GeofenceItem
+      const Hero(
+        tag: 'AW_GeofenceItem',
+        key: Key('AW_GeofenceItem'),
+        child: Material(
+          child: AW_GeofenceItem(
+            key: Key('AW_GeofenceItem'),
+            checkBoxColor: Colors.red,
+            checkBoxPath: Assets.assetsIcSwoosh,
+            checkBoxTapped: true,
+            text: 'Text',
+          ),
+        ),
+      ),
+
+      /// AW_TappableGooglePlace
+      Hero(
+        tag: 'AW_TappableGooglePlace',
+        key: const Key('AW_TappableGooglePlace'),
+        child: Material(
+          child: AW_TappableGooglePlace(
+            key: const Key('AW_GeofenceItem'),
+            place: 'Manchester',
+            isSelected: true,
+            onTap: () => showInSnackBar('On press function', scaffoldKey, context),
+          ),
+        ),
+      ),
+
+      /// AW_InboxListItem
+      Hero(
+        tag: 'AW_InboxListItem',
+        key: const Key('AW_InboxListItem'),
+        child: Material(
+          child: AW_InboxListItem(
+            key: const Key('AW_InboxListItem'),
+            onTap: () => showInSnackBar('On press function', scaffoldKey, context),
+            title: 'Title',
+            dateReadColor: Colors.black,
+            dateTime: '06.03.',
+            textContent: 'Text content content content content content content',
+            imageUrl:
+                'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/82114837-0066-42c3-990d-755b33d0743a/dgw053q-46b09f3e-36a2-4975-a767-df22c40451ca.jpg/v1/fill/w_1192,h_670,q_70,strp/swamp_dragon_by_travis_anderson_dgw053q-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTAwIiwicGF0aCI6IlwvZlwvODIxMTQ4MzctMDA2Ni00MmMzLTk5MGQtNzU1YjMzZDA3NDNhXC9kZ3cwNTNxLTQ2YjA5ZjNlLTM2YTItNDk3NS1hNzY3LWRmMjJjNDA0NTFjYS5qcGciLCJ3aWR0aCI6Ijw9MTYwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19._SNnsEcUHyx863Ph0fXfTXB5CO_SjLlLcwM3nZbPak8',
+          ),
         ),
       ),
     ];

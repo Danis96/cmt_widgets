@@ -1,12 +1,16 @@
 import 'package:cmt/routing/routes.dart';
 import 'package:expandable_page_view/expandable_page_view.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
+import '../../../generated/assets.dart';
+import '../../../theme/color_helper.dart';
 import '../../locator.dart';
 import '../../stores/widget_store.dart';
+import '../../utils/helpers/drawer_list.dart';
 import '../../utils/helpers/list_of_widgets.dart';
+import '../../widgets/widgets.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({super.key});
@@ -34,11 +38,16 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      key: _scaffoldKey,
-      appBar: _buildAppBar(context),
-      body: _buildBody(context, _scaffoldKey),
-      bottomNavigationBar: _buildControllerArrows(context),
+    return Observer(
+      builder: (BuildContext context) {
+        return Scaffold(
+          key: _scaffoldKey,
+          drawer: widgetStore.widgetKey.contains('AW_CustomDrawer') ? buildDrawer(context) : null,
+          appBar: _buildAppBar(context),
+          body: _buildBody(context, _scaffoldKey),
+          bottomNavigationBar: _buildControllerArrows(context),
+        );
+      },
     );
   }
 
@@ -145,4 +154,65 @@ class _HomePageState extends State<HomePage> {
       widgetStore.pageController.previousPage(duration: const Duration(milliseconds: 400), curve: Curves.easeInOut);
     }
   }
+}
+
+Widget buildDrawer(BuildContext context) {
+  return AW_CustomDrawer(
+    widgetKey: const Key('AW_CustomDrawer'),
+    actionKey: const Key('AW_CustomDrawer'),
+    onDrawerItemPressed: (String value) {},
+    onDrawerOpened: (String value) {},
+    wrapWithMaterial: true,
+    headerCenterWidget: Container(
+      alignment: Alignment.centerLeft,
+      color: Colors.red,
+      height: 10,
+      width: 10,
+    ),
+    headerHeight: 140,
+    backgroundColor: ColorHelper.white.color,
+    elevation: 0,
+    actionIconColor: Colors.blueAccent,
+    logoutTitle: 'Logout',
+    onActionIconPress: () => Navigator.of(context).pop(),
+    listItems: DrawerHelper().drawerListItems(context),
+    labelStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: Colors.blueAccent),
+    logoutStyle: TextStyle(
+        fontSize: 17, fontWeight: FontWeight.w400, color: ColorHelper.primaryBlue.color, fontFamily: 'SourceSansPro'),
+    customHeader: Padding(
+      padding: const EdgeInsets.only(left: 15, bottom: 10),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              SvgPicture.asset(Assets.assetsAppBarLogo, width: 120),
+              const Spacer(),
+              GestureDetector(
+                onTap: () => Navigator.of(context).pop(),
+                child: Container(
+                  color: Colors.transparent,
+                  padding: const EdgeInsets.all(10),
+                  child: SvgPicture.asset(Assets.assetsBatteryIcon),
+                ),
+              ),
+              const SizedBox(width: 16),
+            ],
+          ),
+          Text(
+            'test.test@gmail.com',
+            style: TextStyle(
+              color: Colors.blueAccent.withOpacity(0.4),
+              fontSize: 13,
+            ),
+          ),
+        ],
+      ),
+    ),
+    appVersion: '0.0.1',
+    appVersionStyle: TextStyle(color: Colors.blueAccent.withOpacity(0.4)),
+  );
 }

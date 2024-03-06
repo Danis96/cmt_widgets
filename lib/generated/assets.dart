@@ -25,6 +25,8 @@ class Assets {
   static const String assetsIcDialogAutoInfo = 'assets/ic_dialog_auto_info.png';
   static const String assetsIcDialogAutoSuccess = 'assets/ic_dialog_auto_success.png';
   static const String assetsIcSpeed = 'assets/ic_speed.svg';
+  static const String assetsIcStatItemArrowsClosed = 'assets/ic_stat_item_arrows_closed.svg';
+  static const String assetsIcStatItemArrowsOpened = 'assets/ic_stat_item_arrows_opened.svg';
   static const String assetsIcSwoosh = 'assets/ic_swoosh.svg';
   static const String assetsIcTagBluetooth = 'assets/ic_tag_bluetooth.svg';
   static const String assetsIcTeam = 'assets/ic_team.svg';
@@ -71,11 +73,15 @@ class Assets {
   static const String drawerCustomDrawer = 'lib/app/widgets/drawer/custom_drawer.dart';
   static const String drawerListItemCustomDrawerListItem = 'lib/app/widgets/drawer_list_item/custom_drawer_list_item.dart';
   static const String faqListItemFaqListItem = 'lib/app/widgets/faq_list_item/faq_list_item.dart';
+  static const String filterAigComponentFilterAigComponent = 'lib/app/widgets/filter_aig_component/filter_aig_component.dart';
   static const String generatedAssets = 'lib/generated/assets.dart';
   static const String geofenceGeofenceListItem = 'lib/app/widgets/geofence/geofence_list_item.dart';
   static const String geofenceTappableGooglePlace = 'lib/app/widgets/geofence/tappable_google_place.dart';
   static const String helpersBottomNavigationList = 'lib/app/utils/helpers/bottom_navigation_list.dart';
+  static const String helpersDrawerList = 'lib/app/utils/helpers/drawer_list.dart';
   static const String helpersListOfWidgets = 'lib/app/utils/helpers/list_of_widgets.dart';
+  static const String helpersShieldLIst = 'lib/app/utils/helpers/shield_lIst.dart';
+  static const String helpersShieldModel = 'lib/app/models/helpers/shield_model.dart';
   static const String homePageHomePage = 'lib/app/view/home_page/home_page.dart';
   static const String inboxInboxListItem = 'lib/app/widgets/inbox/inbox_list_item.dart';
   static const String inboxInboxReplyItem = 'lib/app/widgets/inbox/inbox_reply_item.dart';

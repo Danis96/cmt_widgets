@@ -55,8 +55,10 @@ abstract class WidgetBase with Store {
     }
   }
 
+  @observable
   String widgetKey = '';
 
+  @action
   void setWidgetKey(String x) => widgetKey = x;
 
   @observable

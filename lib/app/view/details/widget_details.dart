@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
 import '../../utils/helpers/list_of_widgets.dart';
+import '../home_page/home_page.dart';
 
 class WidgetDetails extends StatelessWidget {
   WidgetDetails({super.key});
@@ -14,10 +15,26 @@ class WidgetDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(key: _scaffoldKey, appBar: _buildAppBar(context), body: _buildBody(context));
+    return Observer(
+      builder: (BuildContext context) {
+        return Scaffold(
+          key: _scaffoldKey,
+          drawer: widgetStore.widgetKey.contains('AW_CustomDrawer') ? buildDrawer(context) : null,
+          appBar: _buildAppBar(context),
+          body: _buildBody(context),
+        );
+      },
+    );
   }
 
-  PreferredSizeWidget _buildAppBar(BuildContext context) => AppBar(title: Text(widgetStore.singleWidget.name));
+  PreferredSizeWidget _buildAppBar(BuildContext context) => AppBar(
+        title: Text(widgetStore.singleWidget.name),
+        actions: <Widget>[
+          widgetStore.widgetKey.contains('AW_CustomDrawer')
+              ? IconButton(onPressed: () => Navigator.of(context).pop(), icon: const Icon(Icons.arrow_back_ios))
+              : const SizedBox()
+        ],
+      );
 
   Widget _buildBody(BuildContext context) {
     return ListView(

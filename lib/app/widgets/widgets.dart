@@ -21,6 +21,8 @@ import 'package:syncfusion_flutter_gauges/gauges.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../models/helpers/shield_model.dart';
+
 part './app_bars/icon_logo_image_app_bar.dart';
 
 part './app_bars/icon_title_icon_app_bar.dart';
@@ -268,3 +270,5 @@ part 'vouchers/one_product_voucher_item.dart';
 part 'vouchers/voucher_box_labels.dart';
 
 part 'vouchers/voucher_list_item.dart';
+
+part 'filter_aig_component/filter_aig_component.dart';
