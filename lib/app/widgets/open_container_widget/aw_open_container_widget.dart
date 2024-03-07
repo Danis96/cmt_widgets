@@ -22,7 +22,6 @@ class AW_OpenContainer extends StatefulWidget {
 }
 
 class _AW_OpenContainerState extends State<AW_OpenContainer> {
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -45,13 +44,13 @@ class _AW_OpenContainerState extends State<AW_OpenContainer> {
                     style: Theme.of(context).textTheme.displaySmall!.copyWith(color: Colors.black, fontSize: 16),
                   ),
                   SvgPicture.asset(
-                    'assets/ic_arrows_opened.svg',
+                    Assets.assetsIcStatItemArrowsOpened,
                     width: 20,
                   ),
                 ]),
                 const SizedBox(height: 12),
                 if (widget.isOpened)
-                  Text(widget.openText, maxLines: 7, overflow: TextOverflow.ellipsis)
+                  Expanded(child: Text(widget.openText, maxLines: 7, overflow: TextOverflow.ellipsis))
                 else
                   Text(widget.closedText, maxLines: 2, overflow: TextOverflow.ellipsis),
               ],

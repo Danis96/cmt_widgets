@@ -62,7 +62,7 @@ class AW_PrizeItemDemo extends StatelessWidget {
             )
           ]
         ),
-        height: 300,
+        height: 280,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -122,7 +122,7 @@ class _ImageContainer extends StatelessWidget {
       children: <Widget>[
         if (image.isNotEmpty)
           Container(
-            height: 300,
+            height: 200,
             width: MediaQuery.of(context).size.width,
             decoration: const BoxDecoration(
               borderRadius: BorderRadius.only(
@@ -216,7 +216,7 @@ class NoImageContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 300,
+      height: 250,
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(12),

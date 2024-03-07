@@ -3238,8 +3238,1341 @@
           "description": "The color of the divider."
         }
       ]
+    },
+    {
+      "name": "AW_CustomModalSheet",
+      "description": "A custom modal sheet widget in Flutter. It is a stateless widget that can be customized with various parameters. It consists of a container that can hold a column of widgets, including an optional top icon, title, search widget, body widget, and bottom widget.",
+      "parameters": [
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "A key that uniquely identifies this widget."
+        },
+        {
+          "name": "height",
+          "type": "double",
+          "description": "The height of the modal sheet. Default value is 512."
+        },
+        {
+          "name": "onClosePressed",
+          "type": "Function",
+          "description": "A function that is called when the close icon is pressed."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the modal sheet. Default value is an empty string."
+        },
+        {
+          "name": "bottomWidget",
+          "type": "Widget",
+          "description": "A widget that is displayed at the bottom of the modal sheet."
+        },
+        {
+          "name": "bodyWidget",
+          "type": "Widget",
+          "description": "A widget that forms the body of the modal sheet."
+        },
+        {
+          "name": "topIcon",
+          "type": "Widget",
+          "description": "An optional icon that is displayed at the top of the modal sheet."
+        },
+        {
+          "name": "shouldUseHeight",
+          "type": "bool",
+          "description": "A boolean value that determines whether the height should be used. Default value is true."
+        },
+        {
+          "name": "searchWidget",
+          "type": "Widget",
+          "description": "An optional search widget that can be included in the modal sheet."
+        }
+      ]
+    },
+    {
+      "name": "AW_NextPreviousWidget",
+      "description": "A custom next/previous widget in Flutter. It is a stateless widget that can be customized with various parameters. It consists of a container that holds a row of widgets, including an optional IconButton for previous and next actions, and a middle text.",
+      "parameters": [
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "A key that uniquely identifies this widget."
+        },
+        {
+          "name": "arrowColor",
+          "type": "Color",
+          "description": "The color of the arrow icons. Default value is Color.fromRGBO(158, 158, 158, 1)."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color of the widget. Default value is Color.fromRGBO(232, 235, 237, 1)."
+        },
+        {
+          "name": "textColor",
+          "type": "Color",
+          "description": "The color of the text. Default value is Color.fromRGBO(33, 33, 33, 1)."
+        },
+        {
+          "name": "onPreviousPressed",
+          "type": "Function",
+          "description": "A function that is called when the previous icon button is pressed."
+        },
+        {
+          "name": "onNextPressed",
+          "type": "Function",
+          "description": "A function that is called when the next icon button is pressed."
+        },
+        {
+          "name": "middleText",
+          "type": "String",
+          "description": "The text that is displayed in the middle of the widget. Default value is an empty string."
+        }
+      ]
+    },
+    {
+      "name": "AW_NoDataIndicator",
+      "description": "A custom no data indicator widget in Flutter. It is a stateless widget that can be customized with various parameters. It consists of a center widget that holds a column of widgets, including an SVG picture and a text widget.",
+      "parameters": [
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "A key that uniquely identifies this widget."
+        },
+        {
+          "name": "imagePath",
+          "type": "String",
+          "description": "The path to the SVG image. Default value is an empty string."
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "description": "The text that is displayed below the SVG image. Default value is an empty string."
+        },
+        {
+          "name": "textStyle",
+          "type": "TextStyle",
+          "description": "The style of the text. Default value is a TextStyle with fontSize 12, fontWeight w500, and color Color.fromRGBO(33, 33, 33, 1)."
+        },
+        {
+          "name": "imageColor",
+          "type": "Color",
+          "description": "The color of the SVG image. Default value is Color.fromRGBO(127, 144, 159, 1)."
+        },
+        {
+          "name": "textAlign",
+          "type": "TextAlign",
+          "description": "The alignment of the text. Default value is TextAlign.start."
+        },
+        {
+          "name": "imageWidth",
+          "type": "double",
+          "description": "The width of the SVG image. Default value is 49."
+        },
+        {
+          "name": "imageHeight",
+          "type": "double",
+          "description": "The height of the SVG image. Default value is 42."
+        }
+      ]
+    },
+    {
+      "name": "AW_OdometerItem",
+      "description": "A custom Odometer Item widget in Flutter. It is a stateless widget that can be customized with various parameters. It consists of a Card widget that holds a Container, which in turn holds a Row of widgets, including an optional image, title, date, and an icon button.",
+      "parameters": [
+        {
+          "name": "icon",
+          "type": "Icon",
+          "description": "The icon for the IconButton. Default value is Icon(Icons.camera_alt_outlined)."
+        },
+        {
+          "name": "onIconPressed",
+          "type": "Function",
+          "description": "A function that is called when the icon button is pressed."
+        },
+        {
+          "name": "onImagePressed",
+          "type": "Function",
+          "description": "A function that is called when the image is pressed."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the Odometer Item. Default value is 'Odometer'."
+        },
+        {
+          "name": "date",
+          "type": "String",
+          "description": "The date of the Odometer Item. Default value is an empty string."
+        },
+        {
+          "name": "titleTextStyle",
+          "type": "TextStyle",
+          "description": "The style of the title text. Default value is a TextStyle with fontSize 16, fontWeight w400, and color Color.fromRGBO(35, 44, 53, 1)."
+        },
+        {
+          "name": "dateTextStyle",
+          "type": "TextStyle",
+          "description": "The style of the date text. Default value is a TextStyle with fontSize 12, fontWeight w400, and color Color.fromRGBO(114, 125, 134, 1)."
+        },
+        {
+          "name": "padding",
+          "type": "EdgeInsets",
+          "description": "The padding of the Container. Default value is EdgeInsets.symmetric(horizontal: 16.0, vertical: 20.0)."
+        },
+        {
+          "name": "imageBytes",
+          "type": "Uint8List",
+          "description": "The bytes of the image. This is optional."
+        },
+        {
+          "name": "imageUrl",
+          "type": "String",
+          "description": "The URL of the image. This is optional."
+        }
+      ]
+    },
+    {
+      "name": "AW_OpenContainer",
+      "description": "A custom Open Container widget in Flutter. It is a stateful widget that can be customized with various parameters. It consists of a Container that holds a GestureDetector, which in turn holds a Card. The Card contains another Container, which holds a Column of widgets, including a Row with title and SVG picture, and a Text widget that displays either openText or closedText based on the isOpened state.",
+      "parameters": [
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the Open Container. Default value is an empty string."
+        },
+        {
+          "name": "closedText",
+          "type": "String",
+          "description": "The text that is displayed when the container is closed. Default value is an empty string."
+        },
+        {
+          "name": "openText",
+          "type": "String",
+          "description": "The text that is displayed when the container is opened. Default value is an empty string."
+        },
+        {
+          "name": "isOpened",
+          "type": "bool",
+          "description": "A boolean value that determines whether the container is opened or closed. Default value is false."
+        }
+      ]
+    },
+    {
+      "name": "AW_PageViewIndicatorDots",
+      "description": "A custom Page View Indicator Dots widget in Flutter. It is a stateless widget that can be customized with various parameters. It consists of a Row of Container widgets, each representing a dot. The color of the dot changes based on whether it is currently selected or not.",
+      "parameters": [
+        {
+          "name": "currentIndex",
+          "type": "int",
+          "description": "The index of the currently selected dot. Default value is 0."
+        },
+        {
+          "name": "numberOfDots",
+          "type": "int",
+          "description": "The total number of dots. Default value is 0."
+        },
+        {
+          "name": "selectedColor",
+          "type": "Color",
+          "description": "The color of the selected dot. Default value is Color.fromRGBO(5, 23, 108, 1)."
+        },
+        {
+          "name": "unselectedColor",
+          "type": "Color",
+          "description": "The color of the unselected dots. Default value is Color.fromRGBO(110, 110, 110, 1)."
+        },
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "A key that uniquely identifies this widget. This is optional."
+        }
+      ]
+    },
+    {
+      "name": "AW_SupervisionInfoItem",
+      "description": "A custom Supervision Info Item widget in Flutter. It is a stateless widget that can be customized with various parameters. It consists of a Column of widgets, including a SizedBox that holds a Stack of widgets, and a Divider.",
+      "parameters": [
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the Supervision Info Item."
+        },
+        {
+          "name": "onPressed",
+          "type": "VoidCallback",
+          "description": "A callback that is called when the IconButton is pressed. This is optional."
+        },
+        {
+          "name": "hasInfoButton",
+          "type": "bool",
+          "description": "A boolean value that determines whether the IconButton is displayed or not."
+        }
+      ]
+    },
+    {
+      "name": "AW_ParentalControlItem",
+      "description": "A custom Parental Control Item widget in Flutter. It is a stateless widget that can be customized with various parameters. It consists of a Column of widgets, including a Row with title and an IconButton, and a Text widget for description.",
+      "parameters": [
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the Parental Control Item."
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "description": "The description of the Parental Control Item."
+        },
+        {
+          "name": "dialogContent",
+          "type": "String",
+          "description": "The content of the dialog that is displayed when the IconButton is pressed."
+        },
+        {
+          "name": "titleColor",
+          "type": "Color",
+          "description": "The color of the title. Default value is Color.fromRGBO(97, 97, 97, 1)."
+        },
+        {
+          "name": "infoButtonColor",
+          "type": "Color",
+          "description": "The color of the info IconButton. Default value is Color.fromRGBO(158, 158, 158, 1)."
+        },
+        {
+          "name": "descriptionColor",
+          "type": "Color",
+          "description": "The color of the description. Default value is Color.fromRGBO(52, 55, 65, 1)."
+        },
+        {
+          "name": "dialogContentColor",
+          "type": "Color",
+          "description": "The color of the dialog content. Default value is Colors.black."
+        },
+        {
+          "name": "buttonTitle",
+          "type": "String",
+          "description": "The title of the button in the dialog."
+        },
+        {
+          "name": "dialogTitle",
+          "type": "String",
+          "description": "The title of the dialog."
+        }
+      ]
+    },
+    {
+      "name": "AW_PermissionsPageViewItem",
+      "description": "A custom Permissions Page View Item widget in Flutter. It is a stateless widget that can be customized with various parameters. It consists of a Column of widgets, including a Row with title and an IconButton, and a Text widget for description.",
+      "parameters": [
+        {
+          "name": "onEnabledTap",
+          "type": "Function",
+          "description": "A function that is called when the enable button is tapped."
+        },
+        {
+          "name": "onSkipTap",
+          "type": "Function",
+          "description": "A function that is called when the skip button is tapped."
+        },
+        {
+          "name": "skipButtonText",
+          "type": "String",
+          "description": "The text of the skip button. Default value is an empty string."
+        },
+        {
+          "name": "enableButtonText",
+          "type": "String",
+          "description": "The text of the enable button. Default value is an empty string."
+        },
+        {
+          "name": "enableButtonColor",
+          "type": "Color",
+          "description": "The color of the enable button. Default value is Color.fromRGBO(19, 82, 222, 1)."
+        },
+        {
+          "name": "contentText",
+          "type": "String",
+          "description": "The content text of the Permissions Page View Item. Default value is an empty string."
+        },
+        {
+          "name": "contentTextStyle",
+          "type": "TextStyle",
+          "description": "The style of the content text. Default value is a TextStyle with fontSize 15, fontWeight w400, and color Color.fromRGBO(97, 97, 97, 1)."
+        },
+        {
+          "name": "imageAssetPath",
+          "type": "String",
+          "description": "The asset path of the image. Default value is an empty string."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the Permissions Page View Item. Default value is an empty string."
+        },
+        {
+          "name": "titleTextStyle",
+          "type": "TextStyle",
+          "description": "The style of the title. Default value is a TextStyle with fontSize 21, fontWeight w700, and color Color.fromRGBO(33, 33, 33, 1)."
+        },
+        {
+          "name": "skipButtonTextStyle",
+          "type": "TextStyle",
+          "description": "The style of the skip button text. Default value is a TextStyle with fontSize 19, fontWeight w700, and color Color.fromRGBO(19, 82, 222, 1)."
+        },
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "A key that uniquely identifies this widget. This is optional."
+        },
+        {
+          "name": "ignoreSizes",
+          "type": "bool",
+          "description": "A boolean value that determines whether to ignore sizes or not. Default value is false."
+        },
+        {
+          "name": "contentSpacing",
+          "type": "double",
+          "description": "The spacing of the content. Default value is 8.0."
+        },
+        {
+          "name": "topSpacing",
+          "type": "double",
+          "description": "The spacing at the top. Default value is 24."
+        },
+        {
+          "name": "instructionsContent",
+          "type": "Widget",
+          "description": "The instructions content of the Permissions Page View Item. This is optional."
+        }
+      ]
+    },
+    {
+      "name": "AW_PolicyActionsItem",
+      "description": "A custom Policy Actions Item widget in Flutter. It is a stateless widget that can be customized with various parameters. It consists of a Container that holds a Material widget, which in turn holds an InkWell. The InkWell contains a Padding widget, which holds a Row of widgets, including an SvgPicture for the icon, a Text widget for the title, and an Icon widget.",
+      "parameters": [
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the Policy Actions Item."
+        },
+        {
+          "name": "titleColor",
+          "type": "Color",
+          "description": "The color of the title. Default value is Color.fromRGBO(57, 70, 82, 1)."
+        },
+        {
+          "name": "onTap",
+          "type": "VoidCallback",
+          "description": "A callback that is called when the InkWell is tapped."
+        },
+        {
+          "name": "icon",
+          "type": "SvgPicture",
+          "description": "The SvgPicture that represents the icon of the Policy Actions Item."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color of the Container. Default value is Colors.white."
+        }
+      ]
+    },
+    {
+      "name": "AW_PolicyCompletion",
+      "description": "This is a StatelessWidget that displays a policy completion widget. It shows a label, a completed value, and a maximum available value. The completed value is displayed as a fraction of the maximum available value in a progress bar. The widget also allows customization of various aspects such as colors, text sizes, and alignment.",
+      "parameters": [
+        {
+          "name": "completedColor",
+          "type": "Color",
+          "description": "The color of the completed portion of the progress bar."
+        },
+        {
+          "name": "completed",
+          "type": "double",
+          "description": "The completed value to be displayed."
+        },
+        {
+          "name": "completedTextSize",
+          "type": "double",
+          "description": "The text size of the completed value."
+        },
+        {
+          "name": "maxAvailableTextSize",
+          "type": "double",
+          "description": "The text size of the maximum available value."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color of the progress bar."
+        },
+        {
+          "name": "labelColor",
+          "type": "Color",
+          "description": "The color of the label text."
+        },
+        {
+          "name": "label",
+          "type": "String",
+          "description": "The label text to be displayed."
+        },
+        {
+          "name": "unit",
+          "type": "String",
+          "description": "The unit of the values to be displayed."
+        },
+        {
+          "name": "fontFamily",
+          "type": "String?",
+          "description": "The font family of the text."
+        },
+        {
+          "name": "maxAvailable",
+          "type": "double",
+          "description": "The maximum available value to be displayed."
+        },
+        {
+          "name": "maxAvailableColor",
+          "type": "Color",
+          "description": "The color of the maximum available value text."
+        },
+        {
+          "name": "forcedTrailingText",
+          "type": "String",
+          "description": "A string that, if not empty, will replace the display of the completed and maximum available values."
+        },
+        {
+          "name": "widthReduce",
+          "type": "double",
+          "description": "A value to reduce the width of the maximum available value, usually used for padding/margin from the app."
+        },
+        {
+          "name": "rowAlignment",
+          "type": "CrossAxisAlignment",
+          "description": "The alignment of the row in the widget."
+        }
+      ]
+    },
+    {
+      "name": "AW_PolicyData",
+      "description": "This is a StatelessWidget that displays a policy data widget. It shows a score label, a total score, and a range label. The widget also allows customization of various aspects such as colors, text sizes, and alignment. It also includes a list of items that can be displayed in a horizontal scrollable view.",
+      "parameters": [
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color of the widget."
+        },
+        {
+          "name": "scoreColor",
+          "type": "Color",
+          "description": "The color of the score label and total score."
+        },
+        {
+          "name": "rangeLabelColor",
+          "type": "Color",
+          "description": "The color of the range label."
+        },
+        {
+          "name": "scoreLabel",
+          "type": "String",
+          "description": "The score label text to be displayed."
+        },
+        {
+          "name": "totalScore",
+          "type": "double",
+          "description": "The total score to be displayed."
+        },
+        {
+          "name": "rangeLabel",
+          "type": "String",
+          "description": "The range label text to be displayed."
+        },
+        {
+          "name": "listHeight",
+          "type": "double",
+          "description": "The height of the list view."
+        },
+        {
+          "name": "items",
+          "type": "List<Widget>",
+          "description": "The list of items to be displayed in the list view."
+        },
+        {
+          "name": "marginBetweenItems",
+          "type": "double?",
+          "description": "The margin between items in the list view."
+        },
+        {
+          "name": "shouldTakeSpecificNumOfItems",
+          "type": "bool",
+          "description": "A flag indicating whether a specific number of items should be taken from the list."
+        },
+        {
+          "name": "numberOfItemsToTake",
+          "type": "int",
+          "description": "The number of items to take from the list if 'shouldTakeSpecificNumOfItems' is true."
+        },
+        {
+          "name": "isReversed",
+          "type": "bool",
+          "description": "A flag indicating whether the list view is reversed."
+        }
+      ]
+    },
+    {
+      "name": "AW_PolicyDetailItem",
+      "description": "This is a StatelessWidget that displays a policy detail item. It shows an icon, a top text, and a bottom text. The widget also allows customization of various aspects such as colors and text sizes. It also includes an optional trailing widget.",
+      "parameters": [
+        {
+          "name": "icon",
+          "type": "SvgPicture",
+          "description": "The icon to be displayed."
+        },
+        {
+          "name": "topText",
+          "type": "String",
+          "description": "The top text to be displayed."
+        },
+        {
+          "name": "bottomText",
+          "type": "String",
+          "description": "The bottom text to be displayed."
+        },
+        {
+          "name": "topTextColor",
+          "type": "Color",
+          "description": "The color of the top text."
+        },
+        {
+          "name": "bottomTextColor",
+          "type": "Color",
+          "description": "The color of the bottom text."
+        },
+        {
+          "name": "trailingWidget",
+          "type": "Widget?",
+          "description": "An optional trailing widget to be displayed."
+        }
+      ]
+    },
+    {
+      "name": "AW_PolicyPopupItem",
+      "description": "This is a StatelessWidget that displays a policy popup item. It shows a label and a value, with an optional info icon that can be tapped. The widget also allows customization of various aspects such as colors, text sizes, and icon data.",
+      "parameters": [
+        {
+          "name": "textColor",
+          "type": "Color",
+          "description": "The color of the text."
+        },
+        {
+          "name": "label",
+          "type": "String",
+          "description": "The label text to be displayed."
+        },
+        {
+          "name": "value",
+          "type": "String",
+          "description": "The value text to be displayed."
+        },
+        {
+          "name": "onInfoTap",
+          "type": "VoidCallback?",
+          "description": "The callback function to be executed when the info icon is tapped."
+        },
+        {
+          "name": "iconData",
+          "type": "IconData",
+          "description": "The data for the info icon."
+        },
+        {
+          "name": "height",
+          "type": "double",
+          "description": "The height of the items. Items with info icon are higher than those without one. This argument makes them equal in height."
+        }
+      ]
+    },
+    {
+      "name": "AW_PolicyScoreItem",
+      "description": "This is a StatelessWidget that displays a policy score item. It shows a label and a score, with a background color. The widget also allows customization of various aspects such as colors, text sizes, and padding.",
+      "parameters": [
+        {
+          "name": "score",
+          "type": "double",
+          "description": "The score to be displayed."
+        },
+        {
+          "name": "label",
+          "type": "Widget",
+          "description": "The label to be displayed."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color of the score container."
+        },
+        {
+          "name": "scoreColor",
+          "type": "Color",
+          "description": "The color of the score text."
+        },
+        {
+          "name": "labelColor",
+          "type": "Color",
+          "description": "The color of the label text."
+        },
+        {
+          "name": "maxHeight",
+          "type": "double",
+          "description": "The maximum height of the score container."
+        },
+        {
+          "name": "width",
+          "type": "double",
+          "description": "The width of the score container."
+        },
+        {
+          "name": "padding",
+          "type": "EdgeInsets",
+          "description": "The padding around the widget."
+        }
+      ]
+    },
+    {
+      "name": "AW_AmodoBanner",
+      "description": "This is a StatelessWidget that displays a banner with a label. The widget allows customization of the background color, text color, and the label text.",
+      "parameters": [
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color of the banner."
+        },
+        {
+          "name": "textColor",
+          "type": "Color",
+          "description": "The color of the label text."
+        },
+        {
+          "name": "label",
+          "type": "String",
+          "description": "The label text to be displayed on the banner."
+        }
+      ]
+    },
+    {
+      "name": "AW_BasicPolicyCard",
+      "description": "This is a StatelessWidget that displays a basic policy card. It shows a policy name, extra information, price, and under price text, with a background color. The widget also allows customization of various aspects such as colors, text styles, and padding.",
+      "parameters": [
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color of the card."
+        },
+        {
+          "name": "extraInfo",
+          "type": "String",
+          "description": "The extra information to be displayed."
+        },
+        {
+          "name": "policyName",
+          "type": "String",
+          "description": "The policy name to be displayed."
+        },
+        {
+          "name": "price",
+          "type": "String",
+          "description": "The price to be displayed."
+        },
+        {
+          "name": "underPriceText",
+          "type": "String",
+          "description": "The text to be displayed under the price."
+        },
+        {
+          "name": "extraInfoStyle",
+          "type": "TextStyle",
+          "description": "The text style of the extra information."
+        },
+        {
+          "name": "policyNameStyle",
+          "type": "TextStyle",
+          "description": "The text style of the policy name."
+        }
+      ]
+    },
+    {
+      "name": "AW_DynamicPolicyCard",
+      "description": "This is a StatelessWidget that displays a dynamic policy card. It shows a user name, car information, price, extra information, policy name, and policy type, with a background color. The widget also allows customization of various aspects such as colors, text styles, and opacity.",
+      "parameters": [
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color of the card."
+        },
+        {
+          "name": "userName",
+          "type": "String",
+          "description": "The user name to be displayed."
+        },
+        {
+          "name": "carInfo",
+          "type": "String",
+          "description": "The car information to be displayed."
+        },
+        {
+          "name": "price",
+          "type": "String",
+          "description": "The price to be displayed."
+        },
+        {
+          "name": "extraInfo",
+          "type": "String",
+          "description": "The extra information to be displayed."
+        },
+        {
+          "name": "policyName",
+          "type": "String",
+          "description": "The policy name to be displayed."
+        },
+        {
+          "name": "policyType",
+          "type": "String",
+          "description": "The policy type to be displayed."
+        },
+        {
+          "name": "userNameStyle",
+          "type": "TextStyle",
+          "description": "The text style of the user name."
+        },
+        {
+          "name": "carInfoStyle",
+          "type": "TextStyle",
+          "description": "The text style of the car information."
+        },
+        {
+          "name": "priceStyle",
+          "type": "TextStyle",
+          "description": "The text style of the price."
+        },
+        {
+          "name": "extraInfoStyle",
+          "type": "TextStyle",
+          "description": "The text style of the extra information."
+        },
+        {
+          "name": "policyNameStyle",
+          "type": "TextStyle",
+          "description": "The text style of the policy name."
+        },
+        {
+          "name": "policyTypeStyle",
+          "type": "TextStyle",
+          "description": "The text style of the policy type."
+        },
+        {
+          "name": "icon",
+          "type": "Icon",
+          "description": "The icon to be displayed."
+        },
+        {
+          "name": "carInfoOpacity",
+          "type": "double",
+          "description": "The opacity of the car information."
+        },
+        {
+          "name": "priceRange",
+          "type": "String",
+          "description": "The price range to be displayed."
+        },
+        {
+          "name": "maxPrice",
+          "type": "String",
+          "description": "The maximum price to be displayed."
+        },
+        {
+          "name": "dividerColor",
+          "type": "Color",
+          "description": "The color of the divider."
+        }
+      ]
+    },
+    {
+      "name": "AW_Pentagon",
+      "description": "This is a StatelessWidget that draws a pentagon based on five passed arguments. The widget does not take text into account when drawing on the canvas. The caller must supply the necessary space.",
+      "parameters": [
+        {
+          "name": "valueA",
+          "type": "double",
+          "description": "The value for the first point of the pentagon."
+        },
+        {
+          "name": "valueB",
+          "type": "double",
+          "description": "The value for the second point of the pentagon."
+        },
+        {
+          "name": "valueC",
+          "type": "double",
+          "description": "The value for the third point of the pentagon."
+        },
+        {
+          "name": "valueD",
+          "type": "double",
+          "description": "The value for the fourth point of the pentagon."
+        },
+        {
+          "name": "valueE",
+          "type": "double",
+          "description": "The value for the fifth point of the pentagon."
+        },
+        {
+          "name": "radius",
+          "type": "double",
+          "description": "The radius of the pentagon."
+        },
+        {
+          "name": "maxScore",
+          "type": "int",
+          "description": "The maximum score for the pentagon."
+        },
+        {
+          "name": "axisColor",
+          "type": "Color",
+          "description": "The color of the axis of the pentagon."
+        },
+        {
+          "name": "connectorColor",
+          "type": "Color",
+          "description": "The color of the connector of the pentagon."
+        },
+        {
+          "name": "offsetFactor",
+          "type": "double",
+          "description": "The offset factor of the pentagon."
+        },
+        {
+          "name": "labelA",
+          "type": "String",
+          "description": "The label for the first point of the pentagon."
+        },
+        {
+          "name": "labelB",
+          "type": "String",
+          "description": "The label for the second point of the pentagon."
+        },
+        {
+          "name": "labelC",
+          "type": "String",
+          "description": "The label for the third point of the pentagon."
+        },
+        {
+          "name": "labelD",
+          "type": "String",
+          "description": "The label for the fourth point of the pentagon."
+        },
+        {
+          "name": "labelE",
+          "type": "String",
+          "description": "The label for the fifth point of the pentagon."
+        },
+        {
+          "name": "labelsColor",
+          "type": "Color",
+          "description": "The color of the labels of the pentagon."
+        }
+      ]
+    },
+    {
+      "name": "AW_PentagonOutline",
+      "description": "This is a StatelessWidget that draws an outlined pentagon based on five passed arguments. The widget allows customization of various aspects such as colors, line width, filled color, labels, values, offset factor, circle color, and whether to draw lines.",
+      "parameters": [
+        {
+          "name": "radius",
+          "type": "double",
+          "description": "The radius of the pentagon."
+        },
+        {
+          "name": "lineColor",
+          "type": "Color",
+          "description": "The color of the lines of the pentagon."
+        },
+        {
+          "name": "lineWidth",
+          "type": "double",
+          "description": "The width of the lines of the pentagon."
+        },
+        {
+          "name": "filled",
+          "type": "bool",
+          "description": "Whether the pentagon is filled."
+        },
+        {
+          "name": "outlineFillColor",
+          "type": "Color",
+          "description": "The fill color of the outlined pentagon."
+        },
+        {
+          "name": "labelA",
+          "type": "String",
+          "description": "The label for the first point of the pentagon."
+        },
+        {
+          "name": "labelB",
+          "type": "String",
+          "description": "The label for the second point of the pentagon."
+        },
+        {
+          "name": "labelC",
+          "type": "String",
+          "description": "The label for the third point of the pentagon."
+        },
+        {
+          "name": "labelD",
+          "type": "String",
+          "description": "The label for the fourth point of the pentagon."
+        },
+        {
+          "name": "labelE",
+          "type": "String",
+          "description": "The label for the fifth point of the pentagon."
+        },
+        {
+          "name": "valueA",
+          "type": "double",
+          "description": "The value for the first point of the pentagon."
+        },
+        {
+          "name": "valueB",
+          "type": "double",
+          "description": "The value for the second point of the pentagon."
+        },
+        {
+          "name": "valueC",
+          "type": "double",
+          "description": "The value for the third point of the pentagon."
+        },
+        {
+          "name": "valueD",
+          "type": "double",
+          "description": "The value for the fourth point of the pentagon."
+        },
+        {
+          "name": "valueE",
+          "type": "double",
+          "description": "The value for the fifth point of the pentagon."
+        },
+        {
+          "name": "offsetFactor",
+          "type": "double",
+          "description": "The offset factor of the pentagon."
+        },
+        {
+          "name": "valueLineColor",
+          "type": "Color",
+          "description": "The color of the value lines of the pentagon."
+        },
+        {
+          "name": "valueLineWidth",
+          "type": "double",
+          "description": "The width of the value lines of the pentagon."
+        },
+        {
+          "name": "valueFilledColor",
+          "type": "Color",
+          "description": "The filled color of the value of the pentagon."
+        },
+        {
+          "name": "circleColor",
+          "type": "Color",
+          "description": "The color of the circle of the pentagon."
+        },
+        {
+          "name": "shouldDrawLines",
+          "type": "bool",
+          "description": "Whether the lines of the pentagon should be drawn."
+        },
+        {
+          "name": "labelColor",
+          "type": "Color",
+          "description": "The color of the labels of the pentagon."
+        }
+      ]
+    },
+    {
+      "name": "AW_PrivilegesItem",
+      "description": "This is a StatelessWidget that displays a privileges item. It shows a title, deep link, header image, lead text, and link. The widget also allows customization of various aspects such as title text style, image border, and onTap function.",
+      "parameters": [
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the privileges item."
+        },
+        {
+          "name": "deepLink",
+          "type": "String",
+          "description": "The deep link of the privileges item."
+        },
+        {
+          "name": "headerImage",
+          "type": "String",
+          "description": "The header image of the privileges item."
+        },
+        {
+          "name": "leadText",
+          "type": "String",
+          "description": "The lead text of the privileges item."
+        },
+        {
+          "name": "link",
+          "type": "String",
+          "description": "The link of the privileges item."
+        },
+        {
+          "name": "titleTextStyle",
+          "type": "TextStyle",
+          "description": "The text style of the title."
+        },
+        {
+          "name": "imageBorder",
+          "type": "BorderRadius",
+          "description": "The border radius of the image."
+        },
+        {
+          "name": "onTap",
+          "type": "VoidCallback",
+          "description": "The callback function to be executed when the privileges item is tapped."
+        }
+      ]
+    },
+    {
+      "name": "AW_PrizeItem",
+      "description": "This is a StatelessWidget that displays a prize item. It shows an image, prize icon, prize body, prize title, prizes remaining, and other related information. The widget also allows customization of various aspects such as colors, badges, participation status, remaining text, claimed status, claim button visibility, button disabled status, and button title.",
+      "parameters": [
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "The key of the widget."
+        },
+        {
+          "name": "image",
+          "type": "String",
+          "description": "The image of the prize item."
+        },
+        {
+          "name": "prizeIcon",
+          "type": "String",
+          "description": "The icon of the prize."
+        },
+        {
+          "name": "prizeBody",
+          "type": "String",
+          "description": "The body text of the prize."
+        },
+        {
+          "name": "prizeTitle",
+          "type": "String",
+          "description": "The title of the prize."
+        },
+        {
+          "name": "prizesRemaining",
+          "type": "int?",
+          "description": "The number of prizes remaining."
+        },
+        {
+          "name": "prizeIconColor",
+          "type": "Color",
+          "description": "The color of the prize icon."
+        },
+        {
+          "name": "badgesWidget",
+          "type": "Widget?",
+          "description": "The badges widget."
+        },
+        {
+          "name": "alreadyParticipate",
+          "type": "bool",
+          "description": "Whether the user has already participated."
+        },
+        {
+          "name": "prizeRemainingText",
+          "type": "String",
+          "description": "The text showing the remaining prizes."
+        },
+        {
+          "name": "prizeClaimed",
+          "type": "String",
+          "description": "The text showing whether the prize has been claimed."
+        },
+        {
+          "name": "prizeNeedsToBeClaimed",
+          "type": "String",
+          "description": "The text showing whether the prize needs to be claimed."
+        },
+        {
+          "name": "showClaimButton",
+          "type": "bool",
+          "description": "Whether to show the claim button."
+        },
+        {
+          "name": "buttonDisabled",
+          "type": "bool",
+          "description": "Whether the button is disabled."
+        },
+        {
+          "name": "buttonTitle",
+          "type": "String",
+          "description": "The title of the button."
+        },
+        {
+          "name": "onButtonPressed",
+          "type": "VoidCallback?",
+          "description": "The callback function to be executed when the button is pressed."
+        }
+      ]
+    },
+    {
+      "name": "AW_PrizeItemDemo",
+      "description": "This is a StatelessWidget that displays a demo prize item. It shows an image, prize body, prize title, prizes remaining, and other related information. The widget also allows customization of various aspects such as badges, participation status, remaining text, button title, new prize text, activity status, participation ability, expired prize icon, claimed prize icon, non-actionable message, new prize status, expired prize status, and onTap function.",
+      "parameters": [
+        {
+          "name": "image",
+          "type": "String",
+          "description": "The image of the prize item."
+        },
+        {
+          "name": "prizeBody",
+          "type": "String",
+          "description": "The body text of the prize."
+        },
+        {
+          "name": "prizeTitle",
+          "type": "String",
+          "description": "The title of the prize."
+        },
+        {
+          "name": "prizesRemaining",
+          "type": "int?",
+          "description": "The number of prizes remaining."
+        },
+        {
+          "name": "badgesWidget",
+          "type": "Widget?",
+          "description": "The badges widget."
+        },
+        {
+          "name": "alreadyParticipate",
+          "type": "bool",
+          "description": "Whether the user has already participated."
+        },
+        {
+          "name": "prizeRemainingText",
+          "type": "String",
+          "description": "The text showing the remaining prizes."
+        },
+        {
+          "name": "buttonTitle",
+          "type": "String",
+          "description": "The title of the button."
+        },
+        {
+          "name": "newPrizeText",
+          "type": "String",
+          "description": "The text for the new prize."
+        },
+        {
+          "name": "isActive",
+          "type": "bool",
+          "description": "Whether the prize is active."
+        },
+        {
+          "name": "canParticipate",
+          "type": "bool",
+          "description": "Whether the user can participate."
+        },
+        {
+          "name": "prizedExpiredIcon",
+          "type": "Icon",
+          "description": "The icon for the expired prize."
+        },
+        {
+          "name": "prizeClaimedIcon",
+          "type": "Icon",
+          "description": "The icon for the claimed prize."
+        },
+        {
+          "name": "notActionableMessage",
+          "type": "String",
+          "description": "The message for the non-actionable prize."
+        },
+        {
+          "name": "isNewPrize",
+          "type": "bool",
+          "description": "Whether the prize is new."
+        },
+        {
+          "name": "prizeExpired",
+          "type": "bool",
+          "description": "Whether the prize has expired."
+        },
+        {
+          "name": "onTap",
+          "type": "VoidCallback",
+          "description": "The callback function to be executed when the prize item is tapped."
+        }
+      ]
+    },
+    {
+      "name": "AW_PrizeItemImage",
+      "description": "This is a StatelessWidget that displays an image of a prize item. It shows an image, badges widget, button title, and title. The widget also allows customization of various aspects such as participation status, button disabled status, button title, button pressed function, claim button visibility, and widget key.",
+      "parameters": [
+        {
+          "name": "image",
+          "type": "String",
+          "description": "The image of the prize item."
+        },
+        {
+          "name": "alreadyParticipate",
+          "type": "bool",
+          "description": "Whether the user has already participated."
+        },
+        {
+          "name": "badgesWidget",
+          "type": "Widget?",
+          "description": "The badges widget."
+        },
+        {
+          "name": "buttonDisabled",
+          "type": "bool",
+          "description": "Whether the button is disabled."
+        },
+        {
+          "name": "buttonTitle",
+          "type": "String",
+          "description": "The title of the button."
+        },
+        {
+          "name": "onButtonPressed",
+          "type": "VoidCallback?",
+          "description": "The callback function to be executed when the button is pressed."
+        },
+        {
+          "name": "showClaimButton",
+          "type": "bool",
+          "description": "Whether to show the claim button."
+        },
+        {
+          "name": "widgetKey",
+          "type": "Key?",
+          "description": "The key of the widget."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the prize item."
+        }
+      ]
     }
-
 
   ]
 }
