@@ -15,7 +15,7 @@ class AW_NewsTrainingItem extends StatelessWidget {
   }) : super(key: key);
 
   final String title;
-  final SvgPicture asset;
+  final Widget asset;
   final VoidCallback onTap;
 
   final Color titleColor;
