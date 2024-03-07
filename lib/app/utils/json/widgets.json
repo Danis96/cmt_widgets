@@ -4572,6 +4572,339 @@
           "description": "The title of the prize item."
         }
       ]
+    },
+    {
+      "name": "AW_PercentageProgressBar",
+      "description": "A custom widget that displays a percentage progress bar. It accepts various parameters to customize its appearance and behavior.",
+      "parameters": [
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the progress bar."
+        },
+        {
+          "name": "names",
+          "type": "List<String>",
+          "description": "The names displayed on the progress bar."
+        },
+        {
+          "name": "values",
+          "type": "List<double>",
+          "description": "The values that each segment of the progress bar represents."
+        },
+        {
+          "name": "colors",
+          "type": "List<Color>",
+          "description": "The colors of each segment of the progress bar."
+        },
+        {
+          "name": "onInfoPressed",
+          "type": "Function",
+          "description": "The function to be executed when the info icon is pressed."
+        },
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "The key assigned to the widget."
+        },
+        {
+          "name": "boxShadow",
+          "type": "BoxShadow",
+          "description": "The shadow cast by the box."
+        },
+        {
+          "name": "borderColor",
+          "type": "Color",
+          "description": "The color of the border. The default color is RGB(245, 246, 247)."
+        },
+        {
+          "name": "height",
+          "type": "double",
+          "description": "The height of the progress bar. The default height is 160."
+        },
+        {
+          "name": "valueTitle",
+          "type": "String",
+          "description": "The title of the value. The default title is 'km'."
+        },
+        {
+          "name": "hasIcon",
+          "type": "bool",
+          "description": "Indicates whether the progress bar has an icon. The default value is true."
+        },
+        {
+          "name": "isExpired",
+          "type": "bool",
+          "description": "Indicates whether the progress bar is expired. The default value is false."
+        },
+        {
+          "name": "totalSum",
+          "type": "int",
+          "description": "The total sum of the progress bar. The default value is 0."
+        },
+        {
+          "name": "widthReduce",
+          "type": "double",
+          "description": "The amount by which the width of the progress bar is reduced. The default value is 0.0."
+        },
+        {
+          "name": "useValues",
+          "type": "bool",
+          "description": "Indicates whether to use values. The default value is false."
+        },
+        {
+          "name": "namesStyle",
+          "type": "TextStyle",
+          "description": "The style of the names. The default style is FontWeight.w400, Color.RGB(70, 83, 93), and FontSize 11."
+        },
+        {
+          "name": "valuesStyle",
+          "type": "TextStyle",
+          "description": "The style of the values. The default style is FontWeight.w600, Color.RGB(35, 31, 32), and FontSize 14."
+        },
+        {
+          "name": "titleStyle",
+          "type": "TextStyle",
+          "description": "The style of the title. The default style is FontSize 14, Color.black, and FontWeight.w600."
+        },
+        {
+          "name": "padding",
+          "type": "EdgeInsets",
+          "description": "The padding around the progress bar. The default padding is EdgeInsets.all(16.0)."
+        },
+        {
+          "name": "innerHeight",
+          "type": "double",
+          "description": "The inner height of the progress bar. The default inner height is 120."
+        },
+        {
+          "name": "valuesSpacing",
+          "type": "int",
+          "description": "The spacing between the values. The default spacing is 5."
+        },
+        {
+          "name": "isOneTeam",
+          "type": "bool",
+          "description": "Indicates whether the progress bar is for one team. The default value is false."
+        }
+      ]
+    },
+    {
+      "name": "AW_PercentageProgressBarEngagement",
+      "description": "A custom widget that displays a percentage progress bar for user engagement. It accepts various parameters to customize its appearance and behavior.",
+      "parameters": [
+        {
+          "name": "values",
+          "type": "List<double>",
+          "description": "The values that each segment of the progress bar represents."
+        },
+        {
+          "name": "colors",
+          "type": "List<Color>",
+          "description": "The colors of each segment of the progress bar."
+        },
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "The key assigned to the widget."
+        },
+        {
+          "name": "userValue",
+          "type": "double",
+          "description": "The value of the user's progress."
+        },
+        {
+          "name": "userValueTitle",
+          "type": "String",
+          "description": "The title of the user's value."
+        },
+        {
+          "name": "team1Name",
+          "type": "String",
+          "description": "The name of the first team. The default name is 'Team 1'."
+        },
+        {
+          "name": "team2Name",
+          "type": "String",
+          "description": "The name of the second team. The default name is 'Team 2'."
+        },
+        {
+          "name": "myScore",
+          "type": "String",
+          "description": "The label for the user's score. The default label is 'My score: '."
+        },
+        {
+          "name": "teamScore",
+          "type": "String",
+          "description": "The label for the team's score. The default label is 'Team score: '."
+        },
+        {
+          "name": "team1Value",
+          "type": "String",
+          "description": "The value of the first team's progress. The default value is 'km'."
+        },
+        {
+          "name": "team2Value",
+          "type": "String",
+          "description": "The value of the second team's progress. The default value is 'km'."
+        },
+        {
+          "name": "height",
+          "type": "double",
+          "description": "The height of the progress bar. The default height is 60."
+        },
+        {
+          "name": "valueTitle",
+          "type": "String",
+          "description": "The title of the value. The default title is 'km'."
+        },
+        {
+          "name": "isExpired",
+          "type": "bool",
+          "description": "Indicates whether the progress bar is expired. The default value is false."
+        },
+        {
+          "name": "totalSum",
+          "type": "int",
+          "description": "The total sum of the progress bar. The default value is 0."
+        },
+        {
+          "name": "widthReduce",
+          "type": "double",
+          "description": "The amount by which the width of the progress bar is reduced. The default value is 0.0."
+        },
+        {
+          "name": "singleTeamColor",
+          "type": "Color",
+          "description": "The color of the single team progress bar."
+        },
+        {
+          "name": "useValues",
+          "type": "bool",
+          "description": "Indicates whether to use values. The default value is false."
+        },
+        {
+          "name": "padding",
+          "type": "EdgeInsets",
+          "description": "The padding around the progress bar. The default padding is EdgeInsets.all(16.0)."
+        },
+        {
+          "name": "innerHeight",
+          "type": "double",
+          "description": "The inner height of the progress bar. The default inner height is 30."
+        },
+        {
+          "name": "valuesSpacing",
+          "type": "int",
+          "description": "The spacing between the values. The default spacing is 5."
+        }
+      ]
+    },
+    {
+      "name": "AW_QuoteNavbar",
+      "description": "A custom widget that displays a navigation bar with a quote. It accepts various parameters to customize its appearance and behavior.",
+      "parameters": [
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color of the navigation bar. The default color is RGB(23, 164, 160)."
+        },
+        {
+          "name": "buttonText",
+          "type": "String",
+          "description": "The text displayed on the button."
+        },
+        {
+          "name": "onButtonTap",
+          "type": "Function",
+          "description": "The function to be executed when the button is tapped."
+        },
+        {
+          "name": "buttonDisabled",
+          "type": "bool",
+          "description": "Indicates whether the button is disabled. The default value is false."
+        },
+        {
+          "name": "questionText",
+          "type": "String",
+          "description": "The question text displayed on the navigation bar."
+        },
+        {
+          "name": "actionText",
+          "type": "String",
+          "description": "The action text displayed on the navigation bar."
+        },
+        {
+          "name": "questionStyle",
+          "type": "TextStyle",
+          "description": "The style of the question text. The default style is Color(0xff394652) and FontSize 12."
+        },
+        {
+          "name": "onAction",
+          "type": "Function",
+          "description": "The function to be executed when the action is performed."
+        },
+        {
+          "name": "defaultStyle",
+          "type": "TextStyle",
+          "description": "The default style of the text. The default style is Color.white and FontSize 12."
+        },
+        {
+          "name": "linkStyle",
+          "type": "TextStyle",
+          "description": "The style of the link. The default style is Color.white, FontSize 12, and TextDecoration.underline."
+        },
+        {
+          "name": "buttonBorderColor",
+          "type": "Color",
+          "description": "The color of the button border. The default color is Colors.white."
+        },
+        {
+          "name": "borderColorOpacity",
+          "type": "double",
+          "description": "The opacity of the border color. The default opacity is 0.4."
+        },
+        {
+          "name": "mainAxisAlignment",
+          "type": "MainAxisAlignment",
+          "description": "The alignment along the main axis. The default alignment is MainAxisAlignment.center."
+        },
+        {
+          "name": "leftIcon",
+          "type": "Widget",
+          "description": "The left icon displayed on the navigation bar."
+        },
+        {
+          "name": "onLeftIconTap",
+          "type": "Function",
+          "description": "The function to be executed when the left icon is tapped."
+        },
+        {
+          "name": "padding",
+          "type": "EdgeInsets",
+          "description": "The padding around the navigation bar. The default padding is EdgeInsets.all(12)."
+        },
+        {
+          "name": "buttonPadding",
+          "type": "EdgeInsets",
+          "description": "The padding around the button."
+        },
+        {
+          "name": "buttonStyle",
+          "type": "ButtonStyle",
+          "description": "The style of the button."
+        },
+        {
+          "name": "buttonWidth",
+          "type": "double",
+          "description": "The width of the button. The default width is 120."
+        },
+        {
+          "name": "disableDefaultWidth",
+          "type": "bool",
+          "description": "Indicates whether to disable the default width. The default value is false."
+        }
+      ]
     }
 
   ]
