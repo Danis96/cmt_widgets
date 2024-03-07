@@ -42,12 +42,12 @@ class AW_PrizeItem extends StatelessWidget {
     return Card(
       key: widgetKey,
       child: Container(
-        height: showClaimButton ? 550 : 500,
+        height: showClaimButton ? 450 : 500,
         child: Column(
           children: <Widget>[
             _buildImageContainer(image),
             if (prizesRemaining != null) _remainingBanner(context, prizesRemaining!, prizeRemainingText) else const SizedBox(),
-            _iconAndClaim(context, prizeIcon!, prizeIconColor, alreadyParticipate, prizeNeedsToBeClaimed, prizeClaimed),
+            // _iconAndClaim(context, prizeIcon!, prizeIconColor, alreadyParticipate, prizeNeedsToBeClaimed, prizeClaimed),
             _buildTitleAndBody(context, prizeTitle, prizeBody),
             const SizedBox(height: 10),
             if (badgesWidget != null) badgesWidget!  else const SizedBox(),

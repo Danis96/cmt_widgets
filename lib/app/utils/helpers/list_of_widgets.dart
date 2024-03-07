@@ -16,6 +16,9 @@ void showInSnackBar(String value, GlobalKey<ScaffoldState> scaffoldKey, BuildCon
 
 final List<String> labels = <String>['18', '19', '20', '21', '22', '23'];
 final List<double> values = <double>[73, 65, 89, 48, 59, 98];
+final List<String> _namesTest = <String>['Team A', 'Team B'];
+final List<double> _valuesTest = <double>[0.4, 0.6];
+final List<Color> _colorTest = <Color>[Colors.blueAccent, Colors.lightBlueAccent];
 
 List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffoldKey) => <Widget>[
       /// APP BARS
@@ -1216,14 +1219,15 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
       ),
 
       /// AW_PrizeItem
-       Hero(
+      Hero(
         tag: 'AW_PrizeItem',
         key: const Key('AW_PrizeItem'),
         child: Material(
           child: AW_PrizeItem(
             showClaimButton: true,
             widgetKey: const Key('AW_PrizeItem'),
-            image: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ec7d26b1-d557-47c1-a877-6050004d2fc2/dbb7hcs-1f9e8f0a-c4c7-4fc9-baf6-9e075ce86e30.jpg/v1/fill/w_1210,h_661,q_70,strp/cyberpunk_city_by_artursadlos_dbb7hcs-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA0OSIsInBhdGgiOiJcL2ZcL2VjN2QyNmIxLWQ1NTctNDdjMS1hODc3LTYwNTAwMDRkMmZjMlwvZGJiN2hjcy0xZjllOGYwYS1jNGM3LTRmYzktYmFmNi05ZTA3NWNlODZlMzAuanBnIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.GD3LU0BXLk6l52PMsWZ_qnZ_iGnMQ5RXm92XjTWjoDA',
+            image:
+                'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ec7d26b1-d557-47c1-a877-6050004d2fc2/dbb7hcs-1f9e8f0a-c4c7-4fc9-baf6-9e075ce86e30.jpg/v1/fill/w_1210,h_661,q_70,strp/cyberpunk_city_by_artursadlos_dbb7hcs-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA0OSIsInBhdGgiOiJcL2ZcL2VjN2QyNmIxLWQ1NTctNDdjMS1hODc3LTYwNTAwMDRkMmZjMlwvZGJiN2hjcy0xZjllOGYwYS1jNGM3LTRmYzktYmFmNi05ZTA3NWNlODZlMzAuanBnIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.GD3LU0BXLk6l52PMsWZ_qnZ_iGnMQ5RXm92XjTWjoDA',
             prizeBody:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas purus at elit tempor sollicitudin.',
             prizesRemaining: 19,
@@ -1233,15 +1237,18 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
           ),
         ),
       ),
+
       /// AW_PrizeItemDemo
-       Hero(
+      Hero(
         tag: 'AW_PrizeItemDemo',
         key: const Key('AW_PrizeItemDemo'),
         child: Material(
           child: AW_PrizeItemDemo(
             key: const Key('AW_PrizeItemDemo'),
-            image: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ec7d26b1-d557-47c1-a877-6050004d2fc2/dbzo626-803278c8-2f8a-469a-a012-f027cbbdd17f.jpg/v1/fill/w_1327,h_602,q_70,strp/deep_desert__mooeti__by_artursadlos_dbzo626-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzI2IiwicGF0aCI6IlwvZlwvZWM3ZDI2YjEtZDU1Ny00N2MxLWE4NzctNjA1MDAwNGQyZmMyXC9kYnpvNjI2LTgwMzI3OGM4LTJmOGEtNDY5YS1hMDEyLWYwMjdjYmJkZDE3Zi5qcGciLCJ3aWR0aCI6Ijw9MTYwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.aMvW3S-k-aUgfkVJGb6wuobNl_FhBS0P0UOd3iSVINM',
-            prizeBody: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas purus at elit tempor sollicitudin.',
+            image:
+                'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ec7d26b1-d557-47c1-a877-6050004d2fc2/dbzo626-803278c8-2f8a-469a-a012-f027cbbdd17f.jpg/v1/fill/w_1327,h_602,q_70,strp/deep_desert__mooeti__by_artursadlos_dbzo626-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzI2IiwicGF0aCI6IlwvZlwvZWM3ZDI2YjEtZDU1Ny00N2MxLWE4NzctNjA1MDAwNGQyZmMyXC9kYnpvNjI2LTgwMzI3OGM4LTJmOGEtNDY5YS1hMDEyLWYwMjdjYmJkZDE3Zi5qcGciLCJ3aWR0aCI6Ijw9MTYwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.aMvW3S-k-aUgfkVJGb6wuobNl_FhBS0P0UOd3iSVINM',
+            prizeBody:
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas purus at elit tempor sollicitudin.',
             prizesRemaining: 19,
             prizeTitle: 'Prize title',
             alreadyParticipate: false,
@@ -1259,19 +1266,72 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
           ),
         ),
       ),
-    /// AW_PrizeItemImage
-       Hero(
+
+      /// AW_PrizeItemImage
+      Hero(
         tag: 'AW_PrizeItemImage',
         key: const Key('AW_PrizeItemImage'),
         child: Material(
           child: AW_PrizeItemImage(
             widgetKey: const Key('AW_PrizeItemImage'),
-            image: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ec7d26b1-d557-47c1-a877-6050004d2fc2/dbd5p1w-cbd85295-ec36-4341-bc67-5f3750401eca.jpg/v1/fill/w_1232,h_649,q_70,strp/war_relic_by_artursadlos_dbd5p1w-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Njc0IiwicGF0aCI6IlwvZlwvZWM3ZDI2YjEtZDU1Ny00N2MxLWE4NzctNjA1MDAwNGQyZmMyXC9kYmQ1cDF3LWNiZDg1Mjk1LWVjMzYtNDM0MS1iYzY3LTVmMzc1MDQwMWVjYS5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.zM_yNUn3ShvdeWbOB5ZVoDjm1fNPh9VR9f7k8SK66zs',
+            image:
+                'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ec7d26b1-d557-47c1-a877-6050004d2fc2/dbd5p1w-cbd85295-ec36-4341-bc67-5f3750401eca.jpg/v1/fill/w_1232,h_649,q_70,strp/war_relic_by_artursadlos_dbd5p1w-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Njc0IiwicGF0aCI6IlwvZlwvZWM3ZDI2YjEtZDU1Ny00N2MxLWE4NzctNjA1MDAwNGQyZmMyXC9kYmQ1cDF3LWNiZDg1Mjk1LWVjMzYtNDM0MS1iYzY3LTVmMzc1MDQwMWVjYS5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.zM_yNUn3ShvdeWbOB5ZVoDjm1fNPh9VR9f7k8SK66zs',
             alreadyParticipate: false,
             buttonTitle: 'Collect',
             onButtonPressed: () => showInSnackBar('On press function', scaffoldKey, context),
             showClaimButton: true,
             title: 'Title',
+          ),
+        ),
+      ),
+
+      /// AW_PercentageProgressBar
+      Hero(
+        tag: 'AW_PercentageProgressBar',
+        key: const Key('AW_PercentageProgressBar'),
+        child: Material(
+          child: AW_PercentageProgressBar(
+            title: 'Title',
+            names: _namesTest,
+            values: _valuesTest,
+            colors: _colorTest,
+            onInfoPressed: () => showInSnackBar('On press function', scaffoldKey, context),
+            widgetKey: const Key('AW_PercentageProgressBar'),
+            isExpired: false,
+          ),
+        ),
+      ),
+
+      /// AW_PercentageProgressBarEngagement
+      Hero(
+        tag: 'AW_PercentageProgressBarEngagement',
+        key: const Key('AW_PercentageProgressBarEngagement'),
+        child: Material(
+          child: AW_PercentageProgressBarEngagement(
+            values: _valuesTest,
+            widgetKey: const Key('AW_PercentageProgressBarEngagement'),
+            userValue: 12,
+            userValueTitle: 'Value title',
+            myScore: 'My score',
+            colors: const <String>['0xFF1400FF', '0xFF021764'],
+          ),
+        ),
+      ),
+
+      /// AW_QuoteNavbar
+      Hero(
+        tag: 'AW_QuoteNavbar',
+        key: const Key('AW_QuoteNavbar'),
+        child: Material(
+          child: AW_QuoteNavbar(
+            key: const Key('AW_QuoteNavbar'),
+            actionText: 'Connect',
+            buttonText: 'X',
+            backgroundColor: Colors.blueAccent,
+            onButtonTap: () => showInSnackBar('On press function', scaffoldKey, context),
+            questionText: 'Already a customer?',
+            onAction: () => showInSnackBar('On press function', scaffoldKey, context),
+            buttonDisabled: false,
           ),
         ),
       ),
