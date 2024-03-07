@@ -14,6 +14,9 @@ void showInSnackBar(String value, GlobalKey<ScaffoldState> scaffoldKey, BuildCon
   ScaffoldMessenger.of(context).showSnackBar(snackBar);
 }
 
+final List<String> labels = <String>['18', '19', '20', '21', '22', '23'];
+final List<double> values = <double>[73, 65, 89, 48, 59, 98];
+
 List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffoldKey) => <Widget>[
       /// APP BARS
       Hero(
@@ -814,8 +817,462 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
           imageUrl:
               'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/15601231-7c5b-425c-a12a-fc48868e6c49/dcs4s8c-f685f348-42ec-4e65-8fad-148541d62e62.jpg/v1/fill/w_893,h_895,q_70,strp/cube_secret_by_djape028_dcs4s8c-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNiIsInBhdGgiOiJcL2ZcLzE1NjAxMjMxLTdjNWItNDI1Yy1hMTJhLWZjNDg4NjhlNmM0OVwvZGNzNHM4Yy1mNjg1ZjM0OC00MmVjLTRlNjUtOGZhZC0xNDg1NDFkNjJlNjIuanBnIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.oR3ijihHANl6F4A2p4uj4PRTuScvcJUnS8NCSNrDK2c',
           leadTextStyle: Theme.of(context).textTheme.titleSmall!.copyWith(fontSize: 14.0),
-          readMoreTextStyle:
-              Theme.of(context).textTheme.displayMedium!.copyWith(fontSize: 14.0, color: Colors.black38),
+          readMoreTextStyle: Theme.of(context).textTheme.displayMedium!.copyWith(fontSize: 14.0, color: Colors.black38),
         )),
+      ),
+
+      ///AW_CustomModalSheet
+      Hero(
+        tag: 'AW_CustomModalSheet',
+        key: const Key('AW_CustomModalSheet'),
+        child: ElevatedButton(
+          onPressed: () {
+            showModalBottomSheet<dynamic>(
+                context: context,
+                isScrollControlled: true,
+                builder: (BuildContext context) {
+                  return AW_CustomModalSheet(
+                    shouldUseHeight: true,
+                    onClosePressed: () => Navigator.of(context).pop(),
+                    height: MediaQuery.of(context).size.height / 1.1,
+                    bodyWidget: ListView(
+                      padding: const EdgeInsets.all(10),
+                      children: <Widget>[
+                        Image.network(
+                            'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/582d158f-8f07-4157-97b9-d90fbabe6ea1/dcqwwm2-e90b469f-8933-4e95-9741-269808a860e6.jpg/v1/fill/w_894,h_894,q_70,strp/the_dispersed_expectance_ii_by_moodyblue_dcqwwm2-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYwIiwicGF0aCI6IlwvZlwvNTgyZDE1OGYtOGYwNy00MTU3LTk3YjktZDkwZmJhYmU2ZWExXC9kY3F3d20yLWU5MGI0NjlmLTg5MzMtNGU5NS05NzQxLTI2OTgwOGE4NjBlNi5qcGciLCJ3aWR0aCI6Ijw9OTYwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.jy-8Y4LZv65EFJjefAA5suzCFbEckx7IB5thTE9K_QI'),
+                        const SizedBox(height: 20.4),
+                        Text('Title', style: Theme.of(context).textTheme.headline1!.copyWith(fontSize: 24.0)),
+                        const SizedBox(height: 8),
+                        Text(
+                          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+                          style: Theme.of(context).textTheme.titleMedium,
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
+                    ),
+                    bottomWidget: SizedBox(
+                      width: MediaQuery.of(context).size.width / 1.2,
+                      height: 50,
+                      child: AW_Button(
+                        buttonTitle: 'Allow',
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                      ),
+                    ),
+                  );
+                });
+          },
+          child: const Text('Open AW_CustomModalSheet'),
+        ),
+      ),
+
+      ///AW_NextPreviousWidget
+      Hero(
+        tag: 'AW_NextPreviousWidget',
+        key: const Key('AW_NextPreviousWidget'),
+        child: Material(
+          child: AW_NextPreviousWidget(
+            backgroundColor: Colors.blueAccent,
+            textColor: Colors.white,
+            arrowColor: Colors.black38,
+            middleText: 'Text',
+            onNextPressed: () => showInSnackBar('On press function', scaffoldKey, context),
+            onPreviousPressed: () => showInSnackBar('On press function', scaffoldKey, context),
+          ),
+        ),
+      ),
+
+      ///AW_NoDataIndicator
+      const Hero(
+        tag: 'AW_NoDataIndicator',
+        key: Key('AW_NoDataIndicator'),
+        child: Material(
+          child: AW_NoDataIndicator(
+            text: 'No data text',
+            imagePath: Assets.assetsAppBarLogo,
+          ),
+        ),
+      ),
+
+      ///AW_OdometerItem
+      Hero(
+        tag: 'AW_OdometerItem',
+        key: const Key('AW_OdometerItem'),
+        child: Material(
+          child: AW_OdometerItem(
+            onIconPressed: () => showInSnackBar('On press function', scaffoldKey, context),
+            onImagePressed: () => showInSnackBar('On press function', scaffoldKey, context),
+            title: 'Title',
+            date: '07.03.',
+            imageUrl:
+                'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d66aa141-f1b0-4af7-8ca7-5df86d21fe5e/dgk3xtb-b3eb485c-5f26-4320-9e10-1a17e79a0bc7.jpg/v1/fit/w_600,h_750,q_70,strp/concrete_whimsy_by_thelovetrain_dgk3xtb-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzUwIiwicGF0aCI6IlwvZlwvZDY2YWExNDEtZjFiMC00YWY3LThjYTctNWRmODZkMjFmZTVlXC9kZ2szeHRiLWIzZWI0ODVjLTVmMjYtNDMyMC05ZTEwLTFhMTdlNzlhMGJjNy5qcGciLCJ3aWR0aCI6Ijw9NjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.NBHoKcIT0X8r5tNq99uAEq6bUT464qtpypmRXUrz0pI',
+          ),
+        ),
+      ),
+
+      ///AW_OpenContainer
+      Hero(
+        tag: 'AW_OpenContainer',
+        key: const Key('AW_OpenContainer'),
+        child: Material(
+          child: AW_OpenContainer(
+            title: 'Title',
+            closedText: 'Closed text',
+            isOpened: false,
+            openText:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+          ),
+        ),
+      ),
+
+      ///AW_PageViewIndicatorDots
+      const Hero(
+        tag: 'AW_PageViewIndicatorDots',
+        key: Key('AW_PageViewIndicatorDots'),
+        child: Material(
+          child: AW_PageViewIndicatorDots(
+            widgetKey: Key('AW_PageViewIndicatorDots'),
+            currentIndex: 0,
+            numberOfDots: 4,
+            selectedColor: Colors.blue,
+            unselectedColor: Colors.red,
+          ),
+        ),
+      ),
+
+      ///AW_SupervisionInfoItem
+      Hero(
+        tag: 'AW_SupervisionInfoItem',
+        key: const Key('AW_SupervisionInfoItem'),
+        child: Material(
+          child: AW_SupervisionInfoItem(
+            title: 'Title',
+            hasInfoButton: true,
+            onPressed: () => showInSnackBar('On press function', scaffoldKey, context),
+            key: const Key('AW_SupervisionInfoItem'),
+          ),
+        ),
+      ),
+
+      ///AW_ParentalControlItem
+      const Hero(
+        tag: 'AW_ParentalControlItem',
+        key: Key('AW_ParentalControlItem'),
+        child: Material(
+          child: AW_ParentalControlItem(
+            dialogContent:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+            description:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+            title: 'Title',
+            buttonTitle: 'Button',
+            dialogTitle: 'Dialog',
+            titleColor: Colors.blueAccent,
+            descriptionColor: Colors.blueAccent,
+          ),
+        ),
+      ),
+
+      ///AW_PermissionsPageViewItem
+      Hero(
+        tag: 'AW_PermissionsPageViewItem',
+        key: const Key('AW_PermissionsPageViewItem'),
+        child: Material(
+          child: SizedBox(
+            height: 200,
+            child: AW_PermissionsPageViewItem(
+              onEnabledTap: () => showInSnackBar('On press function', scaffoldKey, context),
+              onSkipTap: () => showInSnackBar('On press function', scaffoldKey, context),
+              widgetKey: const Key('AW_ParentalControlItem'),
+              imageAssetPath: Assets.assetsIcDialogAutoSuccess,
+              title: 'Title',
+              contentText:
+                  'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the ind',
+              skipButtonText: 'Skip',
+              enableButtonText: 'Enable',
+            ),
+          ),
+        ),
+      ),
+
+      ///AW_PolicyActionsItem
+      Hero(
+        tag: 'AW_PolicyActionsItem',
+        key: const Key('AW_PolicyActionsItem'),
+        child: Material(
+          child: AW_PolicyActionsItem(
+            key: const Key('AW_PolicyActionsItem'),
+            icon: SvgPicture.asset(Assets.assetsIcSpeed),
+            onTap: () => showInSnackBar('On press function', scaffoldKey, context),
+            title: 'Change Policy Details',
+          ),
+        ),
+      ),
+
+      ///AW_PolicyCompletion
+      const Hero(
+        tag: 'AW_PolicyCompletion',
+        key: Key('AW_PolicyCompletion'),
+        child: Material(
+          child: AW_PolicyCompletion(
+            key: Key('AW_PolicyCompletion'),
+            maxAvailable: 150,
+            completed: 10,
+            backgroundColor: Colors.blueAccent,
+            label: 'Min distance',
+          ),
+        ),
+      ),
+
+      ///AW_PolicyData
+      Hero(
+        tag: 'AW_PolicyData',
+        key: const Key('AW_PolicyData'),
+        child: Material(
+          child: AW_PolicyData(
+            key: const Key('AW_PolicyData'),
+            scoreLabel: 'Score',
+            totalScore: 88,
+            items: <AW_PolicyScoreItem>[
+              for (int i = 0; i < labels.length; i++)
+                AW_PolicyScoreItem(backgroundColor: Colors.red, label: Text(labels[i]), score: values[i])
+            ],
+          ),
+        ),
+      ),
+
+      ///AW_PolicyDetailItem
+      Hero(
+        tag: 'AW_PolicyDetailItem',
+        key: const Key('AW_PolicyDetailItem'),
+        child: Material(
+          child: AW_PolicyDetailItem(
+            key: const Key('AW_PolicyDetailItem'),
+            icon: SvgPicture.asset(Assets.assetsIcSpeed),
+            topText: 'Richard Jameson',
+            bottomText: 'Seat Ateca 1.6 TDI ZG3145FH',
+          ),
+        ),
+      ),
+
+      ///AW_PolicyPopupItem
+      Hero(
+        tag: 'AW_PolicyPopupItem',
+        key: const Key('AW_PolicyPopupItem'),
+        child: Material(
+          child: AW_PolicyPopupItem(
+            key: const Key('AW_PolicyPopupItem'),
+            label: 'Label',
+            iconData: Icons.car_rental,
+            textColor: Colors.blueAccent,
+            onInfoTap: () => showInSnackBar('On press function', scaffoldKey, context),
+            value: 'Motor Telematic insurance',
+          ),
+        ),
+      ),
+
+      ///AW_PolicyScoreItem
+      const Hero(
+        tag: 'AW_PolicyScoreItem',
+        key: Key('AW_PolicyScoreItem'),
+        child: Material(
+          child: AW_PolicyScoreItem(
+            backgroundColor: Colors.red,
+            label: Text('12'),
+            width: 20,
+            labelColor: Colors.black,
+            score: 88,
+            maxHeight: 150,
+          ),
+        ),
+      ),
+
+      ///AW_AmodoBanner
+      const Hero(
+        tag: 'AW_AmodoBanner',
+        key: Key('AW_AmodoBanner'),
+        child: Material(
+          child: AW_AmodoBanner(
+            backgroundColor: Colors.white,
+          ),
+        ),
+      ),
+
+      ///AW_BasicPolicyCard
+      const Hero(
+        tag: 'AW_BasicPolicyCard',
+        key: Key('AW_BasicPolicyCard'),
+        child: Material(
+          child: AW_BasicPolicyCard(
+            key: Key('AW_BasicPolicyCard'),
+            policyName: 'Motor Telematics insurance',
+            backgroundColor: Colors.blueAccent,
+            extraInfo:
+                'Excellent basic coverage with extra coverage options\nCover anytime, anywhere\nBoost your policy to earn up to 15% discount',
+          ),
+        ),
+      ),
+
+      ///AW_DynamicPolicyCard
+      Hero(
+        tag: 'AW_DynamicPolicyCard',
+        key: const Key('AW_DynamicPolicyCard'),
+        child: Material(
+          child: SizedBox(
+            height: 210,
+            child: AW_DynamicPolicyCard(
+              key: const Key('AW_DynamicPolicyCard'),
+              carInfo: 'Seat Ateca 1.6 TDI ZG3145FH',
+              extraInfo: 'Dynamic monthy premium',
+              policyName: 'Motor telematics insurance',
+              userName: 'Richard Jameson',
+              price: '25€/month',
+              policyType: 'Dynamic monthy premium',
+              icon: SvgPicture.asset(Assets.assetsBatteryIcon),
+              maxPrice: '480',
+              priceRange: 'Max per year',
+              backgroundColor: Colors.blueAccent,
+            ),
+          ),
+        ),
+      ),
+
+      ///AW_Pentagon
+      const Hero(
+        tag: 'AW_Pentagon',
+        key: Key('AW_Pentagon'),
+        child: Material(
+          child: SizedBox(
+            height: 400,
+            child: AW_Pentagon(
+              key: Key('AW_Pentagon'),
+              valueA: 5,
+              valueB: 5,
+              valueC: 5,
+              valueD: 3.2,
+              valueE: 5,
+              radius: 120,
+              axisColor: Colors.blueAccent,
+              connectorColor: Colors.blueAccent,
+              labelA: 'Aggressive driving',
+              labelB: '',
+              labelC: 'CO2',
+              labelD: 'Lifestyle',
+              labelE: '',
+              labelsColor: Colors.red,
+            ),
+          ),
+        ),
+      ),
+
+      ///AW_PentagonOutline
+      const Hero(
+        tag: 'AW_PentagonOutline',
+        key: Key('AW_PentagonOutline'),
+        child: Material(
+          child: SizedBox(
+            height: 400,
+            child: AW_PentagonOutline(
+              key: Key('AW_PentagonOutline'),
+              valueA: 5,
+              valueB: 5,
+              valueC: 5,
+              valueD: 3.2,
+              valueE: 5,
+              radius: 80,
+              labelA: 'Aggressive driving',
+              labelB: '',
+              labelC: 'CO2',
+              labelD: 'Lifestyle',
+              labelE: '',
+              circleColor: Colors.redAccent,
+              lineColor: Colors.blueAccent,
+              lineWidth: 1,
+              filled: false,
+              outlineFillColor: Colors.blueAccent,
+              valueLineColor: Colors.blueAccent,
+              valueLineWidth: 1,
+              valueFilledColor: Colors.blueAccent,
+              shouldDrawLines: true,
+            ),
+          ),
+        ),
+      ),
+
+      /// AW_PrivilegesItem
+      Hero(
+        tag: 'AW_PrivilegesItem',
+        key: const Key('AW_PrivilegesItem'),
+        child: Material(
+          child: AW_PrivilegesItem(
+            onTap: () => showInSnackBar('On press function', scaffoldKey, context),
+            title: 'Title',
+            leadText: 'Lead text',
+            headerImage:
+                'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5181c7f5-4300-4d23-a0d1-d0cc2a40214b/dg6jf9o-ed35e76e-8c26-449f-8194-9ee70c5e1bac.jpg/v1/fit/w_828,h_1160,q_70,strp/trident_by_tobiasroetsch_dg6jf9o-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTY4MCIsInBhdGgiOiJcL2ZcLzUxODFjN2Y1LTQzMDAtNGQyMy1hMGQxLWQwY2MyYTQwMjE0YlwvZGc2amY5by1lZDM1ZTc2ZS04YzI2LTQ0OWYtODE5NC05ZWU3MGM1ZTFiYWMuanBnIiwid2lkdGgiOiI8PTEyMDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.60dBJiRlo2nWRQulUiB-PcJyX7eJ9QV9uz3HGhxduu8',
+          ),
+        ),
+      ),
+
+      /// AW_PrizeItem
+       Hero(
+        tag: 'AW_PrizeItem',
+        key: const Key('AW_PrizeItem'),
+        child: Material(
+          child: AW_PrizeItem(
+            showClaimButton: true,
+            widgetKey: const Key('AW_PrizeItem'),
+            image: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ec7d26b1-d557-47c1-a877-6050004d2fc2/dbb7hcs-1f9e8f0a-c4c7-4fc9-baf6-9e075ce86e30.jpg/v1/fill/w_1210,h_661,q_70,strp/cyberpunk_city_by_artursadlos_dbb7hcs-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA0OSIsInBhdGgiOiJcL2ZcL2VjN2QyNmIxLWQ1NTctNDdjMS1hODc3LTYwNTAwMDRkMmZjMlwvZGJiN2hjcy0xZjllOGYwYS1jNGM3LTRmYzktYmFmNi05ZTA3NWNlODZlMzAuanBnIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.GD3LU0BXLk6l52PMsWZ_qnZ_iGnMQ5RXm92XjTWjoDA',
+            prizeBody:
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas purus at elit tempor sollicitudin.',
+            prizesRemaining: 19,
+            prizeTitle: 'Prize title',
+            buttonTitle: 'Collect',
+            onButtonPressed: () => showInSnackBar('On press function', scaffoldKey, context),
+          ),
+        ),
+      ),
+      /// AW_PrizeItemDemo
+       Hero(
+        tag: 'AW_PrizeItemDemo',
+        key: const Key('AW_PrizeItemDemo'),
+        child: Material(
+          child: AW_PrizeItemDemo(
+            key: const Key('AW_PrizeItemDemo'),
+            image: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ec7d26b1-d557-47c1-a877-6050004d2fc2/dbzo626-803278c8-2f8a-469a-a012-f027cbbdd17f.jpg/v1/fill/w_1327,h_602,q_70,strp/deep_desert__mooeti__by_artursadlos_dbzo626-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzI2IiwicGF0aCI6IlwvZlwvZWM3ZDI2YjEtZDU1Ny00N2MxLWE4NzctNjA1MDAwNGQyZmMyXC9kYnpvNjI2LTgwMzI3OGM4LTJmOGEtNDY5YS1hMDEyLWYwMjdjYmJkZDE3Zi5qcGciLCJ3aWR0aCI6Ijw9MTYwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.aMvW3S-k-aUgfkVJGb6wuobNl_FhBS0P0UOd3iSVINM',
+            prizeBody: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas purus at elit tempor sollicitudin.',
+            prizesRemaining: 19,
+            prizeTitle: 'Prize title',
+            alreadyParticipate: false,
+            prizeRemainingText: '',
+            isNewPrize: false,
+            buttonTitle: 'Collect',
+            newPrizeText: '',
+            isActive: true,
+            canParticipate: false,
+            prizeClaimedIcon: SvgPicture.asset(Assets.assetsBatteryIcon),
+            prizedExpiredIcon: SvgPicture.asset(Assets.assetsBatteryIcon),
+            notActionableMessage: 'Not actionable',
+            prizeExpired: 'Prize expired',
+            onTap: () => showInSnackBar('On press function', scaffoldKey, context),
+          ),
+        ),
+      ),
+    /// AW_PrizeItemImage
+       Hero(
+        tag: 'AW_PrizeItemImage',
+        key: const Key('AW_PrizeItemImage'),
+        child: Material(
+          child: AW_PrizeItemImage(
+            widgetKey: const Key('AW_PrizeItemImage'),
+            image: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ec7d26b1-d557-47c1-a877-6050004d2fc2/dbd5p1w-cbd85295-ec36-4341-bc67-5f3750401eca.jpg/v1/fill/w_1232,h_649,q_70,strp/war_relic_by_artursadlos_dbd5p1w-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Njc0IiwicGF0aCI6IlwvZlwvZWM3ZDI2YjEtZDU1Ny00N2MxLWE4NzctNjA1MDAwNGQyZmMyXC9kYmQ1cDF3LWNiZDg1Mjk1LWVjMzYtNDM0MS1iYzY3LTVmMzc1MDQwMWVjYS5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.zM_yNUn3ShvdeWbOB5ZVoDjm1fNPh9VR9f7k8SK66zs',
+            alreadyParticipate: false,
+            buttonTitle: 'Collect',
+            onButtonPressed: () => showInSnackBar('On press function', scaffoldKey, context),
+            showClaimButton: true,
+            title: 'Title',
+          ),
+        ),
       ),
     ];

@@ -55,7 +55,7 @@ class AW_OdometerItem extends StatelessWidget {
               ),
               child: (imageBytes == null && imageUrl == null) ? const SizedBox() : _buildImage(imageBytes, imageUrl, onImagePressed),
             ),
-            const SizedBox(width: 16.0),
+            const SizedBox(width: 12.0),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
