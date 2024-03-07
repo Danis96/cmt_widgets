@@ -22,6 +22,8 @@ final List<double> _valuesTest = <double>[0.4, 0.6];
 final List<Color> _colorTest = <Color>[Colors.blueAccent, Colors.lightBlueAccent];
 const String element0 = 'Some title';
 bool isItemPressed = false;
+bool isSwitchChanged = false;
+bool isIconPressable = false;
 
 List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffoldKey) => <Widget>[
       /// APP BARS
@@ -1571,6 +1573,231 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
             totalValueStyle: TextStyle(color: Colors.blueAccent),
             valuesTextStyle: TextStyle(color: Colors.black),
             showSpacers: true,
+          ),
+        ),
+      ),
+
+      /// AW_MasterSupervisionItem
+      Hero(
+        tag: 'AW_MasterSupervisionItem',
+        key: const Key('AW_MasterSupervisionItem'),
+        child: Material(
+            child: AW_MasterSupervisionItem(
+          key: const Key('AW_MasterSupervisionItem'),
+          onDelete: () => showInSnackBar('On press function', scaffoldKey, context),
+          onToggle: () => showInSnackBar('On press function', scaffoldKey, context),
+          email: 'test.email@gmail.com',
+          supervisionAllowed: false,
+          toggleAsset: Assets.assetsIcSwoosh,
+          toggleColor: Colors.blueAccent,
+        )),
+      ),
+
+      /// AW_SupervisionCheckboxItem
+      Hero(
+        tag: 'AW_SupervisionCheckboxItem',
+        key: const Key('AW_SupervisionCheckboxItem'),
+        child: Material(
+          child: AW_SupervisionCheckboxItem(
+              key: const Key('AW_SupervisionCheckboxItem'),
+              value: false,
+              onChanged: (bool? value) => showInSnackBar('On press function', scaffoldKey, context),
+              text: 'Text sample'),
+        ),
+      ),
+
+      /// AW_SwitchWithTitleDescription
+      Hero(
+        tag: 'AW_SwitchWithTitleDescription',
+        key: const Key('AW_SwitchWithTitleDescription'),
+        child: Material(
+          child: AW_SwitchWithTitleDescription(
+            key: const Key('AW_SwitchWithTitleDescription'),
+            onChanged: (bool val) {
+              isSwitchChanged = true;
+              showInSnackBar('On press function', scaffoldKey, context);
+            },
+            subTitle: 'Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
+            title: 'Title',
+            switchActiveColor: Colors.blueAccent,
+            onIconPressed: () {
+              isIconPressable = true;
+              showInSnackBar('On press function', scaffoldKey, context);
+            },
+          ),
+        ),
+      ),
+
+      /// AW_SwitchWithTitleDescriptionInputField
+      Hero(
+        tag: 'AW_SwitchWithTitleDescriptionInputField',
+        key: const Key('AW_SwitchWithTitleDescriptionInputField'),
+        child: Material(
+          child: AW_SwitchWithTitleDescriptionInputField(
+            key: const Key('AW_SwitchWithTitleDescriptionInputField'),
+            onChanged: (bool val) {
+              isSwitchChanged = true;
+              showInSnackBar('On press function', scaffoldKey, context);
+            },
+            switchActiveColor: Colors.blueAccent,
+            subTitle: 'Lorem ipsum',
+            title: 'Title',
+            onIconPressed: () {
+              isIconPressable = true;
+              showInSnackBar('On press function', scaffoldKey, context);
+            },
+            fieldController: TextEditingController(),
+            fieldInputTitle: 'Input your co2',
+          ),
+        ),
+      ),
+
+      /// AW_TappableText
+      Hero(
+        tag: 'AW_TappableText',
+        key: const Key('AW_TappableText'),
+        child: Material(
+          child: AW_TappableText(
+            key: const Key('AW_TappableText'),
+            text: 'Forgot password? Press here',
+            links: 'Press here',
+            onPressed: (int i) => showInSnackBar('On press function', scaffoldKey, context),
+            textAlign: TextAlign.center,
+          ),
+        ),
+      ),
+
+      /// AW_TextFormField
+      Hero(
+        tag: 'AW_TextFormField',
+        key: const Key('AW_TextFormField'),
+        child: Material(
+          child: AW_TextFormField(
+            fKey: const Key('AW_TextFormField'),
+            label: 'Test',
+            controller: TextEditingController(),
+            icon: const Icon(Icons.add),
+            obscureText: false,
+            hintText: 'Test hint',
+            onChange: () => print('On change test'),
+            errorTextConfirm: '',
+            errorTextEmpty: '',
+            readOnly: false,
+            identical: false,
+          ),
+        ),
+      ),
+
+      /// AW_TopContributorItem
+      const Hero(
+        tag: 'AW_TopContributorItem',
+        key: Key('AW_TopContributorItem'),
+        child: Material(
+          child: AW_TopContributorItem(
+            index: 1,
+            colorValue: Colors.blueAccent,
+            name: 'Name',
+            team: 'Team A',
+            useColors: true,
+            teamColor: Colors.blueAccent,
+            teamStyle: TextStyle(
+              fontSize: 12,
+              color: Color(0xffBDBDBD),
+            ),
+            nameStyle: TextStyle(color: Color.fromRGBO(57, 70, 82, 1), fontSize: 14, fontWeight: FontWeight.w500),
+          ),
+        ),
+      ),
+
+      /// AW_AchievementTrainingItem
+      Hero(
+        tag: 'AW_AchievementTrainingItem',
+        key: const Key('AW_AchievementTrainingItem'),
+        child: Material(
+          child: AW_AchievementTrainingItem(
+            title: 'Title',
+            completed: false,
+            completedColor: Colors.black,
+            notCompletedColor: Colors.blueAccent,
+            onTap: () => showInSnackBar('On press function', scaffoldKey, context),
+          ),
+        ),
+      ),
+
+      /// AW_AchievementTrainingItemJapan
+      Hero(
+        tag: 'AW_AchievementTrainingItemJapan',
+        key: const Key('AW_AchievementTrainingItemJapan'),
+        child: Material(
+          child: AW_AchievementTrainingItemJapan(
+            title: 'Title',
+            completed: false,
+            onTap: () => showInSnackBar('On press function', scaffoldKey, context),
+            progress: 0.7,
+            backgroundColorProgress: Colors.grey,
+            progressColor: Colors.blueAccent,
+          ),
+        ),
+      ),
+
+      /// AW_NewsTrainingItem
+      Hero(
+        tag: 'AW_NewsTrainingItem',
+        key: const Key('AW_NewsTrainingItem'),
+        child: Material(
+          child: AW_NewsTrainingItem(
+            title: 'Title',
+            onTap: () => showInSnackBar('On press function', scaffoldKey, context),
+            asset: Image.network(
+                'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7ef8360e-2a74-43ef-b05f-ed241b1e2377/dgxmj32-a3880924-506c-4930-9de9-d04b1ebeb9ba.jpg/v1/fill/w_894,h_894,q_70,strp/keeping_dry_by_msmaldesignsai_dgxmj32-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcLzdlZjgzNjBlLTJhNzQtNDNlZi1iMDVmLWVkMjQxYjFlMjM3N1wvZGd4bWozMi1hMzg4MDkyNC01MDZjLTQ5MzAtOWRlOS1kMDRiMWViZWI5YmEuanBnIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.cy2ooYdlSnJ0tS3X_04ldKGbK882hiamiPNgkvpxcrE'),
+          ),
+        ),
+      ),
+
+      /// AW_TrainingProgressBar
+      const Hero(
+        tag: 'AW_TrainingProgressBar',
+        key: Key('AW_TrainingProgressBar'),
+        child: Material(
+          child: Padding(
+            padding: EdgeInsets.all(10.0),
+            child: AW_TrainingProgressBar(
+              percentage: 80,
+              radius: 73,
+              completedColor: Colors.blueAccent,
+              notCompletedColor: Colors.white10,
+            ),
+          ),
+        ),
+      ),
+
+      /// AW_TrainingWidget
+      Hero(
+        tag: 'AW_TrainingWidget',
+        key: const Key('AW_TrainingWidget'),
+        child: Material(
+          child: AW_TrainingWidget(
+            title: 'Training title',
+            description: 'Description Lorem ipsum',
+            onInfoTap: () => showInSnackBar('On press function', scaffoldKey, context),
+            displayIcon: true,
+            progressWidget: const Stack(
+              alignment: Alignment.center,
+              children: <Widget>[
+                AW_TrainingProgressBar(
+                  percentage: 70,
+                  notCompletedColor: Colors.black12,
+                  completedColor: Colors.blueAccent,
+                  radius: 73,
+                ),
+                Text(
+                  '70 %',
+                  style: TextStyle(fontSize: 19, color: Colors.blueAccent, fontWeight: FontWeight.w800),
+                )
+              ],
+            ),
+            iconColor: ColorHelper.primaryBlue.color,
+            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
           ),
         ),
       ),

@@ -5723,6 +5723,804 @@
           "description": "The color for the icon. It's optional and defaults to a specific color."
         }
       ]
+    },
+    {
+      "name": "AW_MasterSupervisionItem",
+      "description": "This is a StatelessWidget that represents a master supervision item. It has several properties that can be customized such as border color, toggle background color, delete icon color, toggle color, toggle asset, email, and delete action. It also has a toggle function and a supervision allowed flag.",
+      "parameters": [
+        {
+          "name": "borderColor",
+          "type": "Color",
+          "description": "The color of the border. Default is Color.fromRGBO(97, 97, 97, 1)."
+        },
+        {
+          "name": "toggleBackgroundColor",
+          "type": "Color",
+          "description": "The background color of the toggle. Default is Color.fromRGBO(224, 224, 224, 1)."
+        },
+        {
+          "name": "deleteIconColor",
+          "type": "Color",
+          "description": "The color of the delete icon. Default is Color.fromRGBO(2, 23, 100, 1)."
+        },
+        {
+          "name": "toggleColor",
+          "type": "Color",
+          "description": "The color of the toggle. This is a required parameter."
+        },
+        {
+          "name": "onToggle",
+          "type": "Function",
+          "description": "The function to be called when the toggle is clicked. This is a required parameter."
+        },
+        {
+          "name": "supervisionAllowed",
+          "type": "bool",
+          "description": "A flag indicating whether supervision is allowed. This is a required parameter."
+        },
+        {
+          "name": "toggleAsset",
+          "type": "String",
+          "description": "The asset to be used for the toggle. This is a required parameter."
+        },
+        {
+          "name": "email",
+          "type": "String",
+          "description": "The email associated with the item. This is a required parameter."
+        },
+        {
+          "name": "onDelete",
+          "type": "Function",
+          "description": "The function to be called when the delete icon is clicked. This is a required parameter."
+        }
+      ]
+    },
+    {
+      "name": "AW_SupervisionCheckboxItem",
+      "description": "This is a StatelessWidget that represents a supervision checkbox item. It has several properties that can be customized such as value, onChanged function, and text. It also has a build function that returns a Row widget containing a Checkbox and a Text widget.",
+      "parameters": [
+        {
+          "name": "value",
+          "type": "bool",
+          "description": "The value of the checkbox. This is a required parameter."
+        },
+        {
+          "name": "onChanged",
+          "type": "Function(bool?)",
+          "description": "The function to be called when the checkbox value is changed. This is a required parameter."
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "description": "The text to be displayed next to the checkbox. This is a required parameter."
+        }
+      ]
+    },
+    {
+      "name": "AW_SwitchWithTitleDescription",
+      "description": "This is a StatelessWidget that represents a switch with title and description. It has several properties that can be customized such as switchBool, onChanged function, title, subTitle, icon, onIconPressed function, showIconAndTitle flag, removePadding flag, switchActiveColor, bottomWidget, titleTextStyle, and subTitleTextStyle.",
+      "parameters": [
+        {
+          "name": "switchBool",
+          "type": "bool",
+          "description": "The boolean value of the switch. Default is false."
+        },
+        {
+          "name": "onChanged",
+          "type": "Function",
+          "description": "The function to be called when the switch value is changed. This is a required parameter."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the switch. Default is an empty string."
+        },
+        {
+          "name": "subTitle",
+          "type": "String",
+          "description": "The subtitle of the switch. Default is an empty string."
+        },
+        {
+          "name": "icon",
+          "type": "Icon",
+          "description": "The icon of the switch. Default is an info outline icon with color Color.fromRGBO(158, 158, 158, 1)."
+        },
+        {
+          "name": "onIconPressed",
+          "type": "Function",
+          "description": "The function to be called when the icon is pressed."
+        },
+        {
+          "name": "showIconAndTitle",
+          "type": "bool",
+          "description": "A flag indicating whether to show the icon and title. Default is true."
+        },
+        {
+          "name": "removePadding",
+          "type": "bool",
+          "description": "A flag indicating whether to remove padding. Default is false."
+        },
+        {
+          "name": "switchActiveColor",
+          "type": "Color",
+          "description": "The active color of the switch. Default is Colors.green."
+        },
+        {
+          "name": "bottomWidget",
+          "type": "Widget",
+          "description": "The widget to be displayed at the bottom."
+        },
+        {
+          "name": "titleTextStyle",
+          "type": "TextStyle",
+          "description": "The text style of the title. Default is TextStyle(fontWeight: FontWeight.w600, fontSize: 16.0, color: Color.fromRGBO(97, 97, 97, 1))."
+        },
+        {
+          "name": "subTitleTextStyle",
+          "type": "TextStyle",
+          "description": "The text style of the subtitle. Default is TextStyle(fontWeight: FontWeight.w400, fontSize: 14.0, color: Color.fromRGBO(110, 110, 110, 1))."
+        }
+      ]
+    },
+    {
+      "name": "AW_SwitchWithTitleDescriptionInputField",
+      "description": "This is a StatelessWidget that represents a switch with title, description, and an input field. It has several properties that can be customized such as switchBool, onChanged function, title, subTitle, fieldInputTitle, icon, onIconPressed function, switchActiveColor, titleTextStyle, subTitleTextStyle, fieldInputTitleTextStyle, and fieldController.",
+      "parameters": [
+        {
+          "name": "switchBool",
+          "type": "bool",
+          "description": "The boolean value of the switch. Default is false."
+        },
+        {
+          "name": "onChanged",
+          "type": "Function",
+          "description": "The function to be called when the switch value is changed. This is a required parameter."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the switch. Default is an empty string."
+        },
+        {
+          "name": "subTitle",
+          "type": "String",
+          "description": "The subtitle of the switch. Default is an empty string."
+        },
+        {
+          "name": "fieldInputTitle",
+          "type": "String",
+          "description": "The title of the input field. Default is an empty string."
+        },
+        {
+          "name": "icon",
+          "type": "Icon",
+          "description": "The icon of the switch. Default is an info outline icon with color Color.fromRGBO(158, 158, 158, 1)."
+        },
+        {
+          "name": "onIconPressed",
+          "type": "Function",
+          "description": "The function to be called when the icon is pressed."
+        },
+        {
+          "name": "switchActiveColor",
+          "type": "Color",
+          "description": "The active color of the switch. Default is Colors.green."
+        },
+        {
+          "name": "titleTextStyle",
+          "type": "TextStyle",
+          "description": "The text style of the title. Default is TextStyle(fontWeight: FontWeight.w600, fontSize: 16.0, color: Color.fromRGBO(97, 97, 97, 1))."
+        },
+        {
+          "name": "subTitleTextStyle",
+          "type": "TextStyle",
+          "description": "The text style of the subtitle. Default is TextStyle(fontWeight: FontWeight.w400, fontSize: 14.0, color: Color.fromRGBO(110, 110, 110, 1))."
+        },
+        {
+          "name": "fieldInputTitleTextStyle",
+          "type": "TextStyle",
+          "description": "The text style of the field input title. Default is TextStyle(fontWeight: FontWeight.w400, fontSize: 14.0, color: Color.fromRGBO(33, 33, 33, 1))."
+        },
+        {
+          "name": "fieldController",
+          "type": "TextEditingController",
+          "description": "The controller for the input field. This is a required parameter."
+        }
+      ]
+    },
+    {
+      "name": "AW_TappableText",
+      "description": "This is a StatelessWidget that represents a tappable text. It has several properties that can be customized such as text, links, onPressed function, defaultStyle, linkStyle, and textAlign.",
+      "parameters": [
+        {
+          "name": "text",
+          "type": "String",
+          "description": "The text to be displayed. This is a required parameter."
+        },
+        {
+          "name": "links",
+          "type": "List<String>",
+          "description": "The list of links in the text. This is a required parameter."
+        },
+        {
+          "name": "onPressed",
+          "type": "Function",
+          "description": "The function to be called when the text is pressed."
+        },
+        {
+          "name": "defaultStyle",
+          "type": "TextStyle",
+          "description": "The default style of the text. Default is TextStyle(color: Color.fromRGBO(59, 72, 86, 1.0), fontSize: 13, fontWeight: FontWeight.w400)."
+        },
+        {
+          "name": "linkStyle",
+          "type": "TextStyle",
+          "description": "The style of the links in the text. Default is TextStyle(color: Color.fromRGBO(59, 72, 86, 1.0), fontSize: 13, fontWeight: FontWeight.w500, decoration: TextDecoration.underline)."
+        },
+        {
+          "name": "textAlign",
+          "type": "TextAlign",
+          "description": "The alignment of the text. Default is TextAlign.center."
+        }
+      ]
+    },
+    {
+      "name": "AW_FittedText",
+      "description": "AW_FittedText is a StatelessWidget that accepts a few parameters to display a text. It extends the StatelessWidget, which describes part of the user interface which can depend on configuration information in the constructor and change over time as it rebuilds.",
+      "parameters": [
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "A key that uniquely identifies this widget from others. It's required."
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "description": "The text to display in the widget. It's required."
+        },
+        {
+          "name": "boxFit",
+          "type": "BoxFit",
+          "description": "How to inscribe the box into the rectangle. The default value is BoxFit.contain."
+        },
+        {
+          "name": "style",
+          "type": "TextStyle",
+          "description": "The style to use for the text being displayed. It's optional."
+        },
+        {
+          "name": "textAlign",
+          "type": "TextAlign",
+          "description": "How the text should be aligned horizontally. The default value is TextAlign.start."
+        }
+      ]
+    },
+    {
+      "name": "AW_TextFormField",
+      "description": "AW_TextFormField is a StatefulWidget that accepts several parameters to create a text form field. It extends the StatefulWidget, which means it can change over time and can be created, updated, or destroyed multiple times over the lifecycle of its parent widget.",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "Key",
+          "description": "A key that uniquely identifies this widget from others. It's optional."
+        },
+        {
+          "name": "label",
+          "type": "String",
+          "description": "The label text of the text form field. The default value is an empty string."
+        },
+        {
+          "name": "hintText",
+          "type": "String",
+          "description": "The hint text displayed in the text form field when the field is empty. It's optional."
+        },
+        {
+          "name": "controller",
+          "type": "TextEditingController",
+          "description": "Controls the text being edited. It's optional."
+        },
+        {
+          "name": "obscureText",
+          "type": "bool",
+          "description": "Whether to obscure the text. The default value is false."
+        },
+        {
+          "name": "icon",
+          "type": "Icon",
+          "description": "The icon to display in the text form field. It's optional."
+        },
+        {
+          "name": "errorTextEmpty",
+          "type": "String",
+          "description": "The error text to display when the field is empty. It's optional."
+        },
+        {
+          "name": "identical",
+          "type": "bool",
+          "description": "Whether the text in the field should be identical. The default value is true."
+        },
+        {
+          "name": "onChange",
+          "type": "Function",
+          "description": "Called when the text being edited changes. It's optional."
+        },
+        {
+          "name": "onEditingComplete",
+          "type": "Function",
+          "description": "Called when the user indicates that they are done editing the text in the field. It's optional."
+        },
+        {
+          "name": "fKey",
+          "type": "GlobalKey",
+          "description": "A global key that uniquely identifies the Form widget and allows validation of the form. It's optional."
+        },
+        {
+          "name": "readOnly",
+          "type": "bool",
+          "description": "Whether the text form field is read only. The default value is false."
+        },
+        {
+          "name": "type",
+          "type": "String",
+          "description": "The type of the text form field. It's optional."
+        },
+        {
+          "name": "errorTextConfirm",
+          "type": "String",
+          "description": "The error text to display when the confirmation text does not match. It's optional."
+        },
+        {
+          "name": "dropdownPressFunction",
+          "type": "Function",
+          "description": "Called when the dropdown button is pressed. It's optional."
+        },
+        {
+          "name": "onTap",
+          "type": "Function",
+          "description": "Called when the text form field is tapped. It's optional."
+        },
+        {
+          "name": "keyboardType",
+          "type": "TextInputType",
+          "description": "The type of keyboard to use for editing the text. The default value is TextInputType.text."
+        },
+        {
+          "name": "inputFormatters",
+          "type": "List<TextInputFormatter>",
+          "description": "Optional input validation and formatting overrides. It's optional."
+        },
+        {
+          "name": "textCapitalization",
+          "type": "TextCapitalization",
+          "description": "Configures how the platform keyboard will select an uppercase or lowercase keyboard. The default value is TextCapitalization.none."
+        },
+        {
+          "name": "validation",
+          "type": "Function",
+          "description": "The validation function to use for this text form field. It's optional."
+        },
+        {
+          "name": "errorMessage",
+          "type": "String",
+          "description": "The error message to display when the validation fails. It's optional."
+        },
+        {
+          "name": "style",
+          "type": "TextStyle",
+          "description": "The style to use for the text being edited. It's optional."
+        },
+        {
+          "name": "errorStyle",
+          "type": "TextStyle",
+          "description": "The style to use for the error text. The default value is a TextStyle with fontSize 14.0 and fontWeight w300."
+        },
+        {
+          "name": "labelStyle",
+          "type": "TextStyle",
+          "description": "The style to use for the label text. The default value is a TextStyle with fontSize 14.0, fontWeight w300, and color Color.fromRGBO(257, 70, 82, 1)."
+        },
+        {
+          "name": "inputColor",
+          "type": "Color",
+          "description": "The color to use for the input field. It's optional."
+        },
+        {
+          "name": "obscureStarChar",
+          "type": "bool",
+          "description": "Whether to obscure the text with star characters. The default value is false."
+        },
+        {
+          "name": "helperText",
+          "type": "String",
+          "description": "Additional helpful text to display. It's optional."
+        },
+        {
+          "name": "height",
+          "type": "double",
+          "description": "The height of the text form field. The default value is 90."
+        },
+        {
+          "name": "disableHeight",
+          "type": "bool",
+          "description": "Whether to disable the height of the text form field. The default value is false."
+        },
+        {
+          "name": "hintStyle",
+          "type": "TextStyle",
+          "description": "The style to use for the hint text. It's optional."
+        },
+        {
+          "name": "textInputAction",
+          "type": "TextInputAction",
+          "description": "The keyboard action button that is displayed for the text field. It's optional."
+        },
+        {
+          "name": "onFieldSubmitted",
+          "type": "Function",
+          "description": "Called when the user submits editable content. It's optional."
+        },
+        {
+          "name": "fillColor",
+          "type": "Color",
+          "description": "The color to fill the text form field. It's optional."
+        },
+        {
+          "name": "focusNode",
+          "type": "FocusNode",
+          "description": "An optional focus node for this text form field. It's optional."
+        },
+        {
+          "name": "enabledBorder",
+          "type": "InputBorder",
+          "description": "The border to display when the text form field is enabled. It's optional."
+        },
+        {
+          "name": "errorBorder",
+          "type": "InputBorder",
+          "description": "The border to display when the text form field has an error. The default value is an OutlineInputBorder with a red BorderSide."
+        },
+        {
+          "name": "obscureIcon",
+          "type": "Icon",
+          "description": "The icon to display when the text is obscured. It's optional."
+        },
+        {
+          "name": "disableObscureIcon",
+          "type": "bool",
+          "description": "Whether to disable the obscure icon. It's optional."
+        }
+      ]
+    },
+    {
+      "name": "AW_TopContributorItem",
+      "description": "AW_TopContributorItem is a StatelessWidget that accepts several parameters to create a top contributor item. It extends the StatelessWidget, which means it can be described in terms of other, lower-level widgets.",
+      "parameters": [
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "A key that uniquely identifies this widget from others. It's optional."
+        },
+        {
+          "name": "index",
+          "type": "int",
+          "description": "The index of this top contributor item. It's optional."
+        },
+        {
+          "name": "image",
+          "type": "String",
+          "description": "The image URL of the top contributor. The default value is an empty string."
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "description": "The name of the top contributor. The default value is an empty string."
+        },
+        {
+          "name": "team",
+          "type": "String",
+          "description": "The team of the top contributor. The default value is an empty string."
+        },
+        {
+          "name": "colorValue",
+          "type": "Color",
+          "description": "The color value of the top contributor item. The default value is Colors.black."
+        },
+        {
+          "name": "value",
+          "type": "String",
+          "description": "The value of the top contributor item. The default value is '0.0'."
+        },
+        {
+          "name": "useColors",
+          "type": "bool",
+          "description": "Whether to use colors for the top contributor item. The default value is false."
+        },
+        {
+          "name": "teamColor",
+          "type": "Color",
+          "description": "The color of the team. The default value is Colors.grey."
+        },
+        {
+          "name": "nameStyle",
+          "type": "TextStyle",
+          "description": "The style to use for the name text. It's optional."
+        },
+        {
+          "name": "teamStyle",
+          "type": "TextStyle",
+          "description": "The style to use for the team text. It's optional."
+        }
+      ]
+    },
+    {
+      "name": "AW_AchievementTrainingItem",
+      "description": "AW_AchievementTrainingItem is a StatelessWidget that accepts several parameters to create an achievement training item. It extends the StatelessWidget, which means it can be described in terms of other, lower-level widgets.",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "Key",
+          "description": "A key that uniquely identifies this widget from others. It's optional."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the achievement training item. It's required."
+        },
+        {
+          "name": "completed",
+          "type": "bool",
+          "description": "Whether the achievement training item is completed. It's required."
+        },
+        {
+          "name": "completedColor",
+          "type": "Color",
+          "description": "The color to use when the achievement training item is completed. It's required."
+        },
+        {
+          "name": "notCompletedColor",
+          "type": "Color",
+          "description": "The color to use when the achievement training item is not completed. It's required."
+        },
+        {
+          "name": "titleColor",
+          "type": "Color",
+          "description": "The color to use for the title text. The default value is Color(0xFF394652)."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The color to use for the background. The default value is Colors.white."
+        },
+        {
+          "name": "onTap",
+          "type": "Function",
+          "description": "Called when the achievement training item is tapped. It's required."
+        },
+        {
+          "name": "padding",
+          "type": "EdgeInsets",
+          "description": "The padding to apply to the achievement training item. The default value is EdgeInsets.symmetric(horizontal: 16, vertical: 8)."
+        },
+        {
+          "name": "margin",
+          "type": "EdgeInsets",
+          "description": "The margin to apply to the achievement training item. The default value is EdgeInsets.only(bottom: 20, left: 10)."
+        }
+      ]
+    },
+    {
+      "name": "AW_AchievementTrainingItemJapan",
+      "description": "AW_AchievementTrainingItemJapan is a StatelessWidget that accepts several parameters to create an achievement training item specifically for Japan. It extends the StatelessWidget, which means it can be described in terms of other, lower-level widgets.",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "Key",
+          "description": "A key that uniquely identifies this widget from others. It's optional."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the achievement training item. It's required."
+        },
+        {
+          "name": "completed",
+          "type": "bool",
+          "description": "Whether the achievement training item is completed. It's required."
+        },
+        {
+          "name": "progress",
+          "type": "double",
+          "description": "The progress of the achievement training item. It's required."
+        },
+        {
+          "name": "titleColor",
+          "type": "Color",
+          "description": "The color to use for the title text. The default value is Color(0xFF394652)."
+        },
+        {
+          "name": "backgroundColorProgress",
+          "type": "Color",
+          "description": "The background color to use for the progress bar. The default value is Color(0xFF394652)."
+        },
+        {
+          "name": "progressColor",
+          "type": "Color",
+          "description": "The color to use for the progress bar. The default value is Color(0xFF0F99DD)."
+        },
+        {
+          "name": "onTap",
+          "type": "Function",
+          "description": "Called when the achievement training item is tapped. It's required."
+        },
+        {
+          "name": "padding",
+          "type": "EdgeInsets",
+          "description": "The padding to apply to the achievement training item. The default value is EdgeInsets.symmetric(horizontal: 16, vertical: 8)."
+        },
+        {
+          "name": "margin",
+          "type": "EdgeInsets",
+          "description": "The margin to apply to the achievement training item. The default value is EdgeInsets.only(bottom: 20, left: 10)."
+        }
+      ]
+    },
+    {
+      "name": "AW_NewsTrainingItem",
+      "description": "AW_NewsTrainingItem is a StatelessWidget that accepts several parameters to create a news training item. It extends the StatelessWidget, which means it can be described in terms of other, lower-level widgets.",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "Key",
+          "description": "A key that uniquely identifies this widget from others. It's optional."
+        },
+        {
+          "name": "asset",
+          "type": "String",
+          "description": "The asset to display in the news training item. It's required."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the news training item. It's required."
+        },
+        {
+          "name": "onTap",
+          "type": "Function",
+          "description": "Called when the news training item is tapped. It's required."
+        },
+        {
+          "name": "titleColor",
+          "type": "Color",
+          "description": "The color to use for the title text. The default value is Color(0xFF394652)."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The color to use for the background. The default value is Colors.white."
+        },
+        {
+          "name": "padding",
+          "type": "EdgeInsets",
+          "description": "The padding to apply to the news training item. The default value is EdgeInsets.symmetric(horizontal: 16, vertical: 8)."
+        },
+        {
+          "name": "margin",
+          "type": "EdgeInsets",
+          "description": "The margin to apply to the news training item. The default value is EdgeInsets.only(bottom: 20, left: 10)."
+        }
+      ]
+    },
+    {
+      "name": "AW_TrainingProgressBar",
+      "description": "AW_TrainingProgressBar is a StatelessWidget that accepts several parameters to create a training progress bar. It extends the StatelessWidget, which means it can be described in terms of other, lower-level widgets.",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "Key",
+          "description": "A key that uniquely identifies this widget from others. It's optional."
+        },
+        {
+          "name": "percentage",
+          "type": "double",
+          "description": "The percentage of the progress bar that is completed. It's required."
+        },
+        {
+          "name": "radius",
+          "type": "double",
+          "description": "The radius of the progress bar. It's required."
+        },
+        {
+          "name": "completedColor",
+          "type": "Color",
+          "description": "The color to use when the progress bar is completed. The default value is Color.fromRGBO(23, 164, 160, 1)."
+        },
+        {
+          "name": "notCompletedColor",
+          "type": "Color",
+          "description": "The color to use when the progress bar is not completed. The default value is Color.fromRGBO(23, 164, 160, 0.4)."
+        },
+        {
+          "name": "startOffset",
+          "type": "double",
+          "description": "The start offset of the progress bar. The default value is 20."
+        },
+        {
+          "name": "endOffset",
+          "type": "double",
+          "description": "The end offset of the progress bar. The default value is 40."
+        },
+        {
+          "name": "startRadians",
+          "type": "double",
+          "description": "The start radians of the progress bar. The default value is 180."
+        }
+      ]
+    },
+    {
+      "name": "AW_TrainingWidget",
+      "description": "AW_TrainingWidget is a StatelessWidget that accepts several parameters to create a training widget. It extends the StatelessWidget, which means it can be described in terms of other, lower-level widgets.",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "Key",
+          "description": "A key that uniquely identifies this widget from others. It's optional."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the training widget. It's required."
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "description": "The description of the training widget. It's required."
+        },
+        {
+          "name": "onInfoTap",
+          "type": "Function",
+          "description": "Called when the info icon is tapped. It's required."
+        },
+        {
+          "name": "progressWidget",
+          "type": "Widget",
+          "description": "The progress widget to display. It's optional."
+        },
+        {
+          "name": "infoIcon",
+          "type": "IconData",
+          "description": "The icon to use for the info button. The default value is Icons.info_outline."
+        },
+        {
+          "name": "titleColor",
+          "type": "Color",
+          "description": "The color to use for the title text. The default value is Color.fromRGBO(57, 70, 82, 1)."
+        },
+        {
+          "name": "descriptionColor",
+          "type": "Color",
+          "description": "The color to use for the description text. The default value is Color.fromRGBO(70, 83, 93, 1)."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The color to use for the background. The default value is Colors.white."
+        },
+        {
+          "name": "padding",
+          "type": "EdgeInsets",
+          "description": "The padding to apply to the training widget. The default value is EdgeInsets.symmetric(vertical: 10, horizontal: 16)."
+        },
+        {
+          "name": "iconColor",
+          "type": "Color",
+          "description": "The color to use for the icon. The default value is Color.fromRGBO(57, 70, 82, 1)."
+        },
+        {
+          "name": "displayIcon",
+          "type": "bool",
+          "description": "Whether to display the icon. The default value is true."
+        }
+      ]
     }
 
 
