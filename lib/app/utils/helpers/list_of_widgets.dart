@@ -1,4 +1,5 @@
 import 'package:cmt/app/utils/helpers/drawer_list.dart';
+import 'package:cmt/app/utils/helpers/settings_items_list.dart';
 import 'package:cmt/app/utils/helpers/shield_lIst.dart';
 import 'package:cmt/generated/assets.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +20,8 @@ final List<double> values = <double>[73, 65, 89, 48, 59, 98];
 final List<String> _namesTest = <String>['Team A', 'Team B'];
 final List<double> _valuesTest = <double>[0.4, 0.6];
 final List<Color> _colorTest = <Color>[Colors.blueAccent, Colors.lightBlueAccent];
+const String element0 = 'Some title';
+bool isItemPressed = false;
 
 List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffoldKey) => <Widget>[
       /// APP BARS
@@ -1332,6 +1335,242 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
             questionText: 'Already a customer?',
             onAction: () => showInSnackBar('On press function', scaffoldKey, context),
             buttonDisabled: false,
+          ),
+        ),
+      ),
+
+      /// AW_RewardContestCard
+      Hero(
+        tag: 'AW_RewardContestCard',
+        key: const Key('AW_RewardContestCard'),
+        child: Material(
+          child: AW_RewardContestCard(
+            infoText: 'Info',
+            isJapan: true,
+            rightCornerBtnText: 'X',
+            cardTap: () => showInSnackBar('On press function', scaffoldKey, context),
+          ),
+        ),
+      ),
+
+      /// AW_RiskCardItem
+      Hero(
+        tag: 'AW_RiskCardItem',
+        key: const Key('AW_RiskCardItem'),
+        child: Material(
+          child: SizedBox(
+            height: 200,
+            child: AW_RiskCardItem(
+              description:
+                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make",
+              title: 'Title',
+              discount: '23',
+              textColor: Colors.white,
+              backgroundColor: Colors.blueAccent,
+              onTap: () => showInSnackBar('On press function', scaffoldKey, context),
+              // imageAsset: Assets.assetsIcDialogAutoSuccess,
+            ),
+          ),
+        ),
+      ),
+
+      /// AW_SeeAllWidget
+      Hero(
+        tag: 'AW_SeeAllWidget',
+        key: const Key('AW_SeeAllWidget'),
+        child: Material(
+          child: AW_SeeAllWidget(
+            leftText: 'Challenges',
+            rightText: 'See all',
+            onRightTextClick: () => showInSnackBar('On press function', scaffoldKey, context),
+            rightTextColor: Colors.blueAccent,
+            leftTextStyle: Theme.of(context).textTheme.headlineSmall,
+            rightTextStyle:
+                Theme.of(context).textTheme.headlineMedium!.copyWith(fontSize: 14, fontWeight: FontWeight.w400),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+          ),
+        ),
+      ),
+
+      /// AW_SelectableList
+      Hero(
+        tag: 'AW_SelectableList',
+        key: const Key('AW_SelectableList'),
+        child: Material(
+          child: AW_SelectableList(
+            key: const Key('AW_SelectableList'),
+            selectedIndex: 0,
+            // ignore: prefer_const_literals_to_create_immutables
+            onItemSelected: (int index) {
+              isItemPressed = true;
+            },
+            items: const <String>[element0, 'e1'],
+          ),
+        ),
+      ),
+
+      /// AW_SettingsGroupItem
+      Hero(
+        tag: 'AW_SettingsGroupItem',
+        key: const Key('AW_SettingsGroupItem'),
+        child: Material(
+          child: AW_SettingsGroupItem(
+            title: 'Title',
+            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+            titleStyle: TextStyle(color: ColorHelper.aigCyan.color, fontSize: 14, fontWeight: FontWeight.w600),
+            onTap: () => showInSnackBar('On press function', scaffoldKey, context),
+            leadingIcon: Assets.assetsAppBarLogo,
+            trailingIconColor: ColorHelper.aigCyan.color,
+            leadingIconColor: ColorHelper.aigCyan.color,
+          ),
+        ),
+      ),
+
+      /// AW_SettingsSection
+      Hero(
+        tag: 'AW_SettingsSection',
+        key: const Key('AW_SettingsSection'),
+        child: Material(
+          child: AW_SettingsSection(
+            key: const Key('AW_SettingsSection'),
+            sectionName: 'Section title',
+            items: SettingsItems().sectionItems(scaffoldKey, context),
+          ),
+        ),
+      ),
+
+      /// SettingsSectionItemModel
+      Hero(
+        tag: 'SettingsSectionItemModel',
+        key: const Key('SettingsSectionItemModel'),
+        child: Material(
+          child: AW_SettingsSectionItem(
+            key: const Key('SettingsSectionItemModel'),
+            itemModel: SettingsSectionItemModel(
+              onTap: () => showInSnackBar('On press function', scaffoldKey, context),
+              title: 'Item 1',
+              badgeNumber: 1,
+            ),
+          ),
+        ),
+      ),
+
+      /// AW_ProfileDataTappableItem
+      Hero(
+        tag: 'AW_ProfileDataTappableItem',
+        key: const Key('AW_ProfileDataTappableItem'),
+        child: Material(
+          child: AW_ProfileDataTappableItem(
+            key: const Key('AW_ProfileDataTappableItem'),
+            onTap: () => showInSnackBar('On press function', scaffoldKey, context),
+            firstName: 'First',
+            lastName: 'Last',
+            email: 'email.test@gmail.com',
+          ),
+        ),
+      ),
+
+      /// AW_ShieldCard
+      const Hero(
+        tag: 'AW_ShieldCard',
+        key: Key('AW_ShieldCard'),
+        child: Material(
+          child: AW_ShieldCard(
+            widgetKey: Key('AW_ShieldCard'),
+            title: 'Shield title',
+            image:
+                'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b3be1dae-3caa-4d45-be6c-3de586ba95e2/defsaga-0b005d64-4668-48a4-b5ab-c5df9b8fa0e2.jpg/v1/fill/w_1192,h_670,q_70,strp/mountain_range_by_bisbiswas_defsaga-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcL2IzYmUxZGFlLTNjYWEtNGQ0NS1iZTZjLTNkZTU4NmJhOTVlMlwvZGVmc2FnYS0wYjAwNWQ2NC00NjY4LTQ4YTQtYjVhYi1jNWRmOWI4ZmEwZTIuanBnIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.uaOvEEI7abVQTP6eI2aV6l_VzYe0FOk8MfYUGZ7D9mA',
+            iconDuration: Assets.assetsBatteryIcon,
+            iconPrice: Assets.assetsIcSpeed,
+            durationValue: '1-60 days',
+            isInverted: false,
+            priceValue: '5 / day',
+          ),
+        ),
+      ),
+
+      /// AW_ShieldHomepageCard
+      Hero(
+        tag: 'AW_ShieldHomepageCard',
+        key: const Key('AW_ShieldHomepageCard'),
+        child: Material(
+          child: AW_ShieldHomepageCard(
+            widgetKey: const Key('AW_ShieldHomepageCard'),
+            title: 'Shield title',
+            btnTitle: 'Button',
+            description:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+            image:
+                'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/287eab66-0f73-4b97-8e74-849c5f06d542/dckxntm-a149c5f0-34a1-472d-9e30-e3919dccd386.jpg/v1/fill/w_1095,h_730,q_70,strp/japan_by_anthonypresley_dckxntm-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAwMCIsInBhdGgiOiJcL2ZcLzI4N2VhYjY2LTBmNzMtNGI5Ny04ZTc0LTg0OWM1ZjA2ZDU0MlwvZGNreG50bS1hMTQ5YzVmMC0zNGExLTQ3MmQtOWUzMC1lMzkxOWRjY2QzODYuanBnIiwid2lkdGgiOiI8PTE1MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.oAaiFCNcEY9AX-ClSlJ2qcBnbm-Iv-hkr39k0KtcMY0',
+            onButtonPressed: () => showInSnackBar('On press function', scaffoldKey, context),
+          ),
+        ),
+      ),
+
+      /// AW_ShieldPorscheCard
+      const Hero(
+        tag: 'AW_ShieldPorscheCard',
+        key: Key('AW_ShieldPorscheCard'),
+        child: Material(
+          child: AW_ShieldPorscheCard(
+            widgetKey: Key('AW_ShieldPorscheCard'),
+            title: 'Shield title',
+            image:
+                'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3f80e9ee-fa2f-44ad-8093-96c7f882e5e2/dgrhast-173eae42-c790-4ff5-84ef-05e6f8553fa9.jpg/v1/fill/w_894,h_894,q_70,strp/pop_art_sunflowers_by_mizbrown_dgrhast-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcLzNmODBlOWVlLWZhMmYtNDRhZC04MDkzLTk2YzdmODgyZTVlMlwvZGdyaGFzdC0xNzNlYWU0Mi1jNzkwLTRmZjUtODRlZi0wNWU2Zjg1NTNmYTkuanBnIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.VKeJW6yBw_0TJUjWihTxksvKY2AJdpi64uO7BumZLvY',
+            price: '99',
+            bottomRightText: 'Sample text',
+            per: 'Shield',
+            coverageStart: '01.01.',
+            priceTitle: 'Euro',
+          ),
+        ),
+      ),
+
+      /// AW_StatisticHomeItem
+      const Hero(
+        tag: 'AW_StatisticHomeItem',
+        key: Key('AW_StatisticHomeItem'),
+        child: Material(
+          child: AW_StatisticHomeItem(
+            widgetKey: Key('AW_StatisticHomeItem'),
+            title: 'Statistic',
+            value: '',
+            widgetHeight: 200,
+            actionItemIcon: Assets.assetsIcTimeIcon,
+            centerItemIcon: Assets.assetsIcTeam,
+            leadingItemIcon: Assets.assetsIcTrips,
+            actionItemTitle: 'Time',
+            actionItemValue: '12h',
+            centerItemTitle: 'Team',
+            centerItemValue: 'Team A',
+            leadingItemTitle: 'Trips',
+            leadingItemValue: '15',
+          ),
+        ),
+      ),
+
+      /// AW_DemoStatisticItem
+      const Hero(
+        tag: 'AW_DemoStatisticItem',
+        key: Key('AW_DemoStatisticItem'),
+        child: Material(
+          child: AW_DemoStatisticItem(
+            key: Key('AW_DemoStatisticItem'),
+            title: 'Statistic',
+            value: '',
+            actionItemIcon: Assets.assetsIcTimeIcon,
+            centerItemIcon: Assets.assetsIcTeam,
+            leadingItemIcon: Assets.assetsIcTrips,
+            actionItemTitle: 'Time',
+            actionItemValue: '12h',
+            centerItemTitle: 'Team',
+            centerItemValue: 'Team A',
+            leadingItemTitle: 'Trips',
+            leadingItemValue: '15',
+            valuesVerticalSpacing: 2,
+            totalValueStyle: TextStyle(color: Colors.blueAccent),
+            valuesTextStyle: TextStyle(color: Colors.black),
+            showSpacers: true,
           ),
         ),
       ),

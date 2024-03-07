@@ -4905,7 +4905,826 @@
           "description": "Indicates whether to disable the default width. The default value is false."
         }
       ]
+    },
+    {
+      "name": "AW_RewardContestCard",
+      "description": "A custom widget that displays a reward contest card. It accepts various parameters to customize its appearance and behavior.",
+      "parameters": [
+        {
+          "name": "infoIconColor",
+          "type": "Color",
+          "description": "The color of the info icon. The default color is RGB(15, 153, 221)."
+        },
+        {
+          "name": "infoTextStyle",
+          "type": "TextStyle",
+          "description": "The style of the info text. The default style is FontSize 12."
+        },
+        {
+          "name": "showRightCornerBtn",
+          "type": "bool",
+          "description": "Indicates whether to show the right corner button. The default value is true."
+        },
+        {
+          "name": "rightCornerBtnStyle",
+          "type": "ButtonStyle",
+          "description": "The style of the right corner button."
+        },
+        {
+          "name": "btnDisabled",
+          "type": "bool",
+          "description": "Indicates whether the button is disabled. The default value is false."
+        },
+        {
+          "name": "rightCornerBtnFunction",
+          "type": "Function",
+          "description": "The function to be executed when the right corner button is tapped."
+        },
+        {
+          "name": "rightCornerBtnText",
+          "type": "String",
+          "description": "The text displayed on the right corner button. The default text is 'Sample text'."
+        },
+        {
+          "name": "infoText",
+          "type": "String",
+          "description": "The info text displayed on the card. The default text is 'Sample text'."
+        },
+        {
+          "name": "leftBottomWidget",
+          "type": "Widget",
+          "description": "The widget displayed at the bottom left of the card."
+        },
+        {
+          "name": "rightBottomText",
+          "type": "String",
+          "description": "The text displayed at the bottom right of the card. The default text is 'SampleText'."
+        },
+        {
+          "name": "rightBottomValue",
+          "type": "String",
+          "description": "The value displayed at the bottom right of the card. The default value is an empty string."
+        },
+        {
+          "name": "cardTap",
+          "type": "Function",
+          "description": "The function to be executed when the card is tapped."
+        },
+        {
+          "name": "canParticipate",
+          "type": "bool",
+          "description": "Indicates whether the user can participate in the contest. The default value is false."
+        },
+        {
+          "name": "alreadyParticipate",
+          "type": "bool",
+          "description": "Indicates whether the user has already participated in the contest. The default value is false."
+        },
+        {
+          "name": "isJapan",
+          "type": "bool",
+          "description": "Indicates whether the contest is in Japan. The default value is false."
+        }
+      ]
+    },
+    {
+      "name": "AW_RiskCardItem",
+      "description": "A custom widget that displays a risk card item. It accepts various parameters to customize its appearance and behavior.",
+      "parameters": [
+        {
+          "name": "description",
+          "type": "String",
+          "description": "The description text displayed on the card."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title text displayed on the card."
+        },
+        {
+          "name": "discount",
+          "type": "String",
+          "description": "The discount text displayed on the card."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color of the card. The default color is RGB(23, 164, 160)."
+        },
+        {
+          "name": "textColor",
+          "type": "Color",
+          "description": "The color of the text. The default color is Colors.white."
+        },
+        {
+          "name": "discountBackgroundColor",
+          "type": "Color",
+          "description": "The background color of the discount text. The default color is Colors.white."
+        },
+        {
+          "name": "onTap",
+          "type": "Function",
+          "description": "The function to be executed when the card is tapped."
+        },
+        {
+          "name": "descriptionHeight",
+          "type": "double",
+          "description": "The height of the description text."
+        },
+        {
+          "name": "fontFamily",
+          "type": "String",
+          "description": "The font family of the text."
+        },
+        {
+          "name": "descPadding",
+          "type": "EdgeInsets",
+          "description": "The padding around the description text. The default padding is EdgeInsets.zero."
+        },
+        {
+          "name": "imageAsset",
+          "type": "String",
+          "description": "The asset image displayed on the card."
+        },
+        {
+          "name": "dividerColor",
+          "type": "Color",
+          "description": "The color of the divider. The default color is Colors.white."
+        },
+        {
+          "name": "titleOffset",
+          "type": "int",
+          "description": "The offset of the title text. The default offset is 0."
+        }
+      ]
+    },
+    {
+      "name": "AW_SeeAllWidget",
+      "description": "A custom widget that displays a 'See All' option. It accepts various parameters to customize its appearance and behavior.",
+      "parameters": [
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "The key assigned to the widget."
+        },
+        {
+          "name": "leftText",
+          "type": "String",
+          "description": "The text displayed on the left side of the widget."
+        },
+        {
+          "name": "onRightTextClick",
+          "type": "Function",
+          "description": "The function to be executed when the right text is clicked."
+        },
+        {
+          "name": "rightText",
+          "type": "String",
+          "description": "The text displayed on the right side of the widget."
+        },
+        {
+          "name": "rightTextKey",
+          "type": "Key",
+          "description": "The key assigned to the right text."
+        },
+        {
+          "name": "rightTextColor",
+          "type": "Color",
+          "description": "The color of the right text. The default color is RGB(15, 153, 221)."
+        },
+        {
+          "name": "leftTextStyle",
+          "type": "TextStyle",
+          "description": "The style of the left text."
+        },
+        {
+          "name": "rightTextStyle",
+          "type": "TextStyle",
+          "description": "The style of the right text."
+        },
+        {
+          "name": "padding",
+          "type": "EdgeInsets",
+          "description": "The padding around the widget. The default padding is EdgeInsets.symmetric(horizontal: 24)."
+        }
+      ]
+    },
+    {
+      "name": "AW_SelectableList",
+      "description": "A custom widget that displays a selectable list. It accepts various parameters to customize its appearance and behavior.",
+      "parameters": [
+        {
+          "name": "onItemSelected",
+          "type": "Function",
+          "description": "The function to be executed when an item is selected."
+        },
+        {
+          "name": "items",
+          "type": "List<Widget>",
+          "description": "The items displayed in the list."
+        },
+        {
+          "name": "selectedIndex",
+          "type": "int",
+          "description": "The index of the selected item."
+        },
+        {
+          "name": "shrinkWrap",
+          "type": "bool",
+          "description": "Indicates whether the list should shrink wrap its content. The default value is true."
+        },
+        {
+          "name": "checkedIndicator",
+          "type": "Icon",
+          "description": "The icon displayed when an item is checked. The default icon is Icons.check."
+        },
+        {
+          "name": "textStyle",
+          "type": "TextStyle",
+          "description": "The style of the text. The default style is FontWeight.w400, FontSize 16.0, and Color.RGB(35, 44, 53)."
+        }
+      ]
+    },
+    {
+      "name": "AW_SettingsGroupItem",
+      "description": "This is a StatelessWidget that represents a settings group item. It has a title and a description, and can have leading and trailing icons. It also has a callback function for tap events. The colors and styles for various elements can be customized.",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "Key?",
+          "description": "The widget key. It's optional."
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "description": "The description for the settings item. It's optional and defaults to an empty string."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title for the settings item. It's required."
+        },
+        {
+          "name": "trailingIcon",
+          "type": "String",
+          "description": "The trailing icon for the settings item. It's optional and defaults to an empty string."
+        },
+        {
+          "name": "leadingIcon",
+          "type": "String",
+          "description": "The leading icon for the settings item. It's optional and defaults to an empty string."
+        },
+        {
+          "name": "onTap",
+          "type": "Function",
+          "description": "The callback function that is called when the settings item is tapped. It's required."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color for the settings item. It's optional and defaults to white."
+        },
+        {
+          "name": "trailingIconColor",
+          "type": "Color",
+          "description": "The color for the trailing icon. It's optional and defaults to a specific blue color."
+        },
+        {
+          "name": "titleStyle",
+          "type": "TextStyle",
+          "description": "The text style for the title. It's optional and has a default style."
+        },
+        {
+          "name": "descStyle",
+          "type": "TextStyle",
+          "description": "The text style for the description. It's optional and has a default style."
+        },
+        {
+          "name": "leadingIconColor",
+          "type": "Color",
+          "description": "The color for the leading icon. It's optional and defaults to a specific blue color."
+        }
+      ]
+    },
+    {
+      "name": "AW_SettingsSection",
+      "description": "This is a StatelessWidget that represents a settings section. It has a section name and a list of items. The color of the divider and the style and padding of the section name can be customized.",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "Key?",
+          "description": "The widget key. It's optional."
+        },
+        {
+          "name": "sectionName",
+          "type": "String",
+          "description": "The name of the section. It's optional and defaults to an empty string."
+        },
+        {
+          "name": "items",
+          "type": "List<SettingsSectionItemModel>",
+          "description": "The items in the section. It's optional and defaults to an empty list."
+        },
+        {
+          "name": "dividerColor",
+          "type": "Color",
+          "description": "The color of the divider. It's optional and defaults to a specific color."
+        },
+        {
+          "name": "sectionNameTextStyle",
+          "type": "TextStyle",
+          "description": "The text style for the section name. It's optional and has a default style."
+        },
+        {
+          "name": "sectionNamePadding",
+          "type": "EdgeInsets",
+          "description": "The padding for the section name. It's optional and has a default value."
+        }
+      ]
+    },
+    {
+      "name": "SettingsSectionItemModel",
+      "description": "This is a model class that represents a settings section item. It has a title, optional icons, and a badge. The height, background color, padding, and text styles can be customized. It also has a callback function for tap events.",
+      "parameters": [
+        {
+          "name": "onTap",
+          "type": "Function",
+          "description": "The callback function that is called when the settings item is tapped. It's required."
+        },
+        {
+          "name": "height",
+          "type": "double",
+          "description": "The height of the settings item. It's optional and defaults to 56.0."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color for the settings item. It's optional and defaults to white."
+        },
+        {
+          "name": "padding",
+          "type": "EdgeInsets",
+          "description": "The padding for the settings item. It's optional and defaults to EdgeInsets.only(left: 28.0, right: 32.0)."
+        },
+        {
+          "name": "leftIcon",
+          "type": "Widget?",
+          "description": "The left icon for the settings item. It's optional."
+        },
+        {
+          "name": "rightIcon",
+          "type": "Widget?",
+          "description": "The right icon for the settings item. It's optional."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title for the settings item. It's optional and defaults to an empty string."
+        },
+        {
+          "name": "tapKey",
+          "type": "Key?",
+          "description": "The key for the tap event. It's optional."
+        },
+        {
+          "name": "titleTextStyle",
+          "type": "TextStyle",
+          "description": "The text style for the title. It's optional and has a default style."
+        },
+        {
+          "name": "badgeNumber",
+          "type": "int?",
+          "description": "The number for the badge. It's optional."
+        },
+        {
+          "name": "badgeColor",
+          "type": "Color",
+          "description": "The color for the badge. It's optional and defaults to a specific color."
+        },
+        {
+          "name": "badgeTextStyle",
+          "type": "TextStyle",
+          "description": "The text style for the badge. It's optional and has a default style."
+        }
+      ]
+    },
+    {
+      "name": "AW_ProfileDataTappableItem",
+      "description": "This is a StatelessWidget that represents a profile data item that can be tapped. It displays the first name, last name, and email of a user, along with an avatar. The height, background color, padding, and text styles can be customized. It also has a callback function for tap events and an optional right icon.",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "Key?",
+          "description": "The widget key. It's optional."
+        },
+        {
+          "name": "onTap",
+          "type": "Function",
+          "description": "The callback function that is called when the profile data item is tapped. It's required."
+        },
+        {
+          "name": "height",
+          "type": "double",
+          "description": "The height of the profile data item. It's optional and defaults to 80.0."
+        },
+        {
+          "name": "firstName",
+          "type": "String",
+          "description": "The first name of the user. It's optional and defaults to a single space."
+        },
+        {
+          "name": "lastName",
+          "type": "String",
+          "description": "The last name of the user. It's optional and defaults to a single space."
+        },
+        {
+          "name": "email",
+          "type": "String",
+          "description": "The email of the user. It's optional and defaults to an empty string."
+        },
+        {
+          "name": "avatarCircleColor",
+          "type": "Color",
+          "description": "The color of the avatar circle. It's optional and defaults to a specific color."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color for the profile data item. It's optional and defaults to white."
+        },
+        {
+          "name": "avatarTextStyle",
+          "type": "TextStyle",
+          "description": "The text style for the avatar. It's optional and has a default style."
+        },
+        {
+          "name": "firstLastNameTextStyle",
+          "type": "TextStyle",
+          "description": "The text style for the first and last name. It's optional and has a default style."
+        },
+        {
+          "name": "emailTextStyle",
+          "type": "TextStyle",
+          "description": "The text style for the email. It's optional and has a default style."
+        },
+        {
+          "name": "rightIcon",
+          "type": "Widget?",
+          "description": "The right icon for the profile data item. It's optional."
+        },
+        {
+          "name": "padding",
+          "type": "EdgeInsets",
+          "description": "The padding for the profile data item. It's optional and defaults to EdgeInsets.only(left: 24.0, right: 31.0)."
+        }
+      ]
+    },
+    {
+      "name": "AW_ShieldCard",
+      "description": "This is a StatelessWidget that represents a shield card. It displays an image, a title, and icons for duration and price, along with their respective values. The card can be inverted, and the keys for the widgets are required.",
+      "parameters": [
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "The key for the widget. It's required."
+        },
+        {
+          "name": "image",
+          "type": "Image",
+          "description": "The image for the shield card. It's required."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title for the shield card. It's required."
+        },
+        {
+          "name": "isInverted",
+          "type": "bool",
+          "description": "A flag indicating whether the shield card is inverted. It's optional and defaults to false."
+        },
+        {
+          "name": "iconDuration",
+          "type": "Icon",
+          "description": "The icon for the duration. It's required."
+        },
+        {
+          "name": "durationValue",
+          "type": "String",
+          "description": "The value for the duration. It's optional and defaults to an empty string."
+        },
+        {
+          "name": "iconPrice",
+          "type": "Icon",
+          "description": "The icon for the price. It's required."
+        },
+        {
+          "name": "priceValue",
+          "type": "String",
+          "description": "The value for the price. It's optional and defaults to an empty string."
+        }
+      ]
+    },
+    {
+      "name": "AW_ShieldHomepageCard",
+      "description": "This is a StatelessWidget that represents a shield homepage card. It displays a title, an image, a description, and a button with a title. The button has a callback function for button press events. The keys for the widgets are required.",
+      "parameters": [
+        {
+          "name": "widgetKey",
+          "type": "Key?",
+          "description": "The key for the widget. It's optional."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title for the shield homepage card. It's optional and defaults to an empty string."
+        },
+        {
+          "name": "image",
+          "type": "String",
+          "description": "The image for the shield homepage card. It's optional and defaults to an empty string."
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "description": "The description for the shield homepage card. It's optional and defaults to an empty string."
+        },
+        {
+          "name": "btnTitle",
+          "type": "String",
+          "description": "The title for the button. It's optional and defaults to an empty string."
+        },
+        {
+          "name": "onButtonPressed",
+          "type": "Function?",
+          "description": "The callback function that is called when the button is pressed. It's optional."
+        }
+      ]
+    },
+    {
+      "name": "AW_ShieldPorscheCard",
+      "description": "This is a StatelessWidget that represents a shield Porsche card. It displays a price, an image, a title, and text at the bottom right. It also shows whether the item was bought, the type of price, the start of coverage, whether it's a summary page, the title of the coverage start date, the title of the price, and the height of the card. The keys for the widgets are required.",
+      "parameters": [
+        {
+          "name": "widgetKey",
+          "type": "Key",
+          "description": "The key for the widget. It's required."
+        },
+        {
+          "name": "price",
+          "type": "String",
+          "description": "The price for the shield Porsche card. It's required."
+        },
+        {
+          "name": "image",
+          "type": "String",
+          "description": "The image for the shield Porsche card. It's required."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title for the shield Porsche card. It's required."
+        },
+        {
+          "name": "bottomRightText",
+          "type": "String",
+          "description": "The text at the bottom right of the shield Porsche card. It's required."
+        },
+        {
+          "name": "per",
+          "type": "String",
+          "description": "The 'per' text for the shield Porsche card. It's required."
+        },
+        {
+          "name": "didBuy",
+          "type": "bool",
+          "description": "A flag indicating whether the item was bought. It's optional and defaults to false."
+        },
+        {
+          "name": "priceType",
+          "type": "String",
+          "description": "The type of price for the shield Porsche card. It's optional and defaults to '€'."
+        },
+        {
+          "name": "coverageStart",
+          "type": "String",
+          "description": "The start of coverage for the shield Porsche card. It's optional and defaults to '-'."
+        },
+        {
+          "name": "isSummaryPage",
+          "type": "bool",
+          "description": "A flag indicating whether it's a summary page. It's optional and defaults to false."
+        },
+        {
+          "name": "coverageStartDateTitle",
+          "type": "String",
+          "description": "The title of the coverage start date for the shield Porsche card. It's optional and defaults to an empty string."
+        },
+        {
+          "name": "priceTitle",
+          "type": "String",
+          "description": "The title of the price for the shield Porsche card. It's optional and defaults to an empty string."
+        },
+        {
+          "name": "height",
+          "type": "double",
+          "description": "The height of the shield Porsche card. It's optional and defaults to 250."
+        }
+      ]
+    },
+    {
+      "name": "AW_StatisticHomeItem",
+      "description": "This is a StatelessWidget that represents a statistic home item. It displays a title, a value, and icons for action, center, and leading items, along with their respective titles and values. The height, text styles, total value style, and vertical spacing of the values can be customized. The keys for the widgets are optional.",
+      "parameters": [
+        {
+          "name": "widgetHeight",
+          "type": "double",
+          "description": "The height of the statistic home item. It's optional and defaults to 152."
+        },
+        {
+          "name": "widgetKey",
+          "type": "Key?",
+          "description": "The key for the widget. It's optional."
+        },
+        {
+          "name": "title",
+          "type": "String?",
+          "description": "The title for the statistic home item. It's optional."
+        },
+        {
+          "name": "value",
+          "type": "String?",
+          "description": "The value for the statistic home item. It's optional."
+        },
+        {
+          "name": "actionItemIcon",
+          "type": "String?",
+          "description": "The icon for the action item. It's optional."
+        },
+        {
+          "name": "actionItemTitle",
+          "type": "String?",
+          "description": "The title for the action item. It's optional."
+        },
+        {
+          "name": "actionItemValue",
+          "type": "String?",
+          "description": "The value for the action item. It's optional."
+        },
+        {
+          "name": "centerItemIcon",
+          "type": "String?",
+          "description": "The icon for the center item. It's optional."
+        },
+        {
+          "name": "centerItemTitle",
+          "type": "String?",
+          "description": "The title for the center item. It's optional."
+        },
+        {
+          "name": "centerItemValue",
+          "type": "String?",
+          "description": "The value for the center item. It's optional."
+        },
+        {
+          "name": "leadingItemIcon",
+          "type": "String?",
+          "description": "The icon for the leading item. It's optional."
+        },
+        {
+          "name": "leadingItemTitle",
+          "type": "String?",
+          "description": "The title for the leading item. It's optional."
+        },
+        {
+          "name": "leadingItemValue",
+          "type": "String?",
+          "description": "The value for the leading item. It's optional."
+        },
+        {
+          "name": "valuesTextStyle",
+          "type": "TextStyle?",
+          "description": "The text style for the values. It's optional."
+        },
+        {
+          "name": "totalValueStyle",
+          "type": "TextStyle?",
+          "description": "The total value style for the statistic home item. It's optional."
+        },
+        {
+          "name": "valuesVerticalSpacing",
+          "type": "double",
+          "description": "The vertical spacing for the values. It's optional and defaults to 0."
+        }
+      ]
+    },
+    {
+      "name": "AW_DemoStatisticItem",
+      "description": "This is a StatelessWidget that represents a demo statistic item. It displays a title, a value, and icons for action, center, and leading items, along with their respective titles and values. The vertical spacing of the values, the total value style, the values text style, the main axis alignment, the visibility of spacers, the title style, the inner padding, and the icon color can be customized. The keys for the widgets are optional.",
+      "parameters": [
+        {
+          "name": "key",
+          "type": "Key?",
+          "description": "The key for the widget. It's optional."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title for the demo statistic item. It's required."
+        },
+        {
+          "name": "value",
+          "type": "String",
+          "description": "The value for the demo statistic item. It's required."
+        },
+        {
+          "name": "actionItemIcon",
+          "type": "String",
+          "description": "The icon for the action item. It's required."
+        },
+        {
+          "name": "actionItemTitle",
+          "type": "String",
+          "description": "The title for the action item. It's required."
+        },
+        {
+          "name": "actionItemValue",
+          "type": "String",
+          "description": "The value for the action item. It's required."
+        },
+        {
+          "name": "centerItemIcon",
+          "type": "String",
+          "description": "The icon for the center item. It's required."
+        },
+        {
+          "name": "centerItemTitle",
+          "type": "String",
+          "description": "The title for the center item. It's required."
+        },
+        {
+          "name": "centerItemValue",
+          "type": "String",
+          "description": "The value for the center item. It's required."
+        },
+        {
+          "name": "leadingItemIcon",
+          "type": "String",
+          "description": "The icon for the leading item. It's required."
+        },
+        {
+          "name": "leadingItemTitle",
+          "type": "String",
+          "description": "The title for the leading item. It's required."
+        },
+        {
+          "name": "leadingItemValue",
+          "type": "String",
+          "description": "The value for the leading item. It's required."
+        },
+        {
+          "name": "valuesVerticalSpacing",
+          "type": "double",
+          "description": "The vertical spacing for the values. It's required."
+        },
+        {
+          "name": "totalValueStyle",
+          "type": "TextStyle",
+          "description": "The total value style for the demo statistic item. It's required."
+        },
+        {
+          "name": "valuesTextStyle",
+          "type": "TextStyle",
+          "description": "The text style for the values. It's required."
+        },
+        {
+          "name": "mainAxisAlignment",
+          "type": "MainAxisAlignment",
+          "description": "The main axis alignment for the demo statistic item. It's optional and defaults to MainAxisAlignment.start."
+        },
+        {
+          "name": "showSpacers",
+          "type": "bool",
+          "description": "A flag indicating whether to show spacers. It's optional and defaults to true."
+        },
+        {
+          "name": "titleStyle",
+          "type": "TextStyle?",
+          "description": "The text style for the title. It's optional."
+        },
+        {
+          "name": "innerPadding",
+          "type": "EdgeInsets",
+          "description": "The inner padding for the demo statistic item. It's optional and defaults to EdgeInsets.symmetric(horizontal: 20, vertical: 16)."
+        },
+        {
+          "name": "iconColor",
+          "type": "Color",
+          "description": "The color for the icon. It's optional and defaults to a specific color."
+        }
+      ]
     }
+
 
   ]
 }

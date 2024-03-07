@@ -80,6 +80,7 @@ class Assets {
   static const String helpersBottomNavigationList = 'lib/app/utils/helpers/bottom_navigation_list.dart';
   static const String helpersDrawerList = 'lib/app/utils/helpers/drawer_list.dart';
   static const String helpersListOfWidgets = 'lib/app/utils/helpers/list_of_widgets.dart';
+  static const String helpersSettingsItemsList = 'lib/app/utils/helpers/settings_items_list.dart';
   static const String helpersShieldLIst = 'lib/app/utils/helpers/shield_lIst.dart';
   static const String helpersShieldModel = 'lib/app/models/helpers/shield_model.dart';
   static const String homePageHomePage = 'lib/app/view/home_page/home_page.dart';

@@ -52,7 +52,7 @@ class AW_StatisticHomeItem extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text(title!, style: Theme.of(context).textTheme.displayMedium),
+              Text(title!, style: Theme.of(context).textTheme.displayMedium!.copyWith(fontSize: 20)),
               const SizedBox(height: 5),
               Text(
                 value!,
