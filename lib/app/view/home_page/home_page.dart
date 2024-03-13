@@ -23,7 +23,6 @@ class _HomePageState extends State<HomePage> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   final WidgetStore widgetStore = getIt<WidgetStore>();
 
-
   @override
   void initState() {
     _initialBuild();
@@ -52,7 +51,27 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  PreferredSizeWidget _buildAppBar(BuildContext context) => AppBar(title: const Text('CMT Widgets'));
+  PreferredSizeWidget _buildAppBar(BuildContext context) => AppBar(
+        title: const Text('CMT Widgets'),
+        centerTitle: false,
+        actions: [
+          Row(
+            children: [
+              const Text('Use Material 3'),
+              Observer(
+                builder: (BuildContext context) {
+                 return Switch(
+                   value: widgetStore.isMaterial3,
+                   onChanged: (bool? value) {
+                     widgetStore.useMaterial3();
+                   },
+                 ); 
+                },
+              ),
+            ],
+          ),
+        ],
+      );
 
   Widget _buildBody(BuildContext context, GlobalKey<ScaffoldState> scaffoldKey) {
     return Center(

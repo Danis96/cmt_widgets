@@ -128,6 +128,22 @@ mixin _$WidgetStore on WidgetBase, Store {
     });
   }
 
+  late final _$isMaterial3Atom =
+      Atom(name: 'WidgetBase.isMaterial3', context: context);
+
+  @override
+  bool get isMaterial3 {
+    _$isMaterial3Atom.reportRead();
+    return super.isMaterial3;
+  }
+
+  @override
+  set isMaterial3(bool value) {
+    _$isMaterial3Atom.reportWrite(value, super.isMaterial3, () {
+      super.isMaterial3 = value;
+    });
+  }
+
   late final _$loadAndParseJsonAsyncAction =
       AsyncAction('WidgetBase.loadAndParseJson', context: context);
 
@@ -217,6 +233,17 @@ mixin _$WidgetStore on WidgetBase, Store {
   }
 
   @override
+  void useMaterial3() {
+    final _$actionInfo = _$WidgetBaseActionController.startAction(
+        name: 'WidgetBase.useMaterial3');
+    try {
+      return super.useMaterial3();
+    } finally {
+      _$WidgetBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   String toString() {
     return '''
 widgetModelList: ${widgetModelList},
@@ -225,6 +252,7 @@ widgetName: ${widgetName},
 widgetKey: ${widgetKey},
 pageNum: ${pageNum},
 loadAllParams: ${loadAllParams},
+isMaterial3: ${isMaterial3},
 singleWidget: ${singleWidget}
     ''';
   }

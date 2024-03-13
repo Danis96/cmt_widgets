@@ -6521,8 +6521,484 @@
           "description": "Whether to display the icon. The default value is true."
         }
       ]
+    },
+    {
+      "name": "AW_TripListItem",
+      "description": "This widget represents a list item in a trip. It displays various details about the trip such as driving score, trip date and time, duration, distance, and more. It also includes map features and styling options.",
+      "parameters": [
+        {
+          "name": "isTripAnalized",
+          "type": "bool",
+          "description": "Indicates whether the trip is analyzed."
+        },
+        {
+          "name": "scoreColor",
+          "type": "Color",
+          "description": "The color of the score indicator."
+        },
+        {
+          "name": "drivingScore",
+          "type": "double",
+          "description": "The driving score for the trip."
+        },
+        {
+          "name": "scoreText",
+          "type": "String",
+          "description": "The text to display for the score."
+        },
+        {
+          "name": "tripDate",
+          "type": "String",
+          "description": "The date of the trip."
+        },
+        {
+          "name": "tripTime",
+          "type": "String",
+          "description": "The time of the trip."
+        },
+        {
+          "name": "durationValue",
+          "type": "String",
+          "description": "The duration of the trip."
+        },
+        {
+          "name": "distanceValue",
+          "type": "String",
+          "description": "The distance covered in the trip."
+        },
+        {
+          "name": "durationLabel",
+          "type": "String",
+          "description": "The label for the duration value."
+        },
+        {
+          "name": "distanceLabel",
+          "type": "String",
+          "description": "The label for the distance value."
+        },
+        {
+          "name": "dateTextStyle",
+          "type": "TextStyle",
+          "description": "The text style for the date."
+        },
+        {
+          "name": "timeTextStyle",
+          "type": "TextStyle",
+          "description": "The text style for the time."
+        },
+        {
+          "name": "durationLabelTextStyle",
+          "type": "TextStyle",
+          "description": "The text style for the duration label."
+        },
+        {
+          "name": "distanceLabelTextStyle",
+          "type": "TextStyle",
+          "description": "The text style for the distance label."
+        },
+        {
+          "name": "durationValueTextStyle",
+          "type": "TextStyle",
+          "description": "The text style for the duration value."
+        },
+        {
+          "name": "distanceValueTextStyle",
+          "type": "TextStyle",
+          "description": "The text style for the distance value."
+        },
+        {
+          "name": "scoreTextTextStyle",
+          "type": "TextStyle",
+          "description": "The text style for the score text."
+        },
+        {
+          "name": "scoreNumberTextStyle",
+          "type": "TextStyle",
+          "description": "The text style for the score number."
+        },
+        {
+          "name": "onTap",
+          "type": "Function",
+          "description": "The function to execute when the widget is tapped."
+        },
+        {
+          "name": "mapZoomControlsEnabled",
+          "type": "bool",
+          "description": "Indicates whether the map zoom controls are enabled."
+        },
+        {
+          "name": "mapMyLocationButtonEnabled",
+          "type": "bool",
+          "description": "Indicates whether the map 'My Location' button is enabled."
+        },
+        {
+          "name": "mapType",
+          "type": "MapType",
+          "description": "The type of map to display."
+        },
+        {
+          "name": "mapZoom",
+          "type": "double",
+          "description": "The zoom level of the map."
+        },
+        {
+          "name": "mapMarkers",
+          "type": "List<Marker>",
+          "description": "The markers to display on the map."
+        },
+        {
+          "name": "mapPolylines",
+          "type": "Set<Polyline>",
+          "description": "The polylines to display on the map."
+        },
+        {
+          "name": "mapTarget",
+          "type": "LatLng",
+          "description": "The target location of the map."
+        },
+        {
+          "name": "mapScrollGesturesEnabled",
+          "type": "bool",
+          "description": "Indicates whether map scroll gestures are enabled."
+        },
+        {
+          "name": "mapZoomGesturesEnabled",
+          "type": "bool",
+          "description": "Indicates whether map zoom gestures are enabled."
+        },
+        {
+          "name": "mapFirstAndLastPoints",
+          "type": "List<LatLng>",
+          "description": "The first and last points on the map."
+        },
+        {
+          "name": "borderRadius",
+          "type": "BorderRadius",
+          "description": "The border radius of the widget."
+        },
+        {
+          "name": "itemShadow",
+          "type": "BoxShadow",
+          "description": "The shadow of the widget."
+        },
+        {
+          "name": "cardColor",
+          "type": "Color",
+          "description": "The color of the card."
+        },
+        {
+          "name": "shouldAnimateMap",
+          "type": "bool",
+          "description": "Indicates whether the map should animate."
+        },
+        {
+          "name": "hasShadow",
+          "type": "bool",
+          "description": "Indicates whether the widget has a shadow."
+        },
+        {
+          "name": "bluetoothTagIcon",
+          "type": "String",
+          "description": "The icon for the Bluetooth tag."
+        },
+        {
+          "name": "bluetoothTag",
+          "type": "bool",
+          "description": "Indicates whether the Bluetooth tag is enabled."
+        },
+        {
+          "name": "distanceKm",
+          "type": "String",
+          "description": "The distance in kilometers."
+        },
+        {
+          "name": "percentageScoreHeight",
+          "type": "int",
+          "description": "The height of the percentage score."
+        },
+        {
+          "name": "staticMapUrl",
+          "type": "String",
+          "description": "The URL of the static map."
+        },
+        {
+          "name": "isMap",
+          "type": "bool",
+          "description": "Indicates whether the widget is a map."
+        },
+        {
+          "name": "onImgTap",
+          "type": "Function",
+          "description": "The function to execute when the image is tapped."
+        }
+      ]
+    },
+    {
+      "name": "AW_TripListItemJapan",
+      "description": "This is a StatelessWidget that represents a list item for a trip in Japan. It includes various parameters such as score color, driving score, trip place, score text, trip date, duration value, distance value, and many more. It also includes several callbacks for handling various user interactions.",
+      "parameters": [
+        {
+          "name": "scoreColor",
+          "type": "Color",
+          "description": "The color of the score indicator."
+        },
+        {
+          "name": "onTap",
+          "type": "Function",
+          "description": "A callback function that is invoked when the widget is tapped."
+        },
+        {
+          "name": "drivingScore",
+          "type": "double",
+          "description": "The driving score for the trip."
+        },
+        {
+          "name": "tripPlace",
+          "type": "String",
+          "description": "The place where the trip occurred."
+        },
+        {
+          "name": "scoreText",
+          "type": "String",
+          "description": "The text representation of the score."
+        },
+        {
+          "name": "tripDate",
+          "type": "String",
+          "description": "The date of the trip."
+        },
+        {
+          "name": "durationValue",
+          "type": "String",
+          "description": "The duration of the trip."
+        },
+        {
+          "name": "distanceValue",
+          "type": "String",
+          "description": "The distance covered in the trip."
+        },
+        {
+          "name": "durationLabel",
+          "type": "String",
+          "description": "The label for the duration value."
+        },
+        {
+          "name": "distanceLabel",
+          "type": "String",
+          "description": "The label for the distance value."
+        },
+        {
+          "name": "tripDateTextStyle",
+          "type": "TextStyle",
+          "description": "The text style for the trip date."
+        },
+        {
+          "name": "tripTimeTextStyle",
+          "type": "TextStyle",
+          "description": "The text style for the trip time."
+        },
+        {
+          "name": "topTextStyle",
+          "type": "TextStyle",
+          "description": "The text style for the top text."
+        },
+        {
+          "name": "durationValueTextStyle",
+          "type": "TextStyle",
+          "description": "The text style for the duration value."
+        },
+        {
+          "name": "distanceValueTextStyle",
+          "type": "TextStyle",
+          "description": "The text style for the distance value."
+        },
+        {
+          "name": "scoreTextStyle",
+          "type": "TextStyle",
+          "description": "The text style for the score text."
+        },
+        {
+          "name": "scoreNumberTextStyle",
+          "type": "TextStyle",
+          "description": "The text style for the score number."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "Color",
+          "description": "The background color of the widget."
+        },
+        {
+          "name": "iconBackgroundColor",
+          "type": "Color",
+          "description": "The background color of the icon."
+        },
+        {
+          "name": "percentIndicatorRadius",
+          "type": "int",
+          "description": "The radius of the percent indicator."
+        },
+        {
+          "name": "tripDateLabel",
+          "type": "String",
+          "description": "The label for the trip date."
+        },
+        {
+          "name": "hasError",
+          "type": "bool",
+          "description": "A flag indicating whether there is an error."
+        },
+        {
+          "name": "onImgTap",
+          "type": "Function",
+          "description": "A callback function that is invoked when the image is tapped."
+        },
+        {
+          "name": "topTextPadding",
+          "type": "EdgeInsets",
+          "description": "The padding for the top text."
+        },
+        {
+          "name": "tags",
+          "type": "List<String>",
+          "description": "A list of tags for the trip."
+        },
+        {
+          "name": "showIconIfError",
+          "type": "bool",
+          "description": "A flag indicating whether to show the icon if there is an error."
+        },
+        {
+          "name": "onScoreTap",
+          "type": "Function",
+          "description": "A callback function that is invoked when the score is tapped."
+        },
+        {
+          "name": "onTopItemTap",
+          "type": "Function",
+          "description": "A callback function that is invoked when the top item is tapped."
+        },
+        {
+          "name": "onBottomItemTap",
+          "type": "Function",
+          "description": "A callback function that is invoked when the bottom item is tapped."
+        },
+        {
+          "name": "errorWidget",
+          "type": "Widget",
+          "description": "A widget that is displayed when there is an error."
+        },
+        {
+          "name": "tripTime",
+          "type": "String",
+          "description": "The time of the trip."
+        },
+        {
+          "name": "shadowOpacity",
+          "type": "double",
+          "description": "The opacity of the shadow."
+        },
+        {
+          "name": "tagWidget",
+          "type": "Widget",
+          "description": "A widget for displaying the tags."
+        }
+      ]
+    },
+    {
+      "name": "AW_TripStatItem",
+      "description": "This is a StatefulWidget that represents a trip stat item. It includes various parameters such as icon path, title, score, description, failure color, success color, and many more. It also includes several callbacks for handling various user interactions.",
+      "parameters": [
+        {
+          "name": "iconPath",
+          "type": "String",
+          "description": "The path to the icon."
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "description": "The title of the trip stat item."
+        },
+        {
+          "name": "score",
+          "type": "double",
+          "description": "The score of the trip stat item."
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "description": "The description of the trip stat item."
+        },
+        {
+          "name": "failureColor",
+          "type": "Color",
+          "description": "The color to be used when there is a failure."
+        },
+        {
+          "name": "successColor",
+          "type": "Color",
+          "description": "The color to be used when there is a success."
+        },
+        {
+          "name": "arrowsAssetPathClosed",
+          "type": "String",
+          "description": "The asset path to the arrows when closed."
+        },
+        {
+          "name": "arrowsAssetPathOpened",
+          "type": "String",
+          "description": "The asset path to the arrows when opened."
+        },
+        {
+          "name": "onLogEvent",
+          "type": "Function",
+          "description": "A callback function that is invoked when a log event occurs."
+        },
+        {
+          "name": "progressBar",
+          "type": "Widget",
+          "description": "A widget for displaying the progress bar."
+        },
+        {
+          "name": "customScoring",
+          "type": "Widget",
+          "description": "A widget for displaying the custom scoring."
+        },
+        {
+          "name": "padding",
+          "type": "EdgeInsets",
+          "description": "The padding for the widget."
+        },
+        {
+          "name": "customContent",
+          "type": "Widget",
+          "description": "A widget for displaying the custom content."
+        },
+        {
+          "name": "boxShadow",
+          "type": "BoxShadow",
+          "description": "The box shadow for the widget."
+        },
+        {
+          "name": "iconColor",
+          "type": "Color",
+          "description": "The color of the icon."
+        },
+        {
+          "name": "iconSize",
+          "type": "double",
+          "description": "The size of the icon."
+        },
+        {
+          "name": "border",
+          "type": "Border",
+          "description": "The border of the widget."
+        },
+        {
+          "name": "titleColor",
+          "type": "Color",
+          "description": "The color of the title."
+        }
+      ]
     }
-
-
   ]
 }
