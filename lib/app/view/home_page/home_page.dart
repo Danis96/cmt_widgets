@@ -1,5 +1,7 @@
 import 'package:cmt/routing/routes.dart';
 import 'package:expandable_page_view/expandable_page_view.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
@@ -25,7 +27,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
-    _initialBuild();
+    _initialBuild().then((value) => setState(() {}));
     super.initState();
   }
 
@@ -54,24 +56,27 @@ class _HomePageState extends State<HomePage> {
   PreferredSizeWidget _buildAppBar(BuildContext context) => AppBar(
         title: const Text('CMT Widgets'),
         centerTitle: false,
-        actions: [
-          Row(
-            children: [
-              const Text('Use Material 3'),
-              Observer(
-                builder: (BuildContext context) {
-                 return Switch(
-                   value: widgetStore.isMaterial3,
-                   onChanged: (bool? value) {
-                     widgetStore.useMaterial3();
-                   },
-                 ); 
-                },
-              ),
-            ],
-          ),
-        ],
+        actions: [_buildMaterial3Switch(context)],
       );
+
+  Widget _buildMaterial3Switch(BuildContext context) {
+    return Row(
+      children: [
+        const Text('Use Material 3'),
+        Observer(
+          builder: (BuildContext context) {
+            return Switch(
+              value: widgetStore.isMaterial3,
+              activeColor: Colors.blueAccent,
+              onChanged: (bool? value) {
+                widgetStore.useMaterial3();
+              },
+            );
+          },
+        ),
+      ],
+    );
+  }
 
   Widget _buildBody(BuildContext context, GlobalKey<ScaffoldState> scaffoldKey) {
     return Center(
@@ -112,23 +117,54 @@ class _HomePageState extends State<HomePage> {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text(
-              widgetStore.widgetName.isNotEmpty
-                  ? widgetStore.widgetName
-                  : widgetStore.widgetModelList.isNotEmpty
-                      ? widgetStore.widgetModelList.first.name
-                      : '',
-              style: const TextStyle(color: Colors.black, fontSize: 22),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  alignment: Alignment.centerLeft,
+                  width: 280,
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(
+                      widgetStore.widgetName.isNotEmpty
+                          ? widgetStore.widgetName
+                          : widgetStore.widgetModelList.isNotEmpty
+                              ? widgetStore.widgetModelList.first.name
+                              : '',
+                      style: const TextStyle(color: Colors.black, fontSize: 22),
+                    ),
+                  ),
+                ),
+                _buildDescriptionSwitch(context),
+              ],
             ),
-            const Divider(),
-            Text(
-              widgetStore.description.isNotEmpty
-                  ? widgetStore.description
-                  : widgetStore.widgetModelList.isNotEmpty
-                      ? widgetStore.widgetModelList.first.description
-                      : '',
-            ),
+            widgetStore.showInfo
+                ? Column(
+                    children: [
+                      const Divider(),
+                      Text(
+                        widgetStore.description.isNotEmpty
+                            ? widgetStore.description
+                            : widgetStore.widgetModelList.isNotEmpty
+                                ? widgetStore.widgetModelList.first.description
+                                : '',
+                      ),
+                    ],
+                  )
+                : const SizedBox()
           ],
+        );
+      },
+    );
+  }
+
+  Widget _buildDescriptionSwitch(BuildContext context) {
+    return Observer(
+      builder: (BuildContext context) {
+        return Switch(
+          value: widgetStore.showInfo,
+          activeColor: Colors.blueAccent,
+          onChanged: (bool? value) => widgetStore.showDescription(),
         );
       },
     );

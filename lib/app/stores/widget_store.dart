@@ -104,4 +104,12 @@ abstract class WidgetBase with Store {
     isMaterial3 = !isMaterial3;
   }
 
+  @observable
+  bool showInfo = true;
+
+  @action
+  void showDescription() {
+    showInfo = !showInfo;
+  }
+
 }
