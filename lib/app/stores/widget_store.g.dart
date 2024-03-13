@@ -144,6 +144,22 @@ mixin _$WidgetStore on WidgetBase, Store {
     });
   }
 
+  late final _$showInfoAtom =
+      Atom(name: 'WidgetBase.showInfo', context: context);
+
+  @override
+  bool get showInfo {
+    _$showInfoAtom.reportRead();
+    return super.showInfo;
+  }
+
+  @override
+  set showInfo(bool value) {
+    _$showInfoAtom.reportWrite(value, super.showInfo, () {
+      super.showInfo = value;
+    });
+  }
+
   late final _$loadAndParseJsonAsyncAction =
       AsyncAction('WidgetBase.loadAndParseJson', context: context);
 
@@ -244,6 +260,17 @@ mixin _$WidgetStore on WidgetBase, Store {
   }
 
   @override
+  void showDescription() {
+    final _$actionInfo = _$WidgetBaseActionController.startAction(
+        name: 'WidgetBase.showDescription');
+    try {
+      return super.showDescription();
+    } finally {
+      _$WidgetBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   String toString() {
     return '''
 widgetModelList: ${widgetModelList},
@@ -253,6 +280,7 @@ widgetKey: ${widgetKey},
 pageNum: ${pageNum},
 loadAllParams: ${loadAllParams},
 isMaterial3: ${isMaterial3},
+showInfo: ${showInfo},
 singleWidget: ${singleWidget}
     ''';
   }
