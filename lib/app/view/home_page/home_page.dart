@@ -36,6 +36,7 @@ class _HomePageState extends State<HomePage> {
     if (widgetStore.widgetModelList.isNotEmpty) {
       widgetStore.setSingleWidget(widgetStore.widgetModelList.first);
     }
+    print(widgetStore.widgetModelList.length);
   }
 
   @override
@@ -120,19 +121,17 @@ class _HomePageState extends State<HomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  alignment: Alignment.centerLeft,
+                SizedBox(
                   width: 280,
-                  child: FittedBox(
-                    fit: BoxFit.scaleDown,
-                    child: Text(
-                      widgetStore.widgetName.isNotEmpty
-                          ? widgetStore.widgetName
-                          : widgetStore.widgetModelList.isNotEmpty
-                              ? widgetStore.widgetModelList.first.name
-                              : '',
-                      style: const TextStyle(color: Colors.black, fontSize: 22),
-                    ),
+                  child: Text(
+                    widgetStore.widgetName.isNotEmpty
+                        ? widgetStore.widgetName
+                        : widgetStore.widgetModelList.isNotEmpty
+                            ? widgetStore.widgetModelList.first.name
+                            : '',
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(color: Colors.black, fontSize: 22),
                   ),
                 ),
                 _buildDescriptionSwitch(context),
@@ -178,6 +177,15 @@ class _HomePageState extends State<HomePage> {
         Navigator.of(context).pushNamed(Details);
       },
       child: const Text('See more'),
+    );
+  }
+
+  Widget _buildSwitchAxis(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+
+      },
+      child: const Text('Switch Scroll Behaviour'),
     );
   }
 

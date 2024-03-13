@@ -73,6 +73,7 @@ class CustomTheme {
       appBarTheme: AppBarTheme(
         color: ColorHelper.mercury.color,
         elevation: 0,
+        foregroundColor: Colors.black,
         centerTitle: true,
         toolbarTextStyle: TextTheme(
           displayLarge: TextStyle(

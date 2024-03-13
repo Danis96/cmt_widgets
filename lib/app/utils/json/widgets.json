@@ -5965,37 +5965,6 @@
       ]
     },
     {
-      "name": "AW_FittedText",
-      "description": "AW_FittedText is a StatelessWidget that accepts a few parameters to display a text. It extends the StatelessWidget, which describes part of the user interface which can depend on configuration information in the constructor and change over time as it rebuilds.",
-      "parameters": [
-        {
-          "name": "widgetKey",
-          "type": "Key",
-          "description": "A key that uniquely identifies this widget from others. It's required."
-        },
-        {
-          "name": "text",
-          "type": "String",
-          "description": "The text to display in the widget. It's required."
-        },
-        {
-          "name": "boxFit",
-          "type": "BoxFit",
-          "description": "How to inscribe the box into the rectangle. The default value is BoxFit.contain."
-        },
-        {
-          "name": "style",
-          "type": "TextStyle",
-          "description": "The style to use for the text being displayed. It's optional."
-        },
-        {
-          "name": "textAlign",
-          "type": "TextAlign",
-          "description": "How the text should be aligned horizontally. The default value is TextAlign.start."
-        }
-      ]
-    },
-    {
       "name": "AW_TextFormField",
       "description": "AW_TextFormField is a StatefulWidget that accepts several parameters to create a text form field. It extends the StatefulWidget, which means it can change over time and can be created, updated, or destroyed multiple times over the lifecycle of its parent widget.",
       "parameters": [
