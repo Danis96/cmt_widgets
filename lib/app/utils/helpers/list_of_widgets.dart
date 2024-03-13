@@ -3,6 +3,7 @@ import 'package:cmt/app/utils/helpers/settings_items_list.dart';
 import 'package:cmt/app/utils/helpers/shield_lIst.dart';
 import 'package:cmt/generated/assets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import '../../../theme/color_helper.dart';
 import '../../models/helpers/shield_model.dart';
 import '../../widgets/widgets.dart';
@@ -1798,6 +1799,83 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
             ),
             iconColor: ColorHelper.primaryBlue.color,
             padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+          ),
+        ),
+      ),
+
+      /// AW_TripListItem
+      const Hero(
+        tag: 'AW_TripListItem',
+        key: Key('AW_TripListItem'),
+        child: Material(
+          child: AW_TripListItem(
+            bluetoothTag: false,
+            staticMapUrl: 'https://urbanfootprint.com/wp-content/uploads/2019/07/blog-19Q3-osm-roads-one-ways@2x.jpg',
+            distanceKm: 'km',
+            distanceLabel: 'Distance',
+            distanceValue: '23',
+            drivingScore: 90,
+            durationLabel: 'Duration',
+            durationValue: '25 min',
+            scoreText: 'Score',
+            scoreColor: Colors.blueAccent,
+            tripDate: '08.03.',
+            isMap: false,
+            tripTime: '12:43',
+          ),
+        ),
+      ),
+
+      /// AW_TripListItemJapan
+      Hero(
+        tag: 'AW_TripListItemJapan',
+        key: const Key('AW_TripListItemJapan'),
+        child: Material(
+          child: AW_TripListItemJapan(
+            distanceLabel: 'Distance',
+            distanceValue: '23 km',
+            drivingScore: 70,
+            durationLabel: 'Duration',
+            durationValue: '25 min',
+            scoreText: 'Score',
+            scoreColor: Colors.blueAccent,
+            tripDate: '08.03.',
+            tripTime: '12:43',
+            onTap: (LatLng latLng) {},
+            hasError: false,
+            tags: const SizedBox(),
+            tripDateLabel: Text('08.03'),
+            tripPlace: 'Hong kong',
+          ),
+        ),
+      ),
+
+      /// AW_TripStatItem
+      Hero(
+        tag: 'AW_TripStatItem',
+        key: const Key('AW_TripStatItem'),
+        child: Material(
+          child: AW_TripStatItem(
+            key: const Key('AW_TripStatItem'),
+            successColor: Colors.blueAccent,
+            failureColor: Colors.grey,
+            score: 5,
+            description: 'This is a speeding description' * 5,
+            title: 'Speeding',
+            arrowsAssetPathOpened: SvgPicture.asset(Assets.assetsIcStatItemArrowsOpened),
+            arrowsAssetPathClosed: SvgPicture.asset(Assets.assetsIcStatItemArrowsClosed),
+            iconPath: Assets.assetsIcSpeed,
+            progressBar: AW_PercentageProgressBar(
+              borderColor: Colors.transparent,
+              widgetKey: const Key('progress_bar_key'),
+              title: '',
+              colors: const <Color>[Colors.blueAccent, Colors.lightBlueAccent],
+              names: const <String>['Under limit', 'Speeding'],
+              values: const <double>[0.85, 0.15],
+              boxShadow: const <BoxShadow>[],
+              onInfoPressed: () {},
+              valueTitle: '%',
+            ),
           ),
         ),
       ),

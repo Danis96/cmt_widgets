@@ -11,7 +11,7 @@ void main() {
   registerStores();
   _typedDialogConfig();
   SystemChrome.setPreferredOrientations(<DeviceOrientation>[DeviceOrientation.portraitUp]).then((_) {
-    runApp(const MyApp());
+    runApp(MyApp());
   });
 }
 

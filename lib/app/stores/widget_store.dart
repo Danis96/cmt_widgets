@@ -18,7 +18,6 @@ abstract class WidgetBase with Store {
 
   @action
   Future<void> loadAndParseJson() async {
-    // todo refactor [move next 2 lines]
     String jsonFileName = 'widgets.json';
     String jsonData = await rootBundle.loadString('lib/app/utils/json/$jsonFileName');
     Map<String, dynamic> widgetInfo = jsonDecode(jsonData);
@@ -96,4 +95,13 @@ abstract class WidgetBase with Store {
   void toggleAllParams() {
     loadAllParams = !loadAllParams;
   }
+
+  @observable
+  bool isMaterial3 = false;
+
+  @action
+  void useMaterial3() {
+    isMaterial3 = !isMaterial3;
+  }
+
 }
