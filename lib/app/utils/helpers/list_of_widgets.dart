@@ -1,11 +1,10 @@
-import 'package:cmt/app/utils/helpers/drawer_list.dart';
+
 import 'package:cmt/app/utils/helpers/settings_items_list.dart';
 import 'package:cmt/app/utils/helpers/shield_lIst.dart';
 import 'package:cmt/generated/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import '../../../theme/color_helper.dart';
-import '../../models/helpers/shield_model.dart';
 import '../../widgets/widgets.dart';
 import 'bottom_navigation_list.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -27,7 +26,7 @@ bool isSwitchChanged = false;
 bool isIconPressable = false;
 
 List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffoldKey) => <Widget>[
-      /// APP BARS
+      /// AW_AppBarIconTitleIcon
       Hero(
         tag: 'AW_AppBarIconTitleIcon',
         key: const Key('AW_AppBarIconTitleIcon'),
@@ -44,6 +43,8 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
           backgroundColor: Colors.blueAccent,
         ),
       ),
+
+      /// AW_AppBarIconLogoImage
       Hero(
         tag: 'AW_AppBarIconLogoImage',
         key: const Key('AW_AppBarIconLogoImage'),
@@ -58,6 +59,8 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
           backgroundColor: Colors.blueAccent,
         ),
       ),
+
+      ///AW_IconImageTextIconAlignLeftAppBar
       Hero(
         tag: 'AW_IconImageTextIconAlignLeftAppBar',
         key: const Key('AW_IconImageTextIconAlignLeftAppBar'),
@@ -71,6 +74,8 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
           imageUrl: 'https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png',
         ),
       ),
+
+      /// AW_VerticalWidgetsAppBar
       Hero(
         tag: 'AW_VerticalWidgetsAppBar',
         key: const Key('AW_VerticalWidgetsAppBar'),
@@ -84,7 +89,7 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
         ),
       ),
 
-      /// ALERT CARD
+      /// AW_AlertCard
       const Hero(
         tag: 'AW_AlertCard',
         key: Key('AW_AlertCard'),
@@ -98,7 +103,7 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
         ),
       ),
 
-      /// BADGES
+      /// AW_CustomBadge
       const Hero(
         tag: 'AW_CustomBadge',
         key: Key('AW_CustomBadge'),
@@ -122,6 +127,8 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
           ),
         ),
       ),
+
+      /// AW_BadgeBackground
       Hero(
         tag: 'AW_BadgeBackground',
         key: const Key('AW_BadgeBackground'),
@@ -153,7 +160,7 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
         ),
       ),
 
-      /// BANNERS
+      /// AW_IconTextBanner
       Hero(
         tag: 'AW_IconTextBanner',
         key: const Key('AW_IconTextBanner'),
@@ -171,7 +178,7 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
         ),
       ),
 
-      /// BT STATE
+      /// AW_BluetoothState
       Hero(
         tag: 'AW_BluetoothState',
         key: const Key('AW_BluetoothState'),
@@ -185,7 +192,7 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
         ),
       ),
 
-      /// BOOST
+      /// AW_BoostWidget
       Hero(
         tag: 'AW_BoostWidget',
         key: const Key('AW_BoostWidget'),
@@ -211,7 +218,7 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
         ),
       ),
 
-      /// BOTTOM NAVIGATION BAR
+      ///AW_BottomNavigationPage
       Hero(
         tag: 'AW_BottomNavigationPage',
         key: const Key('AW_BottomNavigationPage'),
@@ -232,7 +239,7 @@ List<Widget> listOfWidgets(BuildContext context, GlobalKey<ScaffoldState> scaffo
         ),
       ),
 
-      /// BUTTON
+      /// AW_Button
       Hero(
         tag: 'AW_Button',
         key: const Key('AW_Button'),
