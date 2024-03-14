@@ -13,6 +13,7 @@ import '../../stores/widget_store.dart';
 import '../../utils/helpers/drawer_list.dart';
 import '../../utils/helpers/list_of_widgets.dart';
 import '../../widgets/widgets.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 class HomePage extends StatefulWidget {
   HomePage({super.key});
@@ -55,7 +56,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   PreferredSizeWidget _buildAppBar(BuildContext context) => AppBar(
-        title: const Text('CMT Widgets'),
+        title: kIsWeb ? const Text('CMT Widgets Web') : const Text('CMT Widgets'),
         centerTitle: false,
         actions: [_buildMaterial3Switch(context)],
       );
@@ -182,9 +183,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget _buildSwitchAxis(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {
-
-      },
+      onPressed: () {},
       child: const Text('Switch Scroll Behaviour'),
     );
   }

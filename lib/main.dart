@@ -1,6 +1,10 @@
+import 'dart:io';
+
 import 'package:cmt/app/locator.dart';
+import 'package:cmt/web/My_app_web.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 import 'app/My_app.dart';
 import 'app/widgets/widgets.dart';
@@ -11,7 +15,7 @@ void main() {
   registerStores();
   _typedDialogConfig();
   SystemChrome.setPreferredOrientations(<DeviceOrientation>[DeviceOrientation.portraitUp]).then((_) {
-    runApp(MyApp());
+    runApp(kIsWeb ? MyAppWeb() : MyApp());
   });
 }
 

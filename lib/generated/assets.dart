@@ -171,9 +171,12 @@ class Assets {
   static const String utilsNavigationAnimations = 'lib/app/utils/navigation_animations.dart';
   static const String validationsValidationMessageItem = 'lib/app/widgets/validations/validation_message_item.dart';
   static const String validationsValidationMessages = 'lib/app/widgets/validations/validation_messages.dart';
+  static const String viewHomePageHomePage = 'lib/web/view/home_page/home_page.dart';
   static const String vouchersOneProductVoucherItem = 'lib/app/widgets/vouchers/one_product_voucher_item.dart';
   static const String vouchersVoucherBoxLabels = 'lib/app/widgets/vouchers/voucher_box_labels.dart';
   static const String vouchersVoucherListItem = 'lib/app/widgets/vouchers/voucher_list_item.dart';
+  static const String webMyAppWeb = 'lib/web/My_app_web.dart';
+  static const String widgetsNavigationBarCustom = 'lib/web/widgets/navigation_bar_custom.dart';
   static const String widgetsWidgets = 'lib/app/widgets/widgets.dart';
 
 }
